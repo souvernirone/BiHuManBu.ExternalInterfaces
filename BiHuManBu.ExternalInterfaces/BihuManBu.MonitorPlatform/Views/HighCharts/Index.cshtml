@@ -1,0 +1,128 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<div id="container"></div>
+@section css{
+    <link rel="stylesheet" href="@Url.Content("~/jquery.jqplot/jquery.jqplot.min.css")"/>
+}
+
+<div id="socialMedia" style="width:600px;"></div>
+
+@section scripts
+{
+    <script type="text/javascript" src="@Url.Content("~/jquery.jqplot/jquery.jqplot.min.js")"></script> 
+    <script type="text/javascript" src="@Url.Content("~/jquery.jqplot/plugins/jqplot.dateAxisRenderer.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/jquery.jqplot/plugins/jqplot.meterGaugeRenderer.js")"></script>
+    <script type="text/javascript">
+        $(function() {
+            var meter = $.jqplot("socialMedia", [[100]], {
+                seriesDefaults: {
+                    renderer: $.jqplot.MeterGaugeRenderer,
+                    rendererOptions: {
+                        min: 0,
+                        max: 255,
+                        label: 'WIFI users',
+                        ticks: [0,50,100,150,200,250],
+                    }
+                }
+            });
+            @*var remoteDataSource = function(url, plot, options) {
+                var data = new Array;
+                $.ajax({
+                    async: false,
+                    url: url,
+                    dataType: "json",
+                    success: function (remoteData) {
+                        var t = eval('(' + remoteData + ')');
+                        data.push(t.twitter);
+                        data.push(t.facebook);
+                    }
+                });
+                return data;
+            };
+            var socialPlot = $.jqplot("socialMedia", '@Url.Action("GetJson","HighCharts")', {
+                title: "Social Media Shaes",
+                dataRenderer: remoteDataSource,
+                series: [
+                    { label: 'Twitter' },
+                    { label: 'FaceBook' }
+                ],
+                legend: {
+                    show: true,
+                    placement: 'outsideGrid'
+                },
+                axes: {
+                    xaxis: {
+                        renderer: $.jqplot.DateAxisRenderer,
+                        label:'Days in November'
+                    },
+                    yaxis: {
+                        min: 0,
+                        label:'Number of Shares'
+                    }
+                }
+            });*@
+
+
+//var revenue = [['2012-07-20', 807403], ['2012-08-20', 755840], ['2012-09-20', 775304]];
+            //var profit = [['2012-07-20', 193793.82], ['2012-08-20', 183221.56], ['2012-09-20', 192797.31]];
+            //var electronics = [['2012-07-20', 116276.29], ['2012-08-20', 95867.97], ['2012-09-20', 120591.27]];
+            //var media = [['2012-07-20', 27596.25], ['2012-08-20', 32396.47], ['2012-09-20', 26709.06]];
+            //var nerd_corral = [['2012-07-20', 49921.28], ['2012-08-20', 54957.12], ['2012-09-20', 45496.98]];
+
+            //var renenuePlot = $.jqplot("firstChart", [revenue, profit, electronics, media, nerd_corral], {
+            //    title: "Q3 Revenue, Profit & Divisional Profits",
+            //    seriesDefault: {
+            //        yaxis: 'y3axis',
+            //        markerOptions: {
+            //            style: "filledCircle",
+            //            size: 10
+            //        }
+            //    },
+            //    series: [
+            //        {
+            //            label: 'Revenue',
+            //            yaxis: 'yaxis',
+            //            showLine: false,
+            //            markerOptions: { style: 'x' }
+            //        },
+            //        {
+            //            label: 'Profit',
+            //            yaxis: 'y2axis',
+            //            showLine: false,
+            //            markerOptions: { style: 'diamond' }
+            //        },
+            //        { label: 'Electronics' },
+            //        {
+            //            label: 'Media & Software',
+            //            markerOptions: { style: 'filledSquare' }
+            //        },
+            //        {
+            //            label: 'Nerd Corral',
+            //            markerOptions: { style: 'filledDiamond' }
+            //        }
+            //    ],
+            //    axesDefaults: {
+            //        tickOptions: { formatString: "$%'d" }
+            //    },
+            //    axes: {
+            //        xaxis: {
+            //            label: 'Months',
+            //            renderer: $.jqplot.DateAxisRenderer,
+            //            numberTicks: 3,
+            //            tickOptions: { formatString: "%B" }
+            //        },
+            //        yaxis: { label: 'Revenue' },
+            //        y2axis: { label: 'Profit' }
+
+            //    },
+            //    legend: {
+            //        show: true,
+            //        placement: 'insideGrid'
+            //    }
+            //});
+        });
+    </script>
+ 
+}

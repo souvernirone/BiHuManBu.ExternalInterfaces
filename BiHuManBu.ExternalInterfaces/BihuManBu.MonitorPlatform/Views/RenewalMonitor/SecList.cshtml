@@ -1,0 +1,166 @@
+﻿@{
+    ViewBag.Title = "实时统计";
+}
+@section css{
+    <link href="@Url.Content("~/jqplot/css/jquery.jqplot.min.css")" rel="stylesheet"/>
+}
+
+
+
+
+<div class="container">
+    <div id="chart" style="width:1000px;height:300px;"></div>
+</div>
+
+
+
+
+@section scripts
+{
+    <script type="text/javascript" src="@Url.Content("~/jqplot/js/jquery.jqplot.min.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/jqplot/js/functions.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/jqplot/js/jqplot.canvasTextRenderer.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/jqplot/js/jqplot.canvasAxisLabelRenderer.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/jqplot/js/jqplot.canvasAxisTickRenderer.min.js")"></script>
+    @*<script type="text/javascript" src="@Url.Content("~/jqplot/js/jqplot.dateAxisRenderer.min.js")"></script>*@
+    <script type="text/javascript">
+
+        $(function() {
+            function dataPull(remoteData, options) {
+                return [remoteData];
+            }
+            function ajaxDataRenderer(url, plot, options) {
+                var ret;
+                $.ajax({
+                    async: false,
+                    url: url,
+                    dataType: "json",
+                    success:function(data) {
+                        ret = data;
+                    }
+                });
+                var da = [[]];
+                for (var i = 0; i < ret.length; i++) {
+                    da[0].push([ret[i].Tick, ret[i].Times]);
+                }
+
+                //var s = [[["1246 3", 10], [1247, 2], [1248, 0], [1249, 0], [1257, 0]]];
+                var s =[[["2016-11-04 16:15:00", 0], ["2016-11-04 16:16:00", 0], ["2016-11-04 16:17:00", 0]]]
+                return s;
+            }
+
+            var ts = $.jqplot("chart", '@Url.Action("GetMinList","RenewalMonitor")', {
+                dataRenderer: ajaxDataRenderer,
+
+                axesDefaults: {
+                    tickRenderer: $.jqplot.CanvasAxisTickRenderer,
+                    tickOptions: {
+                        angle: -30,
+                        fontSize: '10pt'
+                    }
+                },
+                axes: {
+                    xaxis: {
+                       renderer: $.jqplot.DateAxisRenderer,
+                        //tickOptions: { formatString: '%b %e, %Y' },
+                    }
+                }
+            });
+
+            window.setInterval(function () {
+                //ts.replot({ data: '@Url.Action("Test","RenewalMonitor")' });
+                //var x = Math.sin(Math.random()*10) * 10;
+                //var y = Math.sin(Math.random()*10) * 20;
+                //ts.series[0].data.push([x,y]);
+                //ts.redraw();
+            }, 1000);
+        });
+
+        //$(function() {
+        //    function sineRenderer() {
+        //        var data = [[[1246, 0], [1247, 0], [1248, 0], [1249, 0], [1257, 0]]];
+        //        //for (var i = 0; i < 13; i += 0.5) {
+        //        //    data[0].push([i,Math.sin(i)]);
+        //        //}
+
+        //        return data;
+        //    }
+
+        //    $.jqplot("chart", [], {
+        //        title: "动态加载",
+        //        dataRenderer: sineRenderer,
+        //        axes: {
+        //            xaxis: {
+        //                labelRenderer: $.jqplot.CanvasAxisLabelRenderer,
+        //                tickInterval: 'lminute',
+        //            }
+        //        }
+        //});
+        //});
+
+        //$(function() {
+        //    var cosPoints = [];
+        //    for (var i = 0; i < 2 * Math.PI; i += 0.1) {
+        //        cosPoints.push([i, Math.cos(i)]);
+        //    }
+        //    $.jqplot("chart", [cosPoints], {
+        //        series: [
+        //            {
+        //                showMarker:false
+        //            }
+        //        ],
+        //        axes: {
+        //            xaxis: {
+        //                label: "Angle",
+        //                labelRenderer:$.jqplot.CanvasAxisLabelRenderer
+        //            },
+        //            yaxis: {
+        //                label: "Cois",
+        //                labelRenderer: $.jqplot.CanvasAxisLabelRenderer
+        //            }
+        //        }
+        //    });
+        //});
+
+        //$(function() {
+        //    $.jqplot('chart', [
+        //        [1, 2, 3, 4, 5, 6, 7, 8, 9],
+        //        [-1, -2, -3, -4, -5, -6, -7, -8, -9],
+        //        [11, 12, 13, 14, 15, 16, 17, 18, 19],
+        //        [-11, -12, -13, -14, -15, -16, -17, -18, -19]
+        //    ], {
+        //        title: "折线图",
+        //        axesDefaults: {
+        //            labelRenderer: $.jqplot.CanvasAxisLabelRenderer
+        //        },
+        //        axes: {
+        //            xaxis: {
+        //                label: "x轴",
+        //                pad: 1
+        //            },
+        //            yaxis: {
+        //                label: "y轴"
+        //            }
+        //        },
+        //        series: [
+        //            {
+        //                lineWidth: 2,
+        //                markerOptions: { style: "diamond" }
+        //            },
+        //            {
+        //                showLine: false,
+        //                markerOptions: { size: 7, style: "x" }
+        //            },
+        //            {
+        //                markerOptions: {style:"circle"}
+        //            },
+        //            {
+        //                showLine: false,
+        //                markerOptions: { style: "filledSquare" ,size:10}
+        //            }
+        //        ]
+        //    });
+        //});
+    </script>
+}
+

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="4da55dcaea274182887699a61137b68e" Name="Diagram1" ZoomLevel="35" ShowGrid="true">
+        <EntityTypeShape EntityType="BiHuManBuModel.bx_agent_special_rate" Width="1.5" PointX="5.375" PointY="0.75" />
+        <EntityTypeShape EntityType="BiHuManBuModel.bx_lastinfo" Width="1.5" PointX="7.375" PointY="0.75" />
+        <EntityTypeShape EntityType="BiHuManBuModel.bx_agent_rate" Width="1.5" PointX="25.375" PointY="20.75" />
+        <EntityTypeShape EntityType="BiHuManBuModel.bx_lastinfo_userinput" Width="1.5" PointX="5.375" PointY="5.75" />
+        <EntityTypeShape EntityType="BiHuManBuModel.user_token" Width="1.5" PointX="7.375" PointY="9.75" />
+        <EntityTypeShape EntityType="BiHuManBuModel.bx_renewalquote" Width="1.5" PointX="13.375" PointY="6.75" />
+        <EntityTypeShape EntityType="BiHuManBuModel.bx_gsc_userinfo" Width="1.5" PointX="3.375" PointY="9.75" />
+        <EntityTypeShape EntityType="BiHuManBuModel.bx_charge" Width="1.5" PointX="3.375" PointY="12.75" />
+        <EntityTypeShape EntityType="BiHuManBuModel.bx_charge_history" Width="1.5" PointX="9.375" PointY="9.75" />
+        <EntityTypeShape EntityType="BiHuManBuModel.bx_city" Width="1.5" PointX="17.375" PointY="15.75" />
+        <EntityTypeShape EntityType="BiHuManBuModel.bx_images" Width="1.5" PointX="7.375" PointY="18.75" />
+        <EntityTypeShape EntityType="BiHuManBuModel.bx_area" Width="1.5" PointX="9.375" PointY="12.75" />
+        <EntityTypeShape EntityType="BiHuManBuModel.bx_address" Width="1.5" PointX="26.375" PointY="0.75" />
+        <EntityTypeShape EntityType="BiHuManBuModel.bx_bj_union" Width="1.5" PointX="9.375" PointY="15.75" />
+        <EntityTypeShape EntityType="BiHuManBuModel.bx_hebaodianwei" Width="1.5" PointX="26.375" PointY="5.75" />
+        <EntityTypeShape EntityType="BiHuManBuModel.bx_devicedetail" Width="1.5" PointX="13.375" PointY="12.75" />
+        <EntityTypeShape EntityType="BiHuManBuModel.bx_order" Width="1.5" PointX="19.375" PointY="0.75" />
+        <EntityTypeShape EntityType="BiHuManBuModel.bx_order_userinfo" Width="1.5" PointX="5.375" PointY="12.75" />
+        <EntityTypeShape EntityType="BiHuManBuModel.bx_sms_account" Width="1.5" PointX="15.375" PointY="18.75" />
+        <EntityTypeShape EntityType="BiHuManBuModel.bx_carinfo" Width="1.5" PointX="15.375" PointY="22.75" />
+        <EntityTypeShape EntityType="BiHuManBuModel.user" Width="1.5" PointX="9.375" PointY="0.75" />
+        <EntityTypeShape EntityType="BiHuManBuModel.bx_sms_account_content" Width="1.5" PointX="21.375" PointY="0.75" />
+        <EntityTypeShape EntityType="BiHuManBuModel.bx_sms_order" Width="1.5" PointX="23.375" PointY="0.75" />
+        <EntityTypeShape EntityType="BiHuManBuModel.bx_agentpoint" Width="1.5" PointX="11.375" PointY="23.75" />
+        <EntityTypeShape EntityType="BiHuManBuModel.bx_system_message" Width="1.5" PointX="26.375" PointY="14.75" />
+        <EntityTypeShape EntityType="BiHuManBuModel.bx_order_quoteresult" Width="1.5" PointX="5.75" PointY="21.75" />
+        <EntityTypeShape EntityType="BiHuManBuModel.bx_order_savequote" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="BiHuManBuModel.bx_transferrecord" Width="1.5" PointX="27.375" PointY="17.75" />
+        <EntityTypeShape EntityType="BiHuManBuModel.bx_notice_xb" Width="1.5" PointX="27.375" PointY="26.75" />
+        <EntityTypeShape EntityType="BiHuManBuModel.bx_history_contract" Width="1.5" PointX="22.375" PointY="26.75" />
+        <EntityTypeShape EntityType="BiHuManBuModel.bx_report_claim" Width="1.5" PointX="28.375" PointY="0.75" />
+        <EntityTypeShape EntityType="BiHuManBuModel.bx_consumer_review" Width="1.5" PointX="0.75" PointY="14.75" />
+        <EntityTypeShape EntityType="BiHuManBuModel.bx_userinfo_renewal_info" Width="1.5" PointX="20.375" PointY="20.75" />
+        <EntityTypeShape EntityType="BiHuManBuModel.bx_agent_distributed" Width="1.5" PointX="0.75" PointY="18.75" />
+        <EntityTypeShape EntityType="BiHuManBuModel.bx_para_bhtype" Width="1.5" PointX="24.375" PointY="28.75" />
+        <EntityTypeShape EntityType="BiHuManBuModel.bx_appsetting" Width="1.5" PointX="10.375" PointY="29.75" />
+        <EntityTypeShape EntityType="BiHuManBuModel.bx_buid_activity" Width="1.5" PointX="19.375" PointY="25.75" />
+        <EntityTypeShape EntityType="BiHuManBuModel.bx_preferential_activity" Width="1.5" PointX="19.375" PointY="28.625" />
+        <EntityTypeShape EntityType="BiHuManBuModel.bx_userinfo_renewal_index" Width="1.5" PointX="12.375" PointY="29.75" />
+        <EntityTypeShape EntityType="BiHuManBuModel.bx_gsc_renewal" Width="1.5" PointX="14.375" PointY="29.75" />
+        <EntityTypeShape EntityType="BiHuManBuModel.bx_order_claimdetail" Width="1.5" PointX="26.375" PointY="10.75" />
+        <EntityTypeShape EntityType="BiHuManBuModel.bx_cityquoteday" Width="1.5" PointX="9.375" PointY="18.75" />
+        <EntityTypeShape EntityType="BiHuManBuModel.bx_car_renewal" Width="1.5" PointX="16.375" PointY="29.75" />
+        <EntityTypeShape EntityType="BiHuManBuModel.bx_savequote" Width="1.5" PointX="30.375" PointY="0.75" />
+        <EntityTypeShape EntityType="BiHuManBuModel.bx_vehicleinfo" Width="1.5" PointX="31.375" PointY="10.75" />
+        <EntityTypeShape EntityType="BiHuManBuModel.bx_violationlog" Width="1.5" PointX="11.375" PointY="0.75" />
+        <EntityTypeShape EntityType="BiHuManBuModel.bx_config" Width="1.5" PointX="17.375" PointY="20.75" />
+        <EntityTypeShape EntityType="BiHuManBuModel.bx_quoteresult_carinfo" Width="1.5" PointX="8.375" PointY="21.75" />
+        <EntityTypeShape EntityType="BiHuManBuModel.bx_drivelicense_cartype" Width="1.5" PointX="28.375" PointY="10.75" />
+        <EntityTypeShape EntityType="BiHuManBuModel.bx_car_claims" Width="1.5" PointX="23.375" PointY="31.75" />
+        <EntityTypeShape EntityType="BiHuManBuModel.bx_carmodel" Width="1.5" PointX="15.375" PointY="7.75" />
+        <EntityTypeShape EntityType="BiHuManBuModel.bx_claim_detail" Width="1.5" PointX="0.75" PointY="10.75" />
+        <EntityTypeShape EntityType="BiHuManBuModel.bx_message" Width="1.5" PointX="0.75" PointY="22.75" />
+        <EntityTypeShape EntityType="BiHuManBuModel.bj_baodanxinxi" Width="1.5" PointX="29.375" PointY="17.75" />
+        <EntityTypeShape EntityType="BiHuManBuModel.bx_agent_select" Width="1.5" PointX="15.375" PointY="12.75" />
+        <EntityTypeShape EntityType="BiHuManBuModel.bx_picture" Width="1.5" PointX="28.375" PointY="13.75" />
+        <EntityTypeShape EntityType="BiHuManBuModel.bx_order_submit_info" Width="1.5" PointX="31.375" PointY="31.75" />
+        <EntityTypeShape EntityType="BiHuManBuModel.bx_quote_many_source" Width="1.5" PointX="28.375" PointY="13.75" />
+        <EntityTypeShape EntityType="BiHuManBuModel.bx_anxin_delivery" Width="1.5" PointX="19.375" PointY="15.75" />
+        <EntityTypeShape EntityType="BiHuManBuModel.bx_userinfo" Width="1.5" PointX="25.375" PointY="31.75" />
+        <EntityTypeShape EntityType="BiHuManBuModel.bx_submit_info" Width="1.5" PointX="32.375" PointY="0.75" />
+        <EntityTypeShape EntityType="BiHuManBuModel.bx_specialoption" Width="1.5" PointX="15.375" PointY="0.75" />
+        <EntityTypeShape EntityType="BiHuManBuModel.bx_agent_config" Width="1.5" PointX="11.75" PointY="16.75" />
+        <EntityTypeShape EntityType="BiHuManBuModel.bx_agent_xgaccount_relationship" Width="1.5" PointX="22.75" PointY="17.75" />
+        <EntityTypeShape EntityType="BiHuManBuModel.bx_batchrenewal_item" Width="1.5" PointX="23.75" PointY="4.75" />
+        <EntityTypeShape EntityType="BiHuManBuModel.bx_camera_config" Width="1.5" PointX="22.75" PointY="21.75" />
+        <EntityTypeShape EntityType="BiHuManBuModel.bx_crm_steps" Width="1.5" PointX="15.75" PointY="4.75" />
+        <EntityTypeShape EntityType="BiHuManBuModel.bx_msgindex" Width="1.5" PointX="23.75" PointY="11.75" />
+        <EntityTypeShape EntityType="BiHuManBuModel.bx_quoteresult" Width="1.5" PointX="2.75" PointY="28.75" />
+        <EntityTypeShape EntityType="BiHuManBuModel.bx_userinfo_expand" Width="1.5" PointX="18.75" PointY="32.75" />
+        <EntityTypeShape EntityType="BiHuManBuModel.manager_role_db" Width="1.5" PointX="20.75" PointY="32.75" />
+        <EntityTypeShape EntityType="BiHuManBuModel.bx_distributed_history" Width="1.5" PointX="33.375" PointY="9.75" />
+        <EntityTypeShape EntityType="BiHuManBuModel.bx_camera_blacklist" Width="1.5" PointX="17.375" PointY="12.75" />
+        <EntityTypeShape EntityType="BiHuManBuModel.bx_agent_ukey" Width="1.5" PointX="12.375" PointY="33.75" />
+        <EntityTypeShape EntityType="BiHuManBuModel.bx_car_record" Width="1.5" PointX="33.375" PointY="13.75" />
+        <EntityTypeShape EntityType="BiHuManBuModel.bx_car_renewal_premium" Width="1.5" PointX="33.375" PointY="33.75" />
+        <EntityTypeShape EntityType="BiHuManBuModel.bx_renewalstatus" Width="1.5" PointX="34.375" PointY="0.75" />
+        <EntityTypeShape EntityType="BiHuManBuModel.bx_agent" Width="1.5" PointX="5.375" PointY="34.75" />
+        <EntityTypeShape EntityType="BiHuManBuModel.bx_quotehistory_related" Width="1.5" PointX="7.375" PointY="34.75" />
+        <EntityTypeShape EntityType="BiHuManBuModel.bx_car_order" Width="1.5" PointX="9.375" PointY="32.75" />
+        <EntityTypeShape EntityType="BiHuManBuModel.bx_ywxdetail" Width="1.5" PointX="34.375" PointY="4.75" />
+        <EntityTypeShape EntityType="BiHuManBuModel.bx_quotereq_carinfo" Width="1.5" PointX="35.375" PointY="9.75" />
+        <EntityTypeShape EntityType="BiHuManBuModel.bj_baodanxianzhong" Width="1.5" PointX="35.375" PointY="23.75" />
+        <EntityTypeShape EntityType="BiHuManBuModel.bx_customercategories" Width="1.5" PointX="31.375" PointY="20.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

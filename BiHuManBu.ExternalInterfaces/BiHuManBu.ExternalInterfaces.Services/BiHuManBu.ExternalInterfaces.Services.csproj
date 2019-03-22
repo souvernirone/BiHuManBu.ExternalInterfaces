@@ -1,0 +1,659 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1C3A6A9B-0488-42D9-9175-DE0DBD5E1FCA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BiHuManBu.ExternalInterfaces.Services</RootNamespace>
+    <AssemblyName>BiHuManBu.ExternalInterfaces.Services</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'QA_Normal_Release|AnyCPU'">
+    <OutputPath>bin\QA_Normal_Release\</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BiHuManBu.LogBuriedPoint.LogCollection">
+      <HintPath>..\..\Lib\Exceptionless\BiHuManBu.LogBuriedPoint.LogCollection.dll</HintPath>
+    </Reference>
+    <Reference Include="BiHuManBu.Redis, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Lib\Redis4\BiHuManBu.Redis.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework">
+      <HintPath>..\..\Lib\mysql6\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Lib\Exceptionless\log4net2.0.8.0\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="MetricsLibrary">
+      <HintPath>..\..\Lib\metrics\MetricsLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="ServiceStack.Common">
+      <HintPath>..\..\Lib\Redis3\ServiceStack.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="ServiceStack.Interfaces">
+      <HintPath>..\..\Lib\Redis3\ServiceStack.Interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="ServiceStack.Text, Version=4.0.52.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Lib\Redis3\ServiceStack.Text.dll</HintPath>
+    </Reference>
+    <Reference Include="StackExchange.Redis, Version=1.1.608.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Lib\Redis4\StackExchange.Redis.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Lib\dignostics\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.4.0.30506.0\lib\net40\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddressService.cs" />
+    <Compile Include="AgentChannelService\Implementations\ChannelStatusByUkeyIdService.cs" />
+    <Compile Include="AgentChannelService\Interfaces\IChannelStatusByUkeyIdService.cs" />
+    <Compile Include="AgentConfigService\Implementations\AgentConfigByCityService.cs" />
+    <Compile Include="AgentConfigService\Interfaces\IAgentConfigByCityService.cs" />
+    <Compile Include="AgentPointService.cs" />
+    <Compile Include="AgentService.cs" />
+    <Compile Include="AgentUKeyService.cs" />
+    <Compile Include="AppAchieveService.cs" />
+    <Compile Include="AppSettingService.cs" />
+    <Compile Include="AppVerifyService.cs" />
+    <Compile Include="AreaService.cs" />
+    <Compile Include="AuthorityService.cs" />
+    <Compile Include="AuthorizeFilter.cs" />
+    <Compile Include="BjdService.cs" />
+    <Compile Include="BjdServices\Achieves\CheckRequestService.cs">
+      <DependentUpon>GetMyBjdDetailService.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BjdServices\Achieves\GetBjdDetailFromHistoryService.cs" />
+    <Compile Include="BjdServices\Achieves\GetDateNewService.cs" />
+    <Compile Include="BjdServices\Achieves\GetDateService.cs">
+      <DependentUpon>GetMyBjdDetailService.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BjdServices\Achieves\GetMyBjdDetailService.cs" />
+    <Compile Include="BjdServices\Achieves\SetActivitiesService.cs">
+      <DependentUpon>GetMyBjdDetailService.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BjdServices\Achieves\SetAgentService.cs">
+      <DependentUpon>GetMyBjdDetailService.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BjdServices\Achieves\SetBaseInfoService.cs">
+      <DependentUpon>GetMyBjdDetailService.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BjdServices\Achieves\SetCarInfoService.cs">
+      <DependentUpon>GetMyBjdDetailService.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BjdServices\Achieves\SetClaimsService.cs">
+      <DependentUpon>GetMyBjdDetailService.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BjdServices\Achieves\SetDateService.cs">
+      <DependentUpon>GetMyBjdDetailService.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BjdServices\Achieves\SetOrderNewService.cs" />
+    <Compile Include="BjdServices\Achieves\SetOrderService.cs">
+      <DependentUpon>GetMyBjdDetailService.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BjdServices\Achieves\SetPrecisePriceItemNewService.cs" />
+    <Compile Include="BjdServices\Achieves\SetPrecisePriceItemService.cs">
+      <DependentUpon>GetMyBjdDetailService.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BjdServices\Achieves\SetQuoteReqNewService.cs" />
+    <Compile Include="BjdServices\Achieves\SetQuoteReqService.cs">
+      <DependentUpon>GetMyBjdDetailService.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BjdServices\Extends\AddCrmStepsService.cs" />
+    <Compile Include="BjdServices\Extends\GetModelsFromQuoteHistory.cs" />
+    <Compile Include="BjdServices\Extends\GetTempInsured.cs" />
+    <Compile Include="BjdServices\Extends\IAddCrmStepsService.cs" />
+    <Compile Include="BjdServices\Extends\IGetModelsFromQuoteHistory.cs" />
+    <Compile Include="BjdServices\Extends\ISetPrecisePriceItem.cs" />
+    <Compile Include="BjdServices\Extends\ISetPrecisePriceItemNew.cs" />
+    <Compile Include="BjdServices\Extends\SetBaseInfoHistoryService.cs" />
+    <Compile Include="BjdServices\Extends\SetPrecisePriceItem.cs" />
+    <Compile Include="BjdServices\Extends\SetPrecisePriceItemNew.cs" />
+    <Compile Include="BjdServices\Interfaces\ICheckRequestService.cs">
+      <DependentUpon>IGetMyBjdDetailService.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BjdServices\Interfaces\IGetBjdDetailFromHistoryService.cs" />
+    <Compile Include="BjdServices\Interfaces\IGetDateNewService.cs" />
+    <Compile Include="BjdServices\Interfaces\IGetDateService.cs">
+      <DependentUpon>IGetMyBjdDetailService.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BjdServices\Interfaces\IGetMyBjdDetailService.cs" />
+    <Compile Include="BjdServices\Interfaces\IGetTempInsured.cs" />
+    <Compile Include="BjdServices\Interfaces\ISetActivitiesService.cs">
+      <DependentUpon>IGetMyBjdDetailService.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BjdServices\Interfaces\ISetAgentService.cs">
+      <DependentUpon>IGetMyBjdDetailService.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BjdServices\Interfaces\ISetBaseInfoHistoryService.cs" />
+    <Compile Include="BjdServices\Interfaces\ISetBaseInfoService.cs">
+      <DependentUpon>IGetMyBjdDetailService.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BjdServices\Interfaces\ISetCarInfoService.cs">
+      <DependentUpon>IGetMyBjdDetailService.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BjdServices\Interfaces\ISetClaimsService.cs">
+      <DependentUpon>IGetMyBjdDetailService.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BjdServices\Interfaces\ISetDateService.cs">
+      <DependentUpon>IGetMyBjdDetailService.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BjdServices\Interfaces\ISetOrderNewService.cs" />
+    <Compile Include="BjdServices\Interfaces\ISetOrderService.cs">
+      <DependentUpon>IGetMyBjdDetailService.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BjdServices\Interfaces\ISetPrecisePriceItemNewService.cs" />
+    <Compile Include="BjdServices\Interfaces\ISetPrecisePriceItemService.cs">
+      <DependentUpon>IGetMyBjdDetailService.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BjdServices\Interfaces\ISetQuoteReqNewService.cs" />
+    <Compile Include="BjdServices\Interfaces\ISetQuoteReqService.cs">
+      <DependentUpon>IGetMyBjdDetailService.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CacheChannelService.cs" />
+    <Compile Include="BjdServices\Achieves\GetBjdInfoService.cs" />
+    <Compile Include="BjdServices\Extends\BjdInfoViewModel.cs" />
+    <Compile Include="BjdServices\Extends\GetBjdCheck.cs" />
+    <Compile Include="BjdServices\Extends\GetBjdCheckMessage.cs" />
+    <Compile Include="BjdServices\Extends\IGetBjdCheck.cs" />
+    <Compile Include="BjdServices\Extends\IMapBjdInfoRecord.cs" />
+    <Compile Include="BjdServices\Extends\MapBjdInfoRecord.cs" />
+    <Compile Include="BjdServices\Interfaces\IGetBjdInfoService.cs" />
+    <Compile Include="CacheManagerService.cs" />
+    <Compile Include="CacheServices\CarInsuranceCache.cs" />
+    <Compile Include="CacheServices\ICarInsuranceCache.cs" />
+    <Compile Include="CacheServices\IUserClaimCache.cs" />
+    <Compile Include="CacheServices\UserClaimCache.cs" />
+    <Compile Include="CarInsuranceService.cs" />
+    <Compile Include="AgentChannelService\Implementations\ChannelModelMapRedisService.cs" />
+    <Compile Include="AgentChannelService\Implementations\ChannelService.cs" />
+    <Compile Include="ChannelService\CacheCityChannelService.cs" />
+    <Compile Include="ChannelService\CityChannelService.cs" />
+    <Compile Include="ChannelService\GetSourceOfCityRequest.cs" />
+    <Compile Include="ChannelService\GetSourceOfCityResponse.cs" />
+    <Compile Include="ChannelService\ICityChannelService.cs" />
+    <Compile Include="CommonService\implementations\AgentPrivilegeService.cs" />
+    <Compile Include="CommonService\implementations\HttpGetRequestValidService.cs" />
+    <Compile Include="CommonService\interfaces\IAgentPrivilegeService.cs" />
+    <Compile Include="CommonService\interfaces\IRequestValidService.cs" />
+    <Compile Include="ConfigService\Implementations\GetConfigValueService.cs" />
+    <Compile Include="ConfigService\Interfaces\IGetConfigValueService.cs" />
+    <Compile Include="DistributeService\Implements\FilterMoldNameService.cs" />
+    <Compile Include="DistributeService\Implements\FiterAndRepeatDataService.cs" />
+    <Compile Include="DistributeService\Interfaces\IFilterMoldNameService.cs" />
+    <Compile Include="DistributeService\Interfaces\IFiterAndRepeatDataService.cs" />
+    <Compile Include="Distribute\Implements\CameraDistributeService.cs" />
+    <Compile Include="Distribute\Interfaces\ICameraDistributeService.cs" />
+    <Compile Include="GetCarInfoService\Implementations\GetFirstVehicleInfoService.cs" />
+    <Compile Include="GetAccidentListService.cs" />
+    <Compile Include="GetCarInfoService\Implementations\GetMoldNameFromCenter.cs" />
+    <Compile Include="GetCarInfoService\Implementations\GetNewVehicleInfoService.cs" />
+    <Compile Include="GetCarInfoService\Implementations\GetSecondVehicleInfoService.cs" />
+    <Compile Include="GetCarInfoService\Interfaces\IGetFirstVehicleInfoService.cs" />
+    <Compile Include="GetCarInfoService\Interfaces\IGetMoldNameFromCenter.cs" />
+    <Compile Include="GetCarInfoService\Interfaces\IGetNewVehicleInfoService.cs" />
+    <Compile Include="GetCarInfoService\Interfaces\IGetSecondVehicleInfoService.cs" />
+    <Compile Include="GetCenterValueService\Implementations\GetCenterValueService.cs" />
+    <Compile Include="GetCenterValueService\Interfaces\IGetCenterValueService.cs" />
+    <Compile Include="GetPrecisePriceService\Implementations\CheckRequestGetPrecisePrice.cs" />
+    <Compile Include="GetPrecisePriceService\Interfaces\ICheckRequestGetPrecisePrice.cs" />
+    <Compile Include="GetReInfoService\Implementations\CheckCarNeedDrivingInfoService.cs" />
+    <Compile Include="GetReInfoService\Implementations\CheckReInfoService.cs" />
+    <Compile Include="GetReInfoService\Implementations\CheckRequestReInfo.cs" />
+    <Compile Include="GetReInfoService\Implementations\GetIntelligentInsurance.cs" />
+    <Compile Include="GetReInfoService\Implementations\GetIntelligentReInfoService.cs" />
+    <Compile Include="GetReInfoService\Implementations\GetReInfoMainService.cs" />
+    <Compile Include="GetReInfoService\Implementations\GetReInfoState.cs" />
+    <Compile Include="GetReInfoService\Implementations\IsFalseReInfoService.cs" />
+    <Compile Include="GetReInfoService\Implementations\PackagingResponseService.cs" />
+    <Compile Include="GetReInfoService\Implementations\PostThirdPartService.cs" />
+    <Compile Include="GetReInfoService\Implementations\ReWriteUserInfo.cs" />
+    <Compile Include="GetReInfoService\Implementations\SentDistributedService.cs" />
+    <Compile Include="GetReInfoService\Implementations\ToCenterFromReInfoService.cs" />
+    <Compile Include="GetReInfoService\Interfaces\ICheckCarNeedDrivingInfoService.cs" />
+    <Compile Include="GetReInfoService\Interfaces\ICheckReInfoService.cs" />
+    <Compile Include="GetReInfoService\Interfaces\ICheckRequestReInfo.cs" />
+    <Compile Include="GetReInfoService\Interfaces\IGetIntelligentInsurance.cs" />
+    <Compile Include="GetReInfoService\Interfaces\IGetIntelligentReInfoService.cs" />
+    <Compile Include="GetReInfoService\Interfaces\IGetReInfoMainService.cs" />
+    <Compile Include="GetReInfoService\Interfaces\IGetReInfoState.cs" />
+    <Compile Include="GetReInfoService\Interfaces\IIsFalseReInfoService.cs" />
+    <Compile Include="GetReInfoService\Interfaces\IPackagingResponseService.cs" />
+    <Compile Include="GetReInfoService\Interfaces\IPostThirdPartService.cs" />
+    <Compile Include="GetReInfoService\Interfaces\IReWriteUserInfo.cs" />
+    <Compile Include="GetReInfoService\Interfaces\ISentDistributedService.cs" />
+    <Compile Include="GetReInfoService\Interfaces\IToCenterFromReInfoService.cs" />
+    <Compile Include="GetSubmitInfoService\Implementations\CheckRequestGetSubmitInfo.cs" />
+    <Compile Include="GetSubmitInfoService\Interfaces\ICheckRequestGetSubmitInfo.cs" />
+    <Compile Include="IndependentService\Mapper\FloatingInfoMapper.cs" />
+    <Compile Include="Interfaces\IAuthorityService.cs" />
+    <Compile Include="Interfaces\IGetAccidentListService.cs" />
+    <Compile Include="Interfaces\IQuoteSpecialService.cs" />
+    <Compile Include="Interfaces\IRecordNewCarService.cs" />
+    <Compile Include="Interfaces\IRenewalStatusService.cs" />
+    <Compile Include="Mapper\CacheChannelMapper.cs" />
+    <Compile Include="Mapper\JiaYiModelMapper.cs" />
+    <Compile Include="Mapper\RecommendToSaveQuoteMapper.cs" />
+    <Compile Include="Mapper\ReInfoXianZhongMapper.cs" />
+    <Compile Include="Mapper\TransferModelListMapper.cs" />
+    <Compile Include="Messages\RemoteMessage\CarRenewalInsuranceModel.cs" />
+    <Compile Include="Messages\RemoteMessage\CenterPicCodeCacheModel.cs" />
+    <Compile Include="Messages\RemoteMessage\RecommendModel.cs" />
+    <Compile Include="Messages\RemoteMessage\WaBxSysJyxResponse.cs" />
+    <Compile Include="Messages\Request\GetAccidentListRequest.cs" />
+    <Compile Include="Messages\Request\GetBjdDetailFromHistoryRequest.cs" />
+    <Compile Include="Messages\Request\GetChannelStatusByUkeyIdRequest.cs" />
+    <Compile Include="Messages\Request\GetIntelligentReInfoRequest.cs" />
+    <Compile Include="Messages\Request\GetRecordNewCarRequest.cs" />
+    <Compile Include="Messages\Request\GetSpecialListRequest.cs" />
+    <Compile Include="Messages\Request\IsUploadImgRequest.cs" />
+    <Compile Include="GetAgentConfigByCityService\Implementations\GetAgentConfigByCitysService.cs" />
+    <Compile Include="GetAgentConfigByCityService\Interfaces\IGetAgentConfigByCitysService.cs" />
+    <Compile Include="Messages\Request\GetLastQuotedRequest.cs" />
+    <Compile Include="Messages\Request\MultiQuotedChannelsRequest.cs" />
+    <Compile Include="Messages\Request\RecordNewCarRequest.cs" />
+    <Compile Include="Messages\Response\GetIntelligentReInfoResponse.cs" />
+    <Compile Include="Messages\Response\GetRecordNewCarResponse.cs" />
+    <Compile Include="Messages\Response\MultiChannels.cs" />
+    <Compile Include="Messages\Response\SpecialListResponse.cs" />
+    <Compile Include="PrecisePriceService\Implementations\AddJiaYiService.cs" />
+    <Compile Include="PrecisePriceService\Implementations\CheckMultiChannels.cs" />
+    <Compile Include="IndependentService\Implementations\GetFloatingInfoService.cs" />
+    <Compile Include="IndependentService\Implementations\GetSpecialAssumpsitService.cs" />
+    <Compile Include="IndependentService\Implementations\PostIndependentSubmitService.cs" />
+    <Compile Include="IndependentService\Interfaces\IGetFloatingInfoService.cs" />
+    <Compile Include="IndependentService\Interfaces\IGetSpecialAssumpsitService.cs" />
+    <Compile Include="IndependentService\Interfaces\IPostIndependentSubmitService.cs" />
+    <Compile Include="Messages\Request\GetFloatingInfoRequest.cs" />
+    <Compile Include="Messages\Request\GetSpecialAssumpsitRequest.cs" />
+    <Compile Include="Messages\Request\PostIndependentSubmitRequest.cs" />
+    <Compile Include="Messages\Request\UserInfoValidateRequest.cs" />
+    <Compile Include="Messages\Response\AXGainFixSpecInfoResponse.cs" />
+    <Compile Include="Messages\Response\GetFloatingInfoResponse.cs" />
+    <Compile Include="Messages\Response\GetSpecialAssumpsitResponse.cs" />
+    <Compile Include="Messages\Response\PostIndependentSubmitResponse.cs" />
+    <Compile Include="PrecisePriceService\Implementations\CheckReqBaseInfo.cs" />
+    <Compile Include="PrecisePriceService\Implementations\CheckReqInsurance.cs" />
+    <Compile Include="PrecisePriceService\Implementations\CheckRequestPostPrecisePrice.cs" />
+    <Compile Include="PrecisePriceService\Implementations\CheckShebei.cs" />
+    <Compile Include="PrecisePriceService\Implementations\CheckXianZhong.cs" />
+    <Compile Include="PrecisePriceService\Implementations\GetMonth.cs" />
+    <Compile Include="PrecisePriceService\Implementations\GetMultiChannels.cs" />
+    <Compile Include="PrecisePriceService\Implementations\MultiChannelsService.cs" />
+    <Compile Include="PrecisePriceService\Implementations\SpecialOptionService.cs" />
+    <Compile Include="PrecisePriceService\Implementations\TempDemoShowService.cs" />
+    <Compile Include="PrecisePriceService\Implementations\UpdateAgentSelect.cs" />
+    <Compile Include="PrecisePriceService\Implementations\UpdateQuoteManySource.cs" />
+    <Compile Include="PrecisePriceService\Interfaces\IAddJiaYiService.cs" />
+    <Compile Include="PrecisePriceService\Interfaces\ICheckMultiChannels.cs" />
+    <Compile Include="PrecisePriceService\Interfaces\ICheckReqBaseInfo.cs" />
+    <Compile Include="PrecisePriceService\Interfaces\ICheckReqInsurance.cs" />
+    <Compile Include="PrecisePriceService\Interfaces\ICheckRequestPostPrecisePrice.cs" />
+    <Compile Include="PrecisePriceService\Interfaces\ICheckShebei.cs" />
+    <Compile Include="PrecisePriceService\Interfaces\ICheckXianZhong.cs" />
+    <Compile Include="PrecisePriceService\Interfaces\IGetMonth.cs" />
+    <Compile Include="PrecisePriceService\Interfaces\IGetMultiChannels.cs" />
+    <Compile Include="PrecisePriceService\Interfaces\IMultiChannelsService.cs" />
+    <Compile Include="PrecisePriceService\Interfaces\ISpecialOptionService.cs" />
+    <Compile Include="PrecisePriceService\Interfaces\ITempDemoShowService.cs" />
+    <Compile Include="PrecisePriceService\Interfaces\IUpdateAgentSelect.cs" />
+    <Compile Include="PrecisePriceService\Interfaces\IUpdateQuoteManySource.cs" />
+    <Compile Include="QuotedChannelsService\Implementations\GetMultiQuotedChannelsService.cs" />
+    <Compile Include="QuotedChannelsService\Interfaces\IGetMultiQuotedChannelsService.cs" />
+    <Compile Include="QuoteSpecialService.cs" />
+    <Compile Include="RecordNewCarService.cs" />
+    <Compile Include="RenewalStatusService.cs" />
+    <Compile Include="RepeatSubmitService\Implementations\CacheGetExpireDate.cs" />
+    <Compile Include="RepeatSubmitService\Implementations\DbGetExpireDate.cs" />
+    <Compile Include="RepeatSubmitService\Implementations\CacheRepeatInfoFormat.cs" />
+    <Compile Include="RepeatSubmitService\Implementations\DbRepeatInfoFormat.cs" />
+    <Compile Include="RepeatSubmitService\Implementations\RepeatSubmitInnerService.cs" />
+    <Compile Include="RepeatSubmitService\Implementations\RepeatSubmitService.cs" />
+    <Compile Include="RepeatSubmitService\interfaces\IGetExpireDate.cs" />
+    <Compile Include="RepeatSubmitService\interfaces\IRepeatInfoFormat.cs" />
+    <Compile Include="RepeatSubmitService\interfaces\IRepeatSubmitService.cs" />
+    <Compile Include="Mapper\RepeatSubmitMapper.cs" />
+    <Compile Include="Messages\Request\GetRepeatSubmitRequest.cs" />
+    <Compile Include="Messages\Response\GetRepeatSubmitResponse.cs" />
+    <Compile Include="Messages\Response\PostSubmitInfoResponse.cs" />
+    <Compile Include="RedisOperateException.cs" />
+    <Compile Include="SubmitInfoService\Implementations\PostSubmitInfoService.cs" />
+    <Compile Include="SubmitInfoService\Implementations\PostValidate.cs" />
+    <Compile Include="SubmitInfoService\Implementations\RemoveHeBaoKey.cs" />
+    <Compile Include="SubmitInfoService\Interfaces\IPostSubmitInfoService.cs" />
+    <Compile Include="ChargeService.cs" />
+    <Compile Include="ChargingSystemService.cs" />
+    <Compile Include="CityService.cs" />
+    <Compile Include="CommonBehaviorService.cs" />
+    <Compile Include="BjdServices\Extends\CreateActivity.cs" />
+    <Compile Include="DriverLicenseTypeService.cs" />
+    <Compile Include="EnumService.cs" />
+    <Compile Include="Factories\QuoteReqCarInfoMakeFactory.cs" />
+    <Compile Include="Factories\UserinfoMakeFactory.cs" />
+    <Compile Include="GscService.cs" />
+    <Compile Include="ICityService.cs" />
+    <Compile Include="ImagesService.cs" />
+    <Compile Include="InterfacesDemoService.cs" />
+    <Compile Include="Factories\UserinfoSearchFactory.cs" />
+    <Compile Include="BjdServices\Achieves\CreateBjdInfoService.cs" />
+    <Compile Include="BjdServices\Interfaces\ICreateBjdInfoService.cs" />
+    <Compile Include="BjdServices\Extends\IMapBaoDanXianZhongRecord.cs" />
+    <Compile Include="BjdServices\Extends\IUpdateBjdCheck.cs" />
+    <Compile Include="BjdServices\Extends\MapBaoDanXianZhongRecord.cs" />
+    <Compile Include="BjdServices\Extends\Service.cs" />
+    <Compile Include="BjdServices\Extends\IMapBaoDanXinXiRecord.cs" />
+    <Compile Include="BjdServices\Extends\MapBaoDanXinXiRecord.cs" />
+    <Compile Include="BjdServices\Extends\UpdateBjdCheck.cs" />
+    <Compile Include="BjdServices\Extends\UpdateBjdCheckMessage.cs" />
+    <Compile Include="Interfaces\ICacheManagerService.cs" />
+    <Compile Include="Interfaces\IAddressService.cs" />
+    <Compile Include="Interfaces\IAgentPointService.cs" />
+    <Compile Include="Interfaces\IAgentService.cs" />
+    <Compile Include="Interfaces\IAgentUKeyService.cs" />
+    <Compile Include="Interfaces\IAppAchieveService.cs" />
+    <Compile Include="Interfaces\IAppSettingService.cs" />
+    <Compile Include="Interfaces\IAppVerifyService.cs" />
+    <Compile Include="Interfaces\IAreaService.cs" />
+    <Compile Include="Interfaces\IBjdService.cs" />
+    <Compile Include="Interfaces\ICarInsuranceService.cs" />
+    <Compile Include="AgentChannelService\Interfaces\IChannelModelMapRedisService.cs" />
+    <Compile Include="AgentChannelService\Interfaces\IChannelService.cs" />
+    <Compile Include="Interfaces\IChargeService.cs" />
+    <Compile Include="Interfaces\IChargingSystemService.cs" />
+    <Compile Include="BjdServices\Extends\ICreateActivity.cs" />
+    <Compile Include="Interfaces\IDriverLicenseTypeService.cs" />
+    <Compile Include="Interfaces\IEnumService.cs" />
+    <Compile Include="Interfaces\IGscService.cs" />
+    <Compile Include="Interfaces\IImagesService.cs" />
+    <Compile Include="Interfaces\IMessageService.cs" />
+    <Compile Include="Interfaces\IMySqlMonitorService.cs" />
+    <Compile Include="Interfaces\INoticexbService.cs" />
+    <Compile Include="Interfaces\IOrderService.cs" />
+    <Compile Include="Interfaces\IPictureService.cs" />
+    <Compile Include="Interfaces\ISmsService.cs" />
+    <Compile Include="Interfaces\IUserClaimService.cs" />
+    <Compile Include="Interfaces\IUserService.cs" />
+    <Compile Include="Interfaces\IWorkOrderService.cs" />
+    <Compile Include="Interfaces\LoginService.cs" />
+    <Compile Include="LoginService.cs" />
+    <Compile Include="Mapper\AgentIdentityAndRateMapper.cs" />
+    <Compile Include="Mapper\AgentMapper.cs" />
+    <Compile Include="Mapper\AgentPointMapper.cs" />
+    <Compile Include="Mapper\AgentSourceMapper.cs" />
+    <Compile Include="Mapper\AgentUKeyMapper.cs" />
+    <Compile Include="Mapper\BjdItemMapper.cs" />
+    <Compile Include="Mapper\CarChargeMapper.cs" />
+    <Compile Include="Mapper\CarOrderMapper.cs" />
+    <Compile Include="Mapper\CarVehicleMapper.cs" />
+    <Compile Include="Mapper\CityMapper.cs" />
+    <Compile Include="Mapper\CityUKeyMapper.cs" />
+    <Compile Include="Mapper\ContiunedPeriodMapper.cs" />
+    <Compile Include="Mapper\DriverLicenseTypeMapper.cs" />
+    <Compile Include="Mapper\HistoryContractMapper.cs" />
+    <Compile Include="Mapper\LastDayReInfoTotalMapper.cs" />
+    <Compile Include="Mapper\MessageMapper.cs" />
+    <Compile Include="Mapper\MyListMapper.cs" />
+    <Compile Include="Mapper\NewBxCarVehicleInfoMapper.cs" />
+    <Compile Include="Mapper\OrderMapper.cs" />
+    <Compile Include="Mapper\ParaBhTypeMapper.cs" />
+    <Compile Include="Mapper\PrecisePriceMapper.cs" />
+    <Compile Include="Mapper\QuoteResultCarInfoMapper.cs" />
+    <Compile Include="Mapper\ReportClaimMapper.cs" />
+    <Compile Include="Mapper\SaveQuoteMapper.cs" />
+    <Compile Include="Mapper\SmsAccountMapper.cs" />
+    <Compile Include="Mapper\SmsOrderMapper.cs" />
+    <Compile Include="Mapper\SubmitInfoMapper.cs" />
+    <Compile Include="Mapper\UserCalimMapper.cs" />
+    <Compile Include="Mapper\UserInfoMapper.cs" />
+    <Compile Include="Mapper\VehicleInfoMapper.cs" />
+    <Compile Include="Mapper\ViolationMapper.cs" />
+    <Compile Include="Mapper\WorkOrderMapper.cs" />
+    <Compile Include="MessageService.cs" />
+    <Compile Include="Messages\RemoteMessage\BxCarVehicleInfo.cs" />
+    <Compile Include="Messages\RemoteMessage\DepriciatePriceModel.cs" />
+    <Compile Include="Messages\RemoteMessage\FindVehicleInfo.cs" />
+    <Compile Include="Messages\RemoteMessage\VehicleInfo.cs" />
+    <Compile Include="Messages\Request\AdditionalReInfoRequest.cs" />
+    <Compile Include="Messages\Request\AddMultipleRequest.cs" />
+    <Compile Include="Messages\Request\AddOrUpdateWorkOrderDetailRequest.cs" />
+    <Compile Include="Messages\Request\AddReVisitedRequest.cs" />
+    <Compile Include="Messages\Request\AppBaseRequest.cs" />
+    <Compile Include="Messages\Request\BjdCountInfoRequest.cs" />
+    <Compile Include="Messages\Request\ChangeReInfoAgentRequest.cs" />
+    <Compile Include="Messages\Request\DelAgentPropertiyCacheRequest.cs" />
+    <Compile Include="Messages\Request\EditAgentUKeyRequest.cs" />
+    <Compile Include="Messages\Request\EditBackupPwdRequest.cs" />
+    <Compile Include="Messages\Request\GetAppVersionRequest.cs" />
+    <Compile Include="Messages\Request\GetByBuidRequest.cs" />
+    <Compile Include="Messages\Request\GetCancelSubmitRequest.cs" />
+    <Compile Include="Messages\Request\GetCarVehicleRequest.cs" />
+    <Compile Include="Messages\Request\GetChannelStatusRequest.cs" />
+    <Compile Include="Messages\Request\GetCityContinuedPeriodRequest.cs" />
+    <Compile Include="Messages\Request\GetClearAgentSourceRequest.cs" />
+    <Compile Include="Messages\Request\GetDepreciationPriceRequest.cs" />
+    <Compile Include="Messages\Request\GetDiscountPriceRequest.cs" />
+    <Compile Include="Messages\Request\GetDriverLicenseCarTypeRequest.cs" />
+    <Compile Include="Messages\Request\GetMoldNameRequest.cs" />
+    <Compile Include="Messages\Request\GetMyListRequest.cs" />
+    <Compile Include="Messages\Request\GetParaBhTypeRequest.cs" />
+    <Compile Include="Messages\Request\GetReportClaimRequest.cs" />
+    <Compile Include="Messages\RemoteMessage\WaFindCarInfoResponse.cs" />
+    <Compile Include="Messages\RemoteMessage\WaGetClaimHistoryResponse.cs" />
+    <Compile Include="Messages\Request\AddMessageRequest.cs" />
+    <Compile Include="Messages\Request\AddNoticexbRequest.cs" />
+    <Compile Include="Messages\Request\AddOrUpdateWorkOrderRequest.cs" />
+    <Compile Include="Messages\Request\AddressRequest.cs" />
+    <Compile Include="Messages\Request\ApproveAgentRequest.cs" />
+    <Compile Include="Messages\Request\BaseRequest.cs" />
+    <Compile Include="Messages\Request\CreateAccountRequest.cs" />
+    <Compile Include="Messages\Request\CreateChargeRequest.cs" />
+    <Compile Include="Messages\Request\CreateOrderRequest.cs" />
+    <Compile Include="Messages\Request\CreateOrUpdateBjdInfoRequest.cs" />
+    <Compile Include="Messages\Request\CreateSureOrderRequest.cs" />
+    <Compile Include="Messages\Request\GetAgentIdentityAndRateRequest.cs" />
+    <Compile Include="Messages\Request\GetAgentRequest.cs" />
+    <Compile Include="Messages\Request\GetAgentResourceRequest.cs" />
+    <Compile Include="Messages\Request\GetAgentSourceRequest.cs" />
+    <Compile Include="Messages\Request\GetMyBjdDetailRequest.cs" />
+    <Compile Include="Messages\Request\GetMyBjdListRequest.cs" />
+    <Compile Include="Messages\Request\GetBjdItemRequest.cs" />
+    <Compile Include="Messages\Request\GetCityListRequest.cs" />
+    <Compile Include="Messages\Request\GetEscapedInfoRequest.cs" />
+    <Compile Include="Messages\Request\GetImageRequest.cs" />
+    <Compile Include="Messages\Request\GetOrderByBuidRequest.cs" />
+    <Compile Include="Messages\Request\GetOrderRequest.cs" />
+    <Compile Include="Messages\Request\GetOrdersRequest.cs" />
+    <Compile Include="Messages\Request\GetPrecisePriceRequest.cs" />
+    <Compile Include="Messages\Request\GetReInfoDetailRequest.cs" />
+    <Compile Include="Messages\Request\GetReInfoListRequest.cs" />
+    <Compile Include="Messages\Request\GetReInfoRequest.cs" />
+    <Compile Include="Messages\Request\GetSmsOrderDetailRequest.cs" />
+    <Compile Include="Messages\Request\GetSubmitInfoRequest.cs" />
+    <Compile Include="Messages\Request\GetUKeyListRequest.cs" />
+    <Compile Include="Messages\Request\GetViolationInfoRequest.cs" />
+    <Compile Include="Messages\Request\LastDayReInfoTotalRequest.cs" />
+    <Compile Include="Messages\Request\MessageListRequest.cs" />
+    <Compile Include="Messages\Request\ModifyOrderRequest.cs" />
+    <Compile Include="Messages\Request\MsgClosedOrderRequest.cs" />
+    <Compile Include="Messages\Request\OrderDetailRequest.cs" />
+    <Compile Include="Messages\Request\PostAddAgentRequest.cs" />
+    <Compile Include="Messages\Request\PostPrecisePriceRequest.cs" />
+    <Compile Include="Messages\Request\PostSubmitInfoRequest.cs" />
+    <Compile Include="Messages\Request\ReadMessageRequest.cs" />
+    <Compile Include="Messages\Request\ReVisitedListRequest.cs" />
+    <Compile Include="Messages\Request\SmsAccountRequest.cs" />
+    <Compile Include="Messages\Request\SmsCreateOrderRequest.cs" />
+    <Compile Include="Messages\Request\SmsOrderStatusRequest.cs" />
+    <Compile Include="Messages\Request\SmsRequest.cs" />
+    <Compile Include="Messages\Request\UpdateChargeRequest.cs" />
+    <Compile Include="Messages\Request\GetByOpenIdRequest.cs" />
+    <Compile Include="Messages\Request\UpdateOrderRequest.cs" />
+    <Compile Include="Messages\Request\UploadImgRequest.cs" />
+    <Compile Include="Messages\Request\UploadMultipleImgRequest.cs" />
+    <Compile Include="Messages\Request\WorkOrderDetailListRequest.cs" />
+    <Compile Include="Messages\Response\AdditionalReInfoResponse.cs" />
+    <Compile Include="Messages\Response\AddMessageResponse.cs" />
+    <Compile Include="Messages\Response\AddNoticexbResponse.cs" />
+    <Compile Include="Messages\Response\AddOrUpdateWorkOrderResponse.cs" />
+    <Compile Include="Messages\Response\AppBaseResponse.cs" />
+    <Compile Include="Messages\Response\ApproveAgentResponse.cs" />
+    <Compile Include="Messages\Response\BaseResponse.cs" />
+    <Compile Include="Messages\Response\ChangeReInfoAgentResponse.cs" />
+    <Compile Include="Messages\Response\CheckCarVehicleInfoResponse.cs" />
+    <Compile Include="Messages\Response\CreateOrderResponse.cs" />
+    <Compile Include="Messages\Response\DriverLicenseTypeResponse.cs" />
+    <Compile Include="Messages\Response\GetAgentIdentityAndRateResponse.cs" />
+    <Compile Include="Messages\Response\GetAgentListResponse.cs" />
+    <Compile Include="Messages\Response\GetAgentSourceResponse.cs" />
+    <Compile Include="Messages\Response\GetAgentResponse.cs" />
+    <Compile Include="Messages\Response\GetAppVersionResponse.cs" />
+    <Compile Include="Messages\Response\GetCancelSubmitResponse.cs" />
+    <Compile Include="Messages\Response\GetCarVehicleInfoResponse.cs" />
+    <Compile Include="Messages\Response\GetChannelStatusResponse.cs" />
+    <Compile Include="Messages\Response\GetContinedPeriodResponse.cs" />
+    <Compile Include="Messages\Response\GetLicenseResponse.cs" />
+    <Compile Include="Messages\Response\GetMoldNameResponse.cs" />
+    <Compile Include="Messages\Response\GetMyBjdListResponse.cs" />
+    <Compile Include="Messages\Response\GetBjdItemResponse.cs" />
+    <Compile Include="Messages\Response\GetCarClaimResponse.cs" />
+    <Compile Include="Messages\Response\GetCityListResponse.cs" />
+    <Compile Include="Messages\Response\GetEscapedInfoResponse.cs" />
+    <Compile Include="Messages\Response\GetParaBhTypeResponse.cs" />
+    <Compile Include="Messages\Response\GetPrecisePriceReponse.cs" />
+    <Compile Include="Messages\Response\GetReInfoResponse.cs" />
+    <Compile Include="Messages\Response\GetReportClaimResponse.cs" />
+    <Compile Include="Messages\Response\GetSmsAccountResponse.cs" />
+    <Compile Include="Messages\Response\GetSmsOrderDetailResponse.cs" />
+    <Compile Include="Messages\Response\GetSmsOrderStatusResponse.cs" />
+    <Compile Include="Messages\Response\GetSmsOrderResponse.cs" />
+    <Compile Include="Messages\Response\GetSubmitInfoResponse.cs" />
+    <Compile Include="Messages\Response\GetViolationInfoResponse.cs" />
+    <Compile Include="Messages\Response\LastDayReInfoTotalResponse.cs" />
+    <Compile Include="Messages\Response\MessageListResponse.cs" />
+    <Compile Include="Messages\Response\MsgClosedOrderResponse.cs" />
+    <Compile Include="Messages\Response\OrderCacheResponse.cs" />
+    <Compile Include="Messages\Response\OrderDetailResponse.cs" />
+    <Compile Include="Messages\Response\PostPrecisePriceResponse.cs" />
+    <Compile Include="Messages\Response\PushMessageResponse.cs" />
+    <Compile Include="Messages\Response\ReadMessageResponse.cs" />
+    <Compile Include="Messages\Response\TaiPyQueryVehicleByVinEngiInfo.cs" />
+    <Compile Include="Messages\Response\TempInsuredResponse.cs" />
+    <Compile Include="Messages\Response\UKeyListResponse.cs" />
+    <Compile Include="Messages\Response\UpdateChargeResponse.cs" />
+    <Compile Include="Messages\Response\UpdateOrderResponse.cs" />
+    <Compile Include="Messages\Response\WaGetTaiPyCarInfoResponse.cs" />
+    <Compile Include="Messages\Response\WorkOrderDetailListResponse.cs" />
+    <Compile Include="MySqlMonitorService.cs" />
+    <Compile Include="NoticexbService.cs" />
+    <Compile Include="OrderService.cs" />
+    <Compile Include="PictureService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SmsService.cs" />
+    <Compile Include="SubmitInfoService\Interfaces\IPostValidate.cs" />
+    <Compile Include="SubmitInfoService\Interfaces\IRemoveHeBaoKey.cs" />
+    <Compile Include="TestFactory.cs" />
+    <Compile Include="UploadImgService\Implementations\CheckUploadImgTimes.cs" />
+    <Compile Include="UploadImgService\Implementations\UpdateImgTimes.cs" />
+    <Compile Include="UploadImgService\Implementations\UploadImgValidate.cs" />
+    <Compile Include="UploadImgService\Implementations\UploadMultipleImgService.cs" />
+    <Compile Include="UploadImgService\Interfaces\ICheckUploadImgTimes.cs" />
+    <Compile Include="UploadImgService\Interfaces\IUpdateImgTimes.cs" />
+    <Compile Include="UploadImgService\Interfaces\IUploadImgValidate.cs" />
+    <Compile Include="UploadImgService\Interfaces\IUploadMultipleImgService.cs" />
+    <Compile Include="UserClaimService.cs" />
+    <Compile Include="UserinfoFactoryService\Implementations\QuoteAddService.cs" />
+    <Compile Include="UserinfoFactoryService\Implementations\QuoteUpdateService.cs" />
+    <Compile Include="UserinfoFactoryService\Interfaces\IQuoteAddService.cs" />
+    <Compile Include="UserinfoFactoryService\Interfaces\IQuoteUpdateService.cs" />
+    <Compile Include="UserService.cs" />
+    <Compile Include="ValidateService\Achieves\CheckGetSecCode.cs" />
+    <Compile Include="ValidateService\Achieves\CheckQuoteValidService.cs" />
+    <Compile Include="ValidateService\Achieves\GetAgentInfoService.cs" />
+    <Compile Include="ValidateService\Achieves\UserInfoValidateService.cs" />
+    <Compile Include="ValidateService\Achieves\ValidateService.cs" />
+    <Compile Include="ValidateService\Interfaces\ICheckGetSecCode.cs" />
+    <Compile Include="ValidateService\Interfaces\ICheckQuoteValidService.cs" />
+    <Compile Include="ValidateService\Interfaces\IGetAgentInfoService.cs" />
+    <Compile Include="ValidateService\Interfaces\IUserInfoValidateService.cs" />
+    <Compile Include="ValidateService\Interfaces\IValidateService.cs" />
+    <Compile Include="WorkOrderService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BiHuManBu.ExternalInterfaces.Infrastructure\BiHuManBu.ExternalInterfaces.Infrastructure.csproj">
+      <Project>{8218e846-f22c-4318-9faa-838ede8cc58c}</Project>
+      <Name>BiHuManBu.ExternalInterfaces.Infrastructure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BiHuManBu.ExternalInterfaces.Models\BiHuManBu.ExternalInterfaces.Models.csproj">
+      <Project>{3814e7e1-9cae-4e12-bb7a-becda662c19a}</Project>
+      <Name>BiHuManBu.ExternalInterfaces.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BiHuManBu.ExternalInterfaces.Repository\BiHuManBu.ExternalInterfaces.Repository.csproj">
+      <Project>{3fbd97d2-bf8f-4637-861e-d1be5932360d}</Project>
+      <Name>BiHuManBu.ExternalInterfaces.Repository</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BiHuManBu.ExternalInterfaces.Services.ViewModels\BiHuManBu.ExternalInterfaces.Services.ViewModels.csproj">
+      <Project>{0fe83b21-9e60-45da-a600-c11b92c85b62}</Project>
+      <Name>BiHuManBu.ExternalInterfaces.Services.ViewModels</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="GetAgentConfigByCityService\Extends\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

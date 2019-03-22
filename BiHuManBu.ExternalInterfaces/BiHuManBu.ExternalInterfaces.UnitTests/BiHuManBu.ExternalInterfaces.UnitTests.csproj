@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6492CE10-AB12-467A-9FFB-FA59CBDB4E7C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BiHuManBu.ExternalInterfaces.UnitTests</RootNamespace>
+    <AssemblyName>BiHuManBu.ExternalInterfaces.UnitTests</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="NSubstitute">
+      <HintPath>..\..\Lib\UnitTest\NSubstitute.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework">
+      <HintPath>..\..\Lib\UnitTest\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AgentChannelServiceTests\ChannelModelMapRedisServiceTests.cs" />
+    <Compile Include="AgentChannelServiceTests\ChannelServiceTests.cs" />
+    <Compile Include="AgentConfigByCityServiceTests\GetAgentConfigByCityResponseTests.cs" />
+    <Compile Include="AgentConfigByCityServiceTests\GetLastQuotedResponseTests.cs" />
+    <Compile Include="BjdServicesTests\CheckRequestServiceTests.cs">
+      <DependentUpon>GetMyBjdDetailServiceTests.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BjdServicesTests\GetDateServiceTests.cs">
+      <DependentUpon>GetMyBjdDetailServiceTests.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BjdServicesTests\GetMyBjdDetailServiceTests.cs" />
+    <Compile Include="BjdServicesTests\SetActivitiesServiceTests.cs">
+      <DependentUpon>GetMyBjdDetailServiceTests.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BjdServicesTests\SetAgentServiceTests.cs">
+      <DependentUpon>GetMyBjdDetailServiceTests.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BjdServicesTests\SetBaseInfoServiceTests.cs">
+      <DependentUpon>GetMyBjdDetailServiceTests.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BjdServicesTests\SetCarInfoServiceTests.cs">
+      <DependentUpon>GetMyBjdDetailServiceTests.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BjdServicesTests\SetClaimsServiceTests.cs">
+      <DependentUpon>GetMyBjdDetailServiceTests.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BjdServicesTests\SetDateServiceTests.cs">
+      <DependentUpon>GetMyBjdDetailServiceTests.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BjdServicesTests\SetOrderServiceTests.cs">
+      <DependentUpon>GetMyBjdDetailServiceTests.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BjdServicesTests\SetPrecisePriceItemServiceTests.cs">
+      <DependentUpon>GetMyBjdDetailServiceTests.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BjdServicesTests\SetQuoteReqServiceTests.cs">
+      <DependentUpon>GetMyBjdDetailServiceTests.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubmitInfoServiceTests\PostSubmitInfoServiceTests.cs" />
+    <Compile Include="SubmitInfoServiceTests\PostValidateTests.cs" />
+    <Compile Include="SpecialoptionServiceTests\CreateActivityTests.cs" />
+    <Compile Include="SpecialoptionServiceTests\GetBjdCheckTests.cs" />
+    <Compile Include="SpecialoptionServiceTests\GetBjdInfoTests.cs" />
+    <Compile Include="SpecialoptionServiceTests\UpdateBjdCheckTests.cs" />
+    <Compile Include="SpecialoptionServiceTests\CreateBjdInfoServiceTests.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ValidateServiceTests\ValidateServiceTests.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BiHuManBu.ExternalInterfaces.Infrastructure\BiHuManBu.ExternalInterfaces.Infrastructure.csproj">
+      <Project>{8218e846-f22c-4318-9faa-838ede8cc58c}</Project>
+      <Name>BiHuManBu.ExternalInterfaces.Infrastructure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BiHuManBu.ExternalInterfaces.Models\BiHuManBu.ExternalInterfaces.Models.csproj">
+      <Project>{3814e7e1-9cae-4e12-bb7a-becda662c19a}</Project>
+      <Name>BiHuManBu.ExternalInterfaces.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BiHuManBu.ExternalInterfaces.Services.ViewModels\BiHuManBu.ExternalInterfaces.Services.ViewModels.csproj">
+      <Project>{0FE83B21-9E60-45DA-A600-C11B92C85B62}</Project>
+      <Name>BiHuManBu.ExternalInterfaces.Services.ViewModels</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BiHuManBu.ExternalInterfaces.Services\BiHuManBu.ExternalInterfaces.Services.csproj">
+      <Project>{1c3a6a9b-0488-42d9-9175-de0dbd5e1fca}</Project>
+      <Name>BiHuManBu.ExternalInterfaces.Services</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="注意事项.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

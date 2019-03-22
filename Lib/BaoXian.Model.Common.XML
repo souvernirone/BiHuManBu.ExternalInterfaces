@@ -1,0 +1,5218 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BaoXian.Model.Common</name>
+    </assembly>
+    <members>
+        <member name="T:BaoXian.Model.Common.ErrStateCode.EnumExtensions">
+            <summary>
+                枚举扩展方法
+            </summary>
+        </member>
+        <member name="M:BaoXian.Model.Common.ErrStateCode.EnumExtensions.GetDescription(System.Object)">
+            <summary>
+                获取枚举变量值的 Description 属性
+            </summary>
+            <param name="obj">枚举变量</param>
+            <returns>如果包含 Description 属性，则返回 Description 属性的值，否则返回枚举变量值的名称</returns>
+        </member>
+        <member name="M:BaoXian.Model.Common.ErrStateCode.EnumExtensions.GetDescription(System.Object,System.Boolean)">
+            <summary>
+                获取枚举变量值的 Description 属性
+            </summary>
+            <param name="obj">枚举变量</param>
+            <param name="isTop">是否改变为返回该类、枚举类型的头 Description 属性，而不是当前的属性或枚举变量值的 Description 属性</param>
+            <returns>如果包含 Description 属性，则返回 Description 属性的值，否则返回枚举变量值的名称</returns>
+        </member>
+        <member name="M:BaoXian.Model.Common.ErrStateCode.EnumExtensions.ParseEnum``1(System.String)">
+            <summary>
+                值类型转换枚举类型
+            </summary>
+            <typeparam name="T">枚举</typeparam>
+            <param name="val">值</param>
+            <returns></returns>
+        </member>
+        <member name="T:BaoXian.Model.Common.ErrStateCode.CenterErrCode">
+            <summary>
+                中心错误状态码
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Common.ErrStateCode.CenterErrCode.报价超时">
+            <summary>
+                报价超时
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Common.ErrStateCode.CenterErrCode.渠道不可用">
+            <summary>
+                渠道不可用
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Common.ErrStateCode.CenterErrCode.异步过程中超时没有得到结果">
+            <summary>
+                异步过程中超时没有得到结果
+            </summary>
+        </member>
+        <member name="T:BaoXian.Model.Common.ErrStateCode.RBErrCode">
+            <summary>
+                人保错误状态码
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Common.ErrStateCode.RBErrCode.人保账户无效">
+            <summary>
+                人保账户无效
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Common.ErrStateCode.RBErrCode.初登日期格式不正确">
+            <summary>
+                初登日期格式不正确
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Common.ErrStateCode.RBErrCode.车辆信息不完整">
+            <summary>
+                车辆信息不完整
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Common.ErrStateCode.RBErrCode.系统异常报价失败">
+            <summary>
+                系统异常报价失败
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Common.ErrStateCode.RBErrCode.复制续保异常">
+            <summary>
+                复制续保异常
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Common.ErrStateCode.RBErrCode.起保日期异常">
+            <summary>
+                起保日期异常
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Common.ErrStateCode.RBErrCode.车型库查不到信息">
+            <summary>
+                车型库查不到信息
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Common.ErrStateCode.RBErrCode.获取折旧值异常">
+            <summary>
+                获取折旧值异常
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Common.ErrStateCode.RBErrCode.返回车辆信息异常">
+            <summary>
+                返回车辆信息异常
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Common.ErrStateCode.RBErrCode.获取车船税异常">
+            <summary>
+                获取车船税异常
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Common.ErrStateCode.RBErrCode.查询关系人异常">
+            <summary>
+                查询关系人异常
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Common.ErrStateCode.RBErrCode.车型与平台返回的车型不一致">
+            <summary>
+                车型与平台返回的车型不一致
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Common.ErrStateCode.RBErrCode.交强日期不在规定日期之内">
+            <summary>
+                交强日期不在规定日期之内
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Common.ErrStateCode.RBErrCode.核保登录异常">
+            <summary>
+                核保登录异常
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Common.ErrStateCode.RBErrCode.获取缴费计划异常">
+            <summary>
+                获取缴费计划异常
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Common.ErrStateCode.RBErrCode.获取费率为空异常">
+            <summary>
+                获取费率为空异常
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Common.ErrStateCode.RBErrCode.获取辅助核保异常">
+            <summary>
+                获取辅助核保异常
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Common.ErrStateCode.RBErrCode.保存保单异常">
+            <summary>
+                保存保单异常
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Common.ErrStateCode.RBErrCode.核保系统异常">
+            <summary>
+                核保系统异常
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Common.ErrStateCode.RBErrCode.没有提交核保权限">
+            <summary>
+                没有提交核保权限
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Common.ErrStateCode.RBErrCode.人保系统登录超时">
+            <summary>
+                人保系统登录超时
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Common.ErrStateCode.RBErrCode.未匹配到交管车辆信息">
+            <summary>
+                未匹配到交管车辆信息
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Common.ErrStateCode.RBErrCode.与交管车辆信息不一致">
+            <summary>
+                与交管车辆信息不一致
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Common.ErrStateCode.RBErrCode.被保险人证件号不能为空">
+            <summary>
+                被保险人证件号不能为空
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Common.ErrStateCode.RBErrCode.VPN未连接">
+            <summary>
+                VPN未连接
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Common.ErrStateCode.RBErrCode.服务器异常">
+            <summary>
+                服务器异常
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Common.ErrStateCode.RBErrCode.服务器不可用">
+            <summary>
+                服务器不可用
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Common.ErrStateCode.RBErrCode.重复投保">
+            <summary>
+                重复投保
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Common.ErrStateCode.RBErrCode.新核保系统处理异常">
+            <summary>
+                新核保系统处理异常
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Common.ErrStateCode.RBErrCode.无效的会话状态">
+            <summary>
+                无效的会话状态
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Common.ErrStateCode.RBErrCode.险种信息不完整">
+            <summary>
+                险种信息不完整
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Common.ErrStateCode.RBErrCode.参数有误">
+            <summary>
+                参数有误
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Common.ErrStateCode.RBErrCode.公户信息不完整">
+            <summary>
+                公户信息不完整
+            </summary>
+        </member>
+        <member name="T:BaoXian.Model.Common.ErrStateCode.GSCErrCode">
+            <summary>
+                国寿财错误状态码
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Common.ErrStateCode.GSCErrCode.登录超时">
+            <summary>
+                登录超时
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Common.ErrStateCode.GSCErrCode.车辆查询页加载失败">
+            <summary>
+                车辆查询页加载失败
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Common.ErrStateCode.GSCErrCode.非意向核保不报价">
+            <summary>
+                非意向核保不报价
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Common.ErrStateCode.GSCErrCode.车架号和发动机号提供不全">
+            <summary>
+                车架号和发动机号提供不全
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Common.ErrStateCode.GSCErrCode.商业险报价出错">
+            <summary>
+                商业险报价出错
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Common.ErrStateCode.GSCErrCode.报价其他异常">
+            <summary>
+                报价其他异常
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Common.ErrStateCode.GSCErrCode.匹配协议号失败">
+            <summary>
+                匹配协议号失败
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Common.ErrStateCode.GSCErrCode.报价时系统提示IP地址不同">
+            <summary>
+                报价时系统提示IP地址不同
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Common.ErrStateCode.GSCErrCode.组织机构代码格式不正确">
+            <summary>
+                组织机构代码格式不正确
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Common.ErrStateCode.GSCErrCode.身份证格式不正确">
+            <summary>
+                身份证格式不正确
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Common.ErrStateCode.GSCErrCode.获取车辆信息失败">
+            <summary>
+                获取车辆信息失败
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Common.ErrStateCode.GSCErrCode.交强险90天外">
+            <summary>
+                交强险90天外
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Common.ErrStateCode.GSCErrCode.系统返回商业险报价错误">
+            <summary>
+                系统返回商业险报价错误
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Common.ErrStateCode.GSCErrCode.系统返回交强险报价错误">
+            <summary>
+                系统返回交强险报价错误
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Common.ErrStateCode.GSCErrCode.保存失败">
+            <summary>
+                保存失败
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Common.ErrStateCode.GSCErrCode.投保单回撤失败">
+            <summary>
+                投保单回撤失败
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Common.ErrStateCode.GSCErrCode.核保失败">
+            <summary>
+                核保失败
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Common.ErrStateCode.GSCErrCode.其它未知异常">
+            <summary>
+                其它未知异常
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Common.ErrStateCode.GSCErrCode.获取验证码失败请重试">
+            <summary>
+                获取验证码失败请重试
+            </summary>
+        </member>
+        <member name="T:BaoXian.Model.Common.ErrStateCode.TPYErrCode">
+            <summary>
+                太平洋错误状态码
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Common.ErrStateCode.TPYErrCode.登录失败">
+            <summary>
+                登录失败
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Common.ErrStateCode.TPYErrCode.登录异常">
+            <summary>
+                登录异常
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Common.ErrStateCode.TPYErrCode.VPN连接失败">
+            <summary>
+                VPN连接失败
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Common.ErrStateCode.TPYErrCode.catch捕获1201">
+            <summary>
+                catch捕获1201
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Common.ErrStateCode.TPYErrCode.车型库第一步调用失败">
+            <summary>
+                车型库第一步调用失败
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Common.ErrStateCode.TPYErrCode.车型库第二步调用失败">
+            <summary>
+                车型库第二步调用失败
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Common.ErrStateCode.TPYErrCode.续保复制失败">
+            <summary>
+                续保复制失败
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Common.ErrStateCode.TPYErrCode.过户未查到信息">
+            <summary>
+                过户未查到信息
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Common.ErrStateCode.TPYErrCode.获取交强到期时间失败">
+            <summary>
+                获取交强到期时间失败
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Common.ErrStateCode.TPYErrCode.赋值出错">
+            <summary>
+                赋值出错
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Common.ErrStateCode.TPYErrCode.交强不在规定时间">
+            <summary>
+                交强不在规定时间
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Common.ErrStateCode.TPYErrCode.catch捕获1301">
+            <summary>
+                catch捕获1301
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Common.ErrStateCode.TPYErrCode.核保失败返回日期">
+            <summary>
+                核保失败返回日期
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Common.ErrStateCode.TPYErrCode.核保失败未返回日期">
+            <summary>
+                核保失败未返回日期
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Common.ErrStateCode.TPYErrCode.续保失败">
+            <summary>
+                续保失败
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Common.ErrStateCode.TPYErrCode.catch捕获1401">
+            <summary>
+                catch捕获1401
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Common.ErrStateCode.TPYErrCode.未查询到续保信息">
+            <summary>
+                未查询到续保信息
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Common.ErrStateCode.TPYErrCode.解锁登录失败">
+            <summary>
+                解锁登录失败
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Common.ErrStateCode.TPYErrCode.程序抛出异常">
+            <summary>
+                程序抛出异常
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Common.ErrStateCode.TPYErrCode.投保单不存在">
+            <summary>
+                投保单不存在
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Common.ErrStateCode.TPYErrCode.投保单删除失败">
+            <summary>
+                投保单删除失败
+            </summary>
+        </member>
+        <member name="T:BaoXian.Model.Common.ErrStateCode.PingAnErrCode">
+            <summary>
+                平安错误状态码
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Common.ErrStateCode.PingAnErrCode.用户名或密码错误">
+            <summary>
+                报价超时
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Common.ErrStateCode.PingAnErrCode.登录异常">
+            <summary>
+                登录异常
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Common.ErrStateCode.PingAnErrCode.系统原因进入出单中心异常">
+            <summary>
+                系统原因进入出单中心异常
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Common.ErrStateCode.PingAnErrCode.程序原因进入出单中心异常">
+            <summary>
+                程序原因进入出单中心异常
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Common.ErrStateCode.PingAnErrCode.检验MAC地址出错">
+            <summary>
+                检验MAC地址出错
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Common.ErrStateCode.PingAnErrCode.车型名称为空">
+            <summary>
+                车型名称为空
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Common.ErrStateCode.PingAnErrCode.车辆初次登记日期为空">
+            <summary>
+                车辆初次登记日期为空
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Common.ErrStateCode.PingAnErrCode.车型库查不到车辆信息">
+            <summary>
+                车型库查不到车辆信息
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Common.ErrStateCode.PingAnErrCode.车主或被保人姓名为空">
+            <summary>
+                车主或被保人姓名为空
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Common.ErrStateCode.PingAnErrCode.车主或被保人身份证格式不正确">
+            <summary>
+                车主或被保人身份证格式不正确
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Common.ErrStateCode.PingAnErrCode.交警库查不到车辆信息">
+            <summary>
+                交警库查不到车辆信息
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Common.ErrStateCode.PingAnErrCode.交强险规则不通过">
+            <summary>
+                交强险规则不通过
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Common.ErrStateCode.PingAnErrCode.商业险规则不通过">
+            <summary>
+                商业险规则不通过
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Common.ErrStateCode.PingAnErrCode.匹配询单号失败">
+            <summary>
+                匹配询单号失败
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Common.ErrStateCode.PingAnErrCode.处理报价信息异常">
+            <summary>
+                处理报价信息异常
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Common.ErrStateCode.PingAnErrCode.核保需要上传证件">
+            <summary>
+                核保需要上传证件
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Common.ErrStateCode.PingAnErrCode.核保特约检索信息为空">
+            <summary>
+                核保特约检索信息为空
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Common.ErrStateCode.PingAnErrCode.核保不通过">
+            <summary>
+                核保不通过
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Common.ErrStateCode.PingAnErrCode.核保过程中未知异常">
+            <summary>
+                核保过程中未知异常
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Common.ErrStateCode.PingAnErrCode.报价传入参数不对">
+            <summary>
+                报价传入参数不对
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Common.ErrStateCode.PingAnErrCode.返回报价未知异常">
+            <summary>
+                返回报价未知异常
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Common.ErrStateCode.PingAnErrCode.登录请求超时">
+            <summary>
+                登录请求超时
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Common.ErrStateCode.PingAnErrCode.登录Cookie过期">
+            <summary>
+                登录Cookie过期
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Common.ErrStateCode.PingAnErrCode.请求登录失败">
+            <summary>
+                请求登录失败
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Common.ErrStateCode.PingAnErrCode.任务已被终止">
+            <summary>
+                任务已被终止
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Common.ErrStateCode.PingAnErrCode.请求超时">
+            <summary>
+                请求超时
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Common.ErrStateCode.PingAnErrCode.无法连接到目标地址">
+            <summary>
+                无法连接到目标地址
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Common.ErrStateCode.PingAnErrCode.投保人身份证格式不正确">
+            <summary>
+                投保人身份证格式不正确
+            </summary>
+        </member>
+        <member name="M:BaoXian.Model.Common.HangXieRenewal.HangXieRenwal.GetRenewalByOrder(System.String,System.String,System.Int32,System.String)">
+            <summary>
+            单号续保
+            </summary>
+            <param name="order">单号</param>
+            <param name="engineNo">发动机号</param>
+            <param name="outTime">超时时间</param>
+            <param name="requestKey"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BaoXian.Model.Common.HangXieRenewal.HangXieRenwal.GetRenewalByOrder(System.String,System.String,System.String)">
+            <summary>
+            根据单号获取续保页面
+            </summary>
+            <param name="order">保单号</param>
+            <param name="engineNo">发动机号</param>
+            <param name="policyType">1商业险，0交强险</param>
+            <returns></returns>
+        </member>
+        <member name="M:BaoXian.Model.Common.HangXieRenewal.HangXieRenwal.GetRenewalByLicense(System.String,System.String,System.Int32,System.String)">
+            <summary>
+            根据车牌号续保
+            </summary>
+            <param name="licenseNo"></param>
+            <param name="engineNo"></param>
+            <param name="outTime"></param>
+            <param name="requestKey"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BaoXian.Model.Common.HangXieRenewal.HangXieRenwal.GetRenewalByResult(System.String,System.String)">
+            <summary>
+            根据返回页面获取续保信息
+            </summary>
+            <param name="biResult"></param>
+            <param name="ciResult"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BaoXian.Model.Common.HangXieRenewal.HangXieRenwal.GetRenewalByLicense(System.String,System.String,System.String)">
+            <summary>
+            根据车牌号获取续保页面
+            </summary>
+            <param name="licenseNo">车牌号</param>
+            <param name="engineNo">发动机号</param>
+            <param name="policyType">1商业险，0交强险</param>
+            <returns></returns>
+        </member>
+        <member name="T:BaoXian.Model.Common.Interface.IBxSysCenter">
+            <summary>
+            保险中心Socket接口定义
+            </summary>
+        </member>
+        <member name="M:BaoXian.Model.Common.Interface.IBxSysCenter.QuotePrice(BaoXian.Model.WebApIRequest.WaQuoteRequest)">
+            <summary>
+            报价
+            </summary>
+            <param name="request"></param>
+        </member>
+        <member name="M:BaoXian.Model.Common.Interface.IBxSysCenter.CarRenewal(BaoXian.Model.Common.SocketModel.RenewalRequestModel)">
+            <summary>
+            车辆续保
+            </summary>
+            <param name="request"></param>
+        </member>
+        <member name="M:BaoXian.Model.Common.Interface.IBxSysCenter.GetSubmitResult(BaoXian.Model.Common.SocketModel.SubmitModel)">
+            <summary>
+            获取核保结果
+            </summary>
+            <param name="request"></param>
+        </member>
+        <member name="M:BaoXian.Model.Common.Interface.IBxSysCenter.FindVehicle(BaoXian.Model.Common.SocketModel.RenewalRequestModel)">
+            <summary>
+            根据车牌号查询车辆行驶本信息
+            </summary>
+            <param name="request"></param>
+        </member>
+        <member name="M:BaoXian.Model.Common.Interface.IBxSysCenter.GetClaimsInfo(BaoXian.Model.Common.SocketModel.RenewalRequestModel)">
+            <summary>
+            出险记录
+            支持公司：国寿财、中华联合
+            </summary>
+            <param name="request"></param>
+        </member>
+        <member name="M:BaoXian.Model.Common.Interface.IBxSysCenter.UnlockPolicy(BaoXian.Model.Common.SocketModel.SubmitModel)">
+            <summary>
+            撤销核保
+            支持公司：平安、太平洋
+            </summary>
+            <param name="request"></param>
+        </member>
+        <member name="M:BaoXian.Model.Common.Interface.IBxSysCenter.GetVehiclesByName(BaoXian.Model.Common.SocketModel.RenewalRequestModel)">
+            <summary>
+            根据品牌型号获取保险公司查询出的车型列表
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BaoXian.Model.Common.Interface.IBxSysCenter.GetCarInfos(BaoXian.Model.Common.SocketModel.RenewalRequestModel)">
+            <summary>
+            根据车牌号 或 车架号发动机号 获取保险公司车辆信息（过户车）列表
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BaoXian.Model.Common.Interface.IBxSysCenter.GetHistoryPolicys(BaoXian.Model.Common.SocketModel.HistoryPolicyRequestModel)">
+            <summary>
+            历史保单列表，根据保单号查询续保信息
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BaoXian.Model.Common.Interface.IBxSysCenter.GetRenewalByPolicy(BaoXian.Model.Common.SocketModel.PolicyInfoRequestModel)">
+            <summary>
+            根据保单号获取续保信息
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BaoXian.Model.Common.Interface.IBxSysCenter.GetVersion">
+            <summary>
+            获取版本号
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BaoXian.Model.Common.Interface.IBxSysCenter.GetLastInfo(BaoXian.Model.Common.SocketModel.RenewalRequestModel)">
+            <summary>
+            获取上一年投保公司信息
+            支持公司：国寿财
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BaoXian.Model.Common.Interface.IBxSysCenter.GetBalanceInfo(BaoXian.Model.Common.SocketModel.RenewalRequestModel)">
+            <summary>
+            获取对账信息
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BaoXian.Model.Common.Interface.IBxSysCenter.SetReqKeyVal(BaoXian.Model.Common.SocketModel.BaseModel)">
+            <summary>
+            终止方法
+            </summary>
+            <param name="request"></param>
+        </member>
+        <member name="M:BaoXian.Model.Common.Interface.IBxSysCenter.QueryAutoModelCode(BaoXian.Model.Common.SocketModel.RenewalRequestModel)">
+            <summary>
+            根据车架号查询详细品牌型号接口
+            平安用
+            </summary>
+            <param name="request"></param>
+        </member>
+        <member name="M:BaoXian.Model.Common.Interface.IBxSysCenter.UpdateConfigInfo(BaoXian.Model.Common.SocketModel.ConfigInfo)">
+            <summary>
+            修改配置信息
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BaoXian.Model.Common.Interface.IBxSysCenter.GetVehiclesByNameStep2(BaoXian.Model.Common.SocketModel.RenewalRequestModel)">
+            <summary>
+            根据品牌型号获取保险公司查询出的车型列表
+            第二步
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BaoXian.Model.Common.Interface.IBxSysCenter.GetQuotedDataByTNo(BaoXian.Model.Common.WebApIRequest.QuotedRequestModel)">
+            <summary>
+            根据保险公司报价单号查询报价信息
+            </summary>
+            <param name="request">报价请求参数</param>
+        </member>
+        <member name="M:BaoXian.Model.Common.Interface.IBxSysCenter.FindReconciliationInfo(BaoXian.Model.Common.WebApIRequest.WaReconciliationRequest)">
+            <summary>
+            查询对账信息
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BaoXian.Model.Common.Interface.IBxSysCenter.UploadAttachment(BaoXian.Model.Common.WebApIRequest.WaPAunderwritingRequest)">
+            <summary>
+            平安核保失败，上传图片专用
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BaoXian.Model.Common.Interface.IBxSysCenter.ReStartService(BaoXian.Model.Common.WebApIRequest.WaBaseRequest)">
+            <summary>
+            远程重启服务接口
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BaoXian.Model.Common.Interface.IBxSysCenter.GetPolicyData(System.String)">
+            <summary>
+            人保获取保单信息
+            </summary>
+            <param name="bizNo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BaoXian.Model.Common.Interface.IBxSysCenter.GetResponseData">
+            <summary>
+            获取人保表单数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:BaoXian.Model.Model.AgentConfig.AgentId">
+            <summary>
+            经纪人id
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.AgentConfig.AgentAccount">
+            <summary>
+            经纪人快保账号
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.AgentConfig.BxUrl">
+            <summary>
+            保险系统url
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.AgentConfig.BxUser">
+            <summary>
+            保险系统用户名
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.AgentConfig.BxSysName">
+            <summary>
+            保险系统名称，例如：人保鸿森、平安二分等
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.AgentConfig.Source">
+            <summary>
+            保险系统来源，0=平安，1=太平洋，2=人保
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.AgentConfig.LockDevPin">
+            <summary>
+            开发商pin码
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.AgentConfig.LockUserPin">
+            <summary>
+            用户pin码
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.AgentConfig.CityId">
+            <summary>
+            获取城市id
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.AgentConfig.IsUsed">
+            <summary>
+            当前渠道是否在使用
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.AgentConfig.IsUse">
+            <summary>
+            当前渠道是否可用,默认0为可用,1无法连接服务器(包括15秒内无法连接和无法连接服务器),2版本号不一致
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.AgentConfig.IsUseDeploy">
+            <summary>
+            是否用于调度,1用于，0不用于
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.AgentConfig.MacUrl">
+            <summary>
+            客户端mac唯一标识
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.AgentConfig.IsUrl">
+            <summary>
+            1url,2macurl
+            </summary>
+        </member>
+        <member name="T:BaoXian.Model.Common.Model.BDDocument">
+            <summary>
+            保单单证信息
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.BDDocument.BizSerialNumber">
+            <summary>
+            商业险单证流水号
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.BDDocument.ForceSerialNumber">
+            <summary>
+            交强险单证流水号
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.BDDocument.ForceSignSerialNumber">
+            <summary>
+            交强险标志单证流水号
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.BDDocument.BizPrintTime">
+            <summary>
+            商业险单证打印时间
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.BDDocument.ForcePrintTime">
+            <summary>
+            交强险单证打印时间
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.BDDocument.ForceSignPrintTime">
+            <summary>
+            交强险标志打印时间
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.BDDocument.BizDocumentType">
+            <summary>
+            商业险单证类型
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.BDDocument.ForceDocumentType">
+            <summary>
+            交强险单证类型
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.BDDocument.ForceSignDocumentType">
+            <summary>
+            交强险标志类型
+            </summary>
+        </member>
+        <member name="T:BaoXian.Model.Common.Model.BDXianZhong">
+            <summary>
+            保单险种
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.BDXianZhong.CheSunBaoE">
+            <summary>
+            机动车损失保险保额
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.BDXianZhong.SanZheBaoE">
+            <summary>
+            第三者责任保险保额
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.BDXianZhong.DaoQiangBaoE">
+            <summary>
+            全车盗抢保险保额
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.BDXianZhong.SiJiBaoE">
+            <summary>
+            车上人员责任险(司机)保额
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.BDXianZhong.ChengKeBaoE">
+            <summary>
+            车上人员责任险(乘客)保额
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.BDXianZhong.BoLiBaoE">
+            <summary>
+            玻璃单独破碎险保额
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.BDXianZhong.HuaHenBaoE">
+            <summary>
+            车身划痕损失险保额
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.BDXianZhong.TeYueBaoE">
+            <summary>
+            指定专修厂特约险保额
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.BDXianZhong.SheShuiBaoE">
+            <summary>
+            涉水行驶损失险保额
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.BDXianZhong.CheDengBaoE">
+            <summary>
+            倒车镜、车灯单独损坏险保额
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.BDXianZhong.ZiRanBaoE">
+            <summary>
+            自燃损失险保额
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.BDXianZhong.CheSunBaoFei">
+            <summary>
+            机动车损失保险保费
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.BDXianZhong.SanZheBaoFei">
+            <summary>
+            第三者责任保险保费
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.BDXianZhong.DaoQiangBaoFei">
+            <summary>
+            全车盗抢保险保费
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.BDXianZhong.SiJiBaoFei">
+            <summary>
+            车上人员责任险(司机)保费
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.BDXianZhong.ChengKeBaoFei">
+            <summary>
+            车上人员责任险(乘客)保费
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.BDXianZhong.BoLiBaoFei">
+            <summary>
+            玻璃单独破碎险保费
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.BDXianZhong.HuaHenBaoFei">
+            <summary>
+            车身划痕损失险保费
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.BDXianZhong.TeYueBaoFei">
+            <summary>
+            指定专修厂特约险保费
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.BDXianZhong.SheShuiBaoFei">
+            <summary>
+            涉水行驶损失险保费
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.BDXianZhong.CheDengBaoFei">
+            <summary>
+            倒车镜、车灯单独损坏险保费
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.BDXianZhong.ZiRanBaoFei">
+            <summary>
+            自燃损失险保费
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.BDXianZhong.BuJiMianCheSun">
+            <summary>
+            不计免赔险(车损
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.BDXianZhong.BuJiMianSanZhe">
+            <summary>
+            不计免赔险(三者)
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.BDXianZhong.BuJiMianDaoQiang">
+            <summary>
+            不计免赔险(盗抢)
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.BDXianZhong.BuJiMianRenYuan">
+            <summary>
+            不计免赔险(车上人员)
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.BDXianZhong.BuJiMianSiJi">
+            <summary>
+            不计免赔险(司机人员)
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.BDXianZhong.BuJiMianChengKe">
+            <summary>
+            不计免赔险(乘客人员)
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.BDXianZhong.BuJiMianFuJian">
+            <summary>
+            不计免赔险(附加险)
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.BDXianZhong.BuJiMianHuaHen">
+            <summary>
+             不计免赔险(划痕险)
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.BDXianZhong.BuJiMianZiRan">
+            <summary>
+             不计免赔险(自燃险)
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.BDXianZhong.BuJiMianSheShui">
+            <summary>
+             不计免赔险(涉水险)
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.BDXianZhong.SanFangTeYueBaoFei">
+            <summary>
+            机动车损失保险无法找到第三方特约险保费
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.BDXianZhong.JingShenSunShiBaoFei">
+            <summary>
+            三者附加险-精神损害抚慰金责任险保费
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.BDXianZhong.JingShenSunShiBaoE">
+            <summary>
+            三者附加险-精神损害抚慰金责任险保额
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.BDXianZhong.BuJiMianJingShenSunShi">
+            <summary>
+            不计免赔三者附加险-精神损害抚慰金责任险
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.BDXianZhong.XiuLiChangBaoE">
+            <summary>
+            修理厂保额
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.BDXianZhong.XiuLiChangBaoFei">
+            <summary>
+            修理厂保费
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.BDXianZhong.XiuLiChangType">
+            <summary>
+            修理厂类型,0国产，1进口
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.BDXianZhong.XiuLiChangRate">
+            <summary>
+            修理厂系数
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.BDXianZhong.TaxTotal">
+            <summary>
+            车船税
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.BDXianZhong.BizTotal">
+             <summary>
+            商业险总额
+             </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.BDXianZhong.ForceTotal">
+            <summary>
+            交强险总额
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.BDXianZhong.BizContent">
+            <summary>
+            商业险返回信息
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.BDXianZhong.ForceContent">
+            <summary>
+            交强险返回信息
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.BDXianZhong.HuoWuZeRenBaoE">
+            <summary>
+            车上货物责任险保额
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.BDXianZhong.HuoWuZeRenBaoFei">
+            <summary>
+            车上货物责任险保额
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.BDXianZhong.BuJiMianHuoWuZeRen">
+            <summary>
+            不计免车上货物责任险
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.BDXianZhong.SheBeiSunShiBaoE">
+            <summary>
+            新增加设备损失险保额
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.BDXianZhong.BuJiMianSheBei">
+            <summary>
+            新增设备不计免
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.BDXianZhong.SheBeiSunShiBaoFei">
+            <summary>
+            新增加设备损失险保费
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.BDXianZhong.SheBeiSunShiConfigs">
+            <summary>
+            新增设备列表
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.BDXianZhong.BuJiMianSheBeiSunShi">
+            <summary>
+            不计免新增设备损失险
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.BDXianZhong.FeiYongBuChangBaoE">
+            <summary>
+            修理期间费用补偿险保额
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.BDXianZhong.FeiYongBuChangDayCount">
+            <summary>
+            修理期间费用补偿天数
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.BDXianZhong.FeiYongBuChangBaoF">
+            <summary>
+            修理期间费用补偿险保费
+            </summary>
+        </member>
+        <member name="T:BaoXian.Model.Common.Model.SheBeiSunShiConfig">
+            <summary>
+            新增设备列表
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.SheBeiSunShiConfig.SheBeiName">
+            <summary>
+            设备名称
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.SheBeiSunShiConfig.SheBeiBaoE">
+            <summary>
+            设备保额
+            </summary>
+        </member>
+        <member name="T:BaoXian.Model.Common.Model.BDXinXi">
+            <summary>
+            保单信息
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.BDXinXi.CarOwner">
+            <summary>
+            行驶证车主
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.BDXinXi.ForceNum">
+            <summary>
+            交强险保单号
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.BDXinXi.ChargesDate">
+            <summary>
+            确认收费时间
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.BDXinXi.ForceChargesDate">
+            <summary>
+            交强险保险系统确认时间
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.BDXinXi.PrintDate">
+            <summary>
+            保单打印时间
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.BDXinXi.InputDate">
+            <summary>
+             保单录入日期
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.BDXinXi.ArrivalDate">
+            <summary>
+            费用到账时间
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.BDXinXi.InsureSex">
+            <summary>
+            被保险人性别0男,1女
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.BDXinXi.InsureBirth">
+            <summary>
+            被保险人生日
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.BDXinXi.InsureIdType">
+            <summary>
+            被保险人证件类型
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.BDXinXi.InsureIdNum">
+            <summary>
+            被保险人证件号码
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.BDXinXi.CarBrandModel">
+            <summary>
+            机动车品牌型号
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.BDXinXi.CarEngineNo">
+            <summary>
+            发动机号
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.BDXinXi.CarVIN">
+            <summary>
+            车架号
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.BDXinXi.CarDisplacement">
+            <summary>
+            排量功率
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.BDXinXi.CarUsedType">
+            <summary>
+            使用性质
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.BDXinXi.CarOwnerType">
+            <summary>
+            所属性质
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.BDXinXi.CarRegisterDate">
+            <summary>
+            初登日期
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.BDXinXi.CarType">
+            <summary>
+            机动车种类
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.BDXinXi.CarTravelArea">
+            <summary>
+            机动车行驶区域
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.BDXinXi.CarSeated">
+            <summary>
+            载客/载质量
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.BDXinXi.CarPrice">
+            <summary>
+            新车购置价
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.BDXinXi.CarAvgMileage">
+            <summary>
+            平均行驶里程
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.BDXinXi.AgentId">
+            <summary>
+            经纪人ID
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.BDXinXi.AgentName">
+            <summary>
+            经纪人名称
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.BDXinXi.PrinterName">
+            <summary>
+            出单员姓名
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.BDXinXi.PrinterId">
+            <summary>
+            出单员ID
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.BDXinXi.ChannelId">
+            <summary>
+            渠道ID
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.BDXinXi.ChannelName">
+            <summary>
+            渠道名称
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.BDXinXi.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.BDXinXi.OperatingID">
+            <summary>
+            操作人ID
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.BDXinXi.dOperatingName">
+            <summary>
+            操作人名称
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.BDXinXi.BizPrice">
+            <summary>
+            商业险价格
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.BDXinXi.ForcePrice">
+            <summary>
+            交强险价格
+            </summary>
+        </member>
+        <!-- 对于成员“P:BaoXian.Model.Common.Model.BDXinXi.TaxPrice”忽略有格式错误的 XML 注释 -->
+        <member name="P:BaoXian.Model.Common.Model.BDXinXi.QuDaoMingCheng">
+            <summary>
+            渠道名称
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.BDXinXi.IsGroup">
+            <summary>
+            0 个人 1 团体
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.BDXinXi.IsNewCar">
+            <summary>
+            0 续保,1新车
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.BDXinXi.SubCarType">
+            <summary>
+            车辆种类二级，例如平安：六座以下客车
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.BDXinXi.SubCarTypeValue">
+            <summary>
+            车辆种类二级value，例如平安：0
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.BxCarDeviceModel.SheBeiSunShi">
+            <summary>
+            设备损失保额
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.BxCarDeviceModel.Total">
+            <summary>
+            折旧后总额
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.BxCarDeviceModel.Devicedetails">
+            <summary>
+            设备明细
+            </summary>
+        </member>
+        <member name="T:BaoXian.Model.Model.BxCarInfo">
+            <summary>
+                车辆信息
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.BxCarInfo.RegisterDate">
+            <summary>
+                初登日期
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.BxCarInfo.CarVin">
+            <summary>
+                车架号
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.BxCarInfo.EngineNo">
+            <summary>
+                发动机号
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.BxCarInfo.MoldName">
+            <summary>
+                品牌型号
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.BxCarInfo.AutoModelCode">
+            <summary>
+                厂牌车型编码
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.BxCarInfo.BrandName">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.BxCarInfo.CarUsedType">
+            <summary>
+                使用性质
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.BxCarInfo.CarUsedTypeValue">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.BxCarInfo.SubCarUsedTypeValue">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.BxCarInfo.LicenseNo">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.BxCarInfo.LicenseType">
+            <summary>
+                号牌种类,返回值为01、02、03等，01=大型汽车号牌，02=小型汽车号牌......
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.BxCarInfo.LicenseTypeValue">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.BxCarInfo.CarType">
+            <summary>
+                车辆种类，返回值为A01、B01、B02等，A01=客车，B01=货车......
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.BxCarInfo.CarTypeValue">
+            <summary>
+                车辆种类，返回值为客车、货车等，A01=客车，B01=货车......
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.BxCarInfo.SubCarType">
+            <summary>
+                车辆种类二级，例如平安：六座以下客车
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.BxCarInfo.SubCarTypeValue">
+            <summary>
+                车辆种类二级value，例如平安：0
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.BxCarInfo.SeatCount">
+            <summary>
+                座位数
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.BxCarInfo.ExhaustScale">
+            <summary>
+                排气量
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.BxCarInfo.CarLotEquQuality">
+            <summary>
+                整备质量
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.BxCarInfo.CarTonCount">
+            <summary>
+                核定载质量
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.BxCarInfo.PurchasePrice">
+            <summary>
+                新车购置价
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.BxCarInfo.analogyCarPrice">
+            <summary>
+                打折价
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.BxCarInfo.ClauseType">
+            <summary>
+                条款类型，例如家庭自用汽车产品、非营业用汽车产品
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.BxCarInfo.ClauseTypeValue">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.BxCarInfo.LicenseColor">
+            <summary>
+                号牌颜色，例如人保：蓝色
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.BxCarInfo.LicenseColorValue">
+            <summary>
+                号牌颜色value，例如人保：01
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.BxCarInfo.CarProofType">
+            <summary>
+                车辆来历凭证种类，例如销售发票、法院调解书等
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.BxCarInfo.CarProofTypeValue">
+            <summary>
+                车辆来历凭证value值
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.BxCarInfo.FuelType">
+            <summary>
+                燃料种类，例如汽油等
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.BxCarInfo.FuleTypeValue">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.BxCarInfo.RunRegionCode">
+            <summary>
+                行驶区域
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.BxCarInfo.RunRegionCodeValue">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.BxCarInfo.LicenseOwner">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.BxCarInfo.TransferDate">
+            <summary>
+            过户时间
+            </summary>
+            <summary>
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.BxCarInfo.VehicleYear">
+            <summary>
+                年款
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.BxCarInfo.VehicleAlias">
+            <summary>
+                车型别名
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.BxCarInfo.ServiceLife">
+            <summary>
+            使用年限
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.BxCarInfo.Risk">
+            <summary>
+                车辆风险标识
+            </summary>
+        </member>
+        <member name="T:BaoXian.Model.Common.Model.BxCarVehicleInfo">
+            <summary>
+            车型对象
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.BxCarVehicleInfo.VehicleNo">
+            <summary>
+            精友车型代码
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.BxCarVehicleInfo.VehicleAlias">
+            <summary>
+            车型别名
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.BxCarVehicleInfo.Manufacturer">
+            <summary>
+            生产厂商
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.BxCarVehicleInfo.PriceT">
+            <summary>
+            购置价（不含税价）
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.BxCarVehicleInfo.VehicleYear">
+            <summary>
+            上市年份
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.BxCarVehicleInfo.VehicleName">
+            <summary>
+            车型名称
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.BxCarVehicleInfo.VehicleSeat">
+            <summary>
+            座位数
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.BxCarVehicleInfo.VehicleExhaust">
+            <summary>
+            排量
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.BxCarVehicleInfo.VehicleQuality">
+            <summary>
+            吨位
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.BxCarVehicleInfo.PriceTr">
+            <summary>
+            含税价
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.BxCarVehicleInfo.Risk">
+            <summary>
+            风险
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.BxCarVehicleInfo.mass">
+            <summary>
+            整备质量(千克)
+            </summary>
+        </member>
+        <member name="T:BaoXian.Model.Model.BxRateFactorInfo">
+            <summary>
+            费率系数
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.BxRateFactorInfo.NonClaimRate">
+            <summary>
+            无赔款优惠系数
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.BxRateFactorInfo.MultiDiscountRate">
+            <summary>
+            多险种优惠系数(费改后：自主渠道系数）
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.BxRateFactorInfo.AvgMileRate">
+            <summary>
+            平均行驶里程系数（费改后：自主核保系数）
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.BxRateFactorInfo.RiskRate">
+            <summary>
+            特殊风险系数（费改后：交通违法浮动系数）
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.BxRateFactorInfo.CustomerLoyalty">
+            <summary>
+            客户忠诚度
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.BxRateFactorInfo.DriveSafely">
+            <summary>
+            安全驾驶
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.CancelSubmitResult.BizStatus">
+            <summary>
+            商业险撤销核保状态
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.CancelSubmitResult.BizMessage">
+            <summary>
+            商业险撤销结果描述
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.CancelSubmitResult.ForceStatus">
+            <summary>
+            交强险撤销核保状态
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.CancelSubmitResult.ForceMessage">
+            <summary>
+            交强险撤销结果描述
+            </summary>
+        </member>
+        <member name="T:BaoXian.Model.Common.Model.CiInsureDemandLossListBI">
+            <summary>
+            交通违法详情记录
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.CiInsureDemandLossListBI.lossTime">
+            <summary>
+            违章时间
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.CiInsureDemandLossListBI.sanctionDate">
+            <summary>
+            违章受理时间
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.CiInsureDemandLossListBI.lossActionDesc">
+            <summary>
+            违章描述
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.CiInsureDemandLossListBI.lossDddress">
+            <summary>
+            违章地点
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.CiInsureDemandLossListBI.coeff">
+            <summary>
+            系数
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.CiInsureDemandLossListBI.peccancyid">
+            <summary>
+            违章编号
+            唯一标识
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.CiInsureDemandLossListBI.processingStatus">
+            <summary>
+            处理状态
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.CiInsureDemandLossListBI.violationRecordTypeName">
+            <summary>
+            违章记录类型名称
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.CiInsureDemandLossListBI.acceptagencycode">
+            <summary>
+            行政区划分
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.CiInsureDemandLossListBI.lossAction">
+            <summary>
+            违章行为代码
+            </summary>
+        </member>
+        <member name="T:BaoXian.Model.Model.DeviceActualValueResult">
+            <summary>
+            货车-新增设备损失险-折旧值结果
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.DeviceActualValueResult.totalRecords">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.DeviceActualValueResult.data">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.Id.proposalNo">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.Id.itemNo">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.Id.serialNo">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.DataItem.actualValue">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.DataItem.deviceName">
+            <summary>
+            保险杠
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.DataItem.id">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.DeviceDetailModel.id">
+            <summary>
+            主键id
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.DeviceDetailModel.b_uid">
+            <summary>
+            用户buid
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.DeviceDetailModel.device_name">
+            <summary>
+            设备名称
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.DeviceDetailModel.device_quantity">
+            <summary>
+            数量
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.DeviceDetailModel.device_amount">
+            <summary>
+            折旧前金额小计
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.DeviceDetailModel.device_depreciationamount">
+            <summary>
+            折旧后金额小计
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.DeviceDetailModel.device_type">
+            <summary>
+            国产进口标识 0 国产 1 进口
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.DeviceDetailModel.purchase_date">
+            <summary>
+            购买日期，格式20160504
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.FindVehicleInfo.PlateNo">
+            <summary>
+            车牌号
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.FindVehicleInfo.CarVin">
+            <summary>
+            车架号
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.FindVehicleInfo.EngineNo">
+            <summary>
+            发动机号
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.FindVehicleInfo.RegisteDate">
+            <summary>
+            初登日期
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.FindVehicleInfo.MoldName">
+            <summary>
+            品牌型号
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.GSCSys.GSCClaimsListInfo.InsuranceCompany">
+            <summary>
+            保险公司
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.GSCSys.GSCClaimsListInfo.InsuranceOrder">
+            <summary>
+            保单号
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.GSCSys.GSCClaimsListInfo.InsuranStartTime">
+            <summary>
+            保险起期
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.GSCSys.GSCClaimsListInfo.InsuranEndTime">
+            <summary>
+            保险止期
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.GSCSys.GSCClaimsListInfo.PlacedOnFileNO">
+            <summary>
+            立案号
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.GSCSys.GSCClaimsListInfo.OutDender">
+            <summary>
+            出险时间
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.GSCSys.GSCClaimsListInfo.EndReportDate">
+            <summary>
+            结案时间
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.GSCSys.GSCClaimsListInfo.EstimationLoos">
+            <summary>
+            估损金额
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.GSCSys.GSCClaimsListInfo.Compensate">
+            <summary>
+            赔付金额
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.GSCSys.GSCClaimsListInfo.ReportStatus">
+            <summary>
+            案件状态
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.GSCSys.GSCClaimsListInfo.IsCommerce">
+            <summary>
+            是否商业险
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.GSCSys.GSCClaimsListInfo.IsOwners">
+            <summary>
+            是否车主
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.GSCSys.GSCClaimsListInfo.IsThreecCar">
+            <summary>
+            是否三者车
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.GSCSys.GSCClaimsListInfo.ReportDate">
+            <summary>
+            报案时间
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.GSCSys.GSCClaimsListInfo.AccidentPlace">
+            <summary>
+            出险地点
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.GSCSys.GSCClaimsListInfo.AccidentPsss">
+            <summary>
+            出险经过
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.GSCSys.GSCClaimsListInfo.DriverName">
+            <summary>
+            驾驶员姓名
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.GSCSys.GSCHistoryContractInfo.InsureCompanyName">
+            <summary>
+            保险公司
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.GSCSys.GSCHistoryContractInfo.InsureCompanySource">
+            <summary>
+            保险公司代码
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.GSCSys.GSCHistoryContractInfo.PolicyNo">
+            <summary>
+            保单号码
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.GSCSys.GSCHistoryContractInfo.Strdate">
+            <summary>
+            开始时间
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.GSCSys.GSCHistoryContractInfo.Enddate">
+            <summary>
+            结束时间
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.GSCSys.GSCHistoryContractInfo.IsCommerce">
+            <summary>
+            是否商业
+            </summary>
+        </member>
+        <member name="T:BaoXian.Model.Common.Model.HistoryPolicyModel">
+            <summary>
+            历史保单
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.HistoryPolicyModel.PolicyNo">
+            <summary>
+            保单号
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.HistoryPolicyModel.Strdate">
+            <summary>
+            保单开始时间
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.HistoryPolicyModel.Enddate">
+            <summary>
+            保单结束时间
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.HistoryPolicyModel.IsCommerce">
+            <summary>
+            是否商业,1商业，0交强
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.HistoryPolicyModel.CarVin">
+            <summary>
+            车架号
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.HistoryPolicyModel.EngineNo">
+            <summary>
+            发动机号
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.InsuranceTime.BizStartDate">
+            <summary>
+            商业险起保时间
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.InsuranceTime.ForceStartDate">
+            <summary>
+            交强险起保时间
+            </summary>
+        </member>
+        <member name="T:BaoXian.Model.Common.Model.ReconciliationInfo">
+            <summary>
+            对账信息
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.ReconciliationInfo.AccidentRecords">
+            <summary>
+            上年理赔信息
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.ReconciliationInfo.BaoDanType">
+            <summary>
+            保单类型  1商业 2交强
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.ReconciliationInfo.BaoDanNature">
+            <summary>
+            保单类型  1电子保单 2监制保单
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.ReconciliationInfo.BizpNo">
+            <summary>
+            商业险保单号
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.ReconciliationInfo.BiztNo">
+            <summary>
+            商业险投保单号
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.ReconciliationInfo.LastBizpNo">
+            <summary>
+            上年商业险保单号
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.ReconciliationInfo.BizStartTime">
+            <summary>
+            商业险起保时间
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.ReconciliationInfo.BizEndTime">
+            <summary>
+            商业险截止时间
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.ReconciliationInfo.ForcetNo">
+            <summary>
+            交强险投保单号
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.ReconciliationInfo.ForcepNo">
+            <summary>
+            交强险保单号
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.ReconciliationInfo.LastForcepNo">
+            <summary>
+            上年交强险保单号
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.ReconciliationInfo.ForceStartTime">
+            <summary>
+            交强险起保时间
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.ReconciliationInfo.ForceEndTime">
+            <summary>
+            交强险截止时间
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.ReconciliationInfo.BizDiscountRate">
+            <summary>
+            商业险费率
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.ReconciliationInfo.ForceDiscountRate">
+            <summary>
+            交强险费率
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.ReconciliationInfo.bizinsurance_price">
+            <summary>
+            商业险保费金额
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.ReconciliationInfo.ForceTotal">
+            <summary>
+            交强险保费金额
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.ReconciliationInfo.tax_price">
+            <summary>
+            车船税
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.ReconciliationInfo.licenseNo">
+            <summary>
+            车牌
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.ReconciliationInfo.ChargesDate">
+            <summary>
+            商业险保险系统确认时间
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.ReconciliationInfo.ForceChargesDate">
+            <summary>
+            交强险保险系统确认时间
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.ReconciliationInfo.PrintDate">
+            <summary>
+            商业险的打印时间
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.ReconciliationInfo.InputDate">
+            <summary>
+            保单录入日期
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.ReconciliationInfo.ArrivalDate">
+            <summary>
+            费用到账时间
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.ReconciliationInfo.ForceInputDate">
+            <summary>
+            交强险保单录入日期
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.ReconciliationInfo.ForceArrivalDate">
+            <summary>
+            交强险费用到账时间
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.ReconciliationInfo.ForcePrintDate">
+            <summary>
+            交强险打印时间
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.ReconciliationInfo.RelationPerson">
+            <summary>
+            关系人
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.ReconciliationInfo.RateFactor">
+            <summary>
+            费率系数
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.ReconciliationInfo.ReturnInsured">
+            <summary>
+            退保标识，0正常，1退保，2加保，3批单（用户更改车牌号、被保人），4减保
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.ReconciliationInfo.LastPolicyNo">
+            <summary>
+            原保单号
+            批单情况下会有原保单号
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.ReconciliationInfo.PolicyPrintNo">
+            <summary>
+            保单印刷号
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.ReconciliationInfo.SigningDate">
+            <summary>
+            签单时间
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.ReconciliationInfo.SubmitDate">
+            <summary>
+            核保日期
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.ReconciliationInfo.CardDate">
+            <summary>
+            刷卡时间
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.ReconciliationInfo.OwnerPeople">
+            <summary>
+            归属人
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.ReconciliationInfo.VehiclePeople">
+            <summary>
+            验车人
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.ReconciliationInfo.BatchNo">
+            <summary>
+            批单号
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.ReconciliationInfo.AgentName">
+            <summary>
+            渠道名称
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.ReconciliationInfo.AgentCode">
+            <summary>
+            渠道名称代码
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.ReconciliationInfo.BatchRemark">
+            <summary>
+            批单备注信息字段
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.ReconciliationInfo.IncludeTaxTotal">
+            <summary>
+            含税总保费
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.ReconciliationInfo.CleanTotal">
+            <summary>
+            净保费
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.Model.ReconciliationInfo.ShuiJinTotal">
+            <summary>
+            总税金
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.RelationPersonInfo.OwnerInfo">
+            <summary>
+            车主
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.RelationPersonInfo.PolicyHoderInfo">
+            <summary>
+            投保人
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.RelationPersonInfo.InsuredInfo">
+            <summary>
+            被保险人
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.RelationPersonInfo.CaimantInfo">
+            <summary>
+            索赔人
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.PersonInfo.Customcode">
+            <summary>
+            代码
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.PersonInfo.Name">
+            <summary>
+            姓名
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.PersonInfo.IdType">
+            <summary>
+            证件类型
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.PersonInfo.IdTypeValue">
+            <summary>
+            证件类型Value,例如人保：01
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.PersonInfo.IdNo">
+            <summary>
+            证件号码
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.PersonInfo.Mobile">
+            <summary>
+            手机号
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.PersonInfo.Email">
+            <summary>
+            邮箱
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.PersonInfo.CertiStartdate">
+            <summary>
+            身份证有效期起期
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.PersonInfo.CertiEnddate">
+            <summary>
+            身份证有效期止期
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.PersonInfo.Sex">
+            <summary>
+            性别0男,1女
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.PersonInfo.Birth">
+            <summary>
+            生日
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Model.SaveQuoteModel.IsCloseSms">
+            <summary>
+            是否关闭短信，0=否，1=是
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.SaveQuoteModel.CheSun">
+            <summary>
+            车损
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.SaveQuoteModel.SanZhe">
+            <summary>
+            三者
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.SaveQuoteModel.DaoQiang">
+            <summary>
+            盗抢
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.SaveQuoteModel.SiJi">
+            <summary>
+            司机
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.SaveQuoteModel.ChengKe">
+            <summary>
+            乘客
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.SaveQuoteModel.BoLi">
+            <summary>
+            玻璃单独破碎险
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.SaveQuoteModel.HuaHen">
+            <summary>
+            划痕
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.SaveQuoteModel.BuJiMianCheSun">
+            <summary>
+            不计免赔车损
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.SaveQuoteModel.BuJiMianSanZhe">
+            <summary>
+            不计免赔三者
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.SaveQuoteModel.BuJiMianDaoQiang">
+            <summary>
+            不计免赔盗抢
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.SaveQuoteModel.BuJiMianRenYuan">
+            <summary>
+            不计免赔人员
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.SaveQuoteModel.BuJiMianSiji">
+            <summary>
+            不计免司机
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.SaveQuoteModel.BuJiMianChengKe">
+            <summary>
+            不计免乘客 
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.SaveQuoteModel.BuJiMianHuaHen">
+            <summary>
+            不计免赔划痕
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.SaveQuoteModel.BuJiMianZiRan">
+            <summary>
+            不计免赔自燃
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.SaveQuoteModel.BuJiMianSheShui">
+            <summary>
+            不计免涉水
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.SaveQuoteModel.BuJiMianFuJian">
+            <summary>
+            不计免赔附加
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.SaveQuoteModel.TeYue">
+            <summary>
+            特约
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.SaveQuoteModel.SheShui">
+            <summary>
+            涉水
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.SaveQuoteModel.CheDeng">
+            <summary>
+            车灯
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.SaveQuoteModel.ZiRan">
+            <summary>
+            自然
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.SaveQuoteModel.SanFangTeYue">
+            <summary>
+            机动车损失保险无法找到第三方特约险
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.SaveQuoteModel.BizTotal">
+            <summary>
+            商业险合计
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.SaveQuoteModel.ForceTotal">
+            <summary>
+            交强险总额
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.SaveQuoteModel.TaxTotal">
+            <summary>
+            车船税
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.SaveQuoteModel.SavedAmount">
+            <summary>
+            优惠金额
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.SaveQuoteModel.ShangyeStartDate">
+            <summary>
+            商业险开始日期
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.SaveQuoteModel.ShangyeEndDate">
+            <summary>
+            商业险结束日期
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.SaveQuoteModel.JiaoqiangStartDate">
+            <summary>
+            交强险开始日期
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.SaveQuoteModel.JiaoqiangEndDate">
+            <summary>
+            交强险结束日期
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.SaveQuoteModel.SubmitStatus">
+            <summary>
+            0=提交失败，1=提交成功
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.SaveQuoteModel.IsRenewal">
+            <summary>
+            是否续保获取的险种，1=续保，0=自定义投保
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.SaveQuoteModel.JiaoQiang">
+            <summary>
+            1:报价交强车船+商业险，0：不报价交强车船（单商业）
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.SaveQuoteModel.HcSheBeiSunshi">
+            <summary>
+            新增设备损失险
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.SaveQuoteModel.DeviceActualValue">
+            <summary>
+            设备信息实际折旧值
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.SaveQuoteModel.HcHuoWuZeRen">
+            <summary>
+            车上货物责任险
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.SaveQuoteModel.HcFeiYongBuChang">
+            <summary>
+            修理期间费用补偿险
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.SaveQuoteModel.FeiYongBuChangDays">
+            <summary>
+            修理期间费用补偿险天数
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.SaveQuoteModel.HcJingShenSunShi">
+            <summary>
+            精神损失抚慰金责任险
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.SaveQuoteModel.HcSanFangTeYue">
+            <summary>
+            机动车损失保险无法找到第三方特约险
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.SaveQuoteModel.HcXiuLiChang">
+            <summary>
+            指定修理厂险
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.SaveQuoteModel.HcXiuLiChangType">
+            <summary>
+            指定修理厂类型
+            0国产，1进口
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.SaveQuoteModel.HcSheBeiSunshiInfo">
+            <summary>
+            设备损失险
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.SaveQuoteModel.BuJiMianHcSheBeiSunshi">
+            <summary>
+            新增设备不计免
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.SaveQuoteModel.BuJiMianJingShenSunShi">
+            <summary>
+            不计免赔三者附加险-精神损害抚慰金责任险
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.SaveQuoteModel.co_real_value">
+            <summary>
+            协商实际价值
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.SubmitInfo.BizpNo">
+            <summary>
+            商业险保单号
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.SubmitInfo.BiztNo">
+            <summary>
+            商业险投保单号
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.SubmitInfo.BizStartTime">
+            <summary>
+            商业险起保时间
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.SubmitInfo.BizEndTime">
+            <summary>
+            商业险截止时间
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.SubmitInfo.ForcetNo">
+            <summary>
+            交强险投保单号
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.SubmitInfo.ForcepNo">
+            <summary>
+            交强险保单号
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.SubmitInfo.ForceStartTime">
+            <summary>
+            交强险起保时间
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.SubmitInfo.ForceEndTime">
+            <summary>
+            交强险截止时间
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.SubmitInfo.SubmitStatus">
+            <summary>
+            核保状态，1=成功，0=失败,2=未到期未核保（lastenddate大于90天）、非意向未核保（bx_userinfo.source不等于该家保险公司）、报价失败未核保（quotestatus=0），3=核保中，
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.SubmitInfo.SubmitResult">
+            <summary>
+            核保说明
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.SubmitInfo.QuoteStatus">
+            <summary>
+            保险系统报价状态，0=失败，1=成功
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.SubmitInfo.QuoteResult">
+            <summary>
+            报价返回内容，成功或者其他错误
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.SubmitInfo.BizDiscountRate">
+            <summary>
+            商业险费率
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.SubmitInfo.ForceDiscountRate">
+            <summary>
+            交强险费率
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.SubmitInfo.SubmitResultToC">
+            <summary>
+            优化后核保原因
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.SubmitInfo.QuoteResultToC">
+            <summary>
+            优化后报价原因
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.SubmitInfo.ChannelId">
+            <summary>
+            bx_agent_config.id
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.SubmitInfo.DelayLevel">
+            <summary>
+            核保延迟级别
+            1,2,3,4=>5m,15m,30m,60m
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.SubmitInfo.HistoryId">
+            <summary>
+            历史记录id
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.SubmitInfo.documentGroupId">
+            <summary>
+            平安核保专用
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.SubmitInfoModel.BizNo">
+            <summary>
+            商业险投保单号
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.SubmitInfoModel.ForceNo">
+            <summary>
+            交强险投保单号
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.UserClaimDetail.LiId">
+            <summary>
+            bx_lastinfo.id
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.UserClaimDetail.EndcaseTime">
+            <summary>
+            结案时间
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.UserClaimDetail.LossTime">
+            <summary>
+            出险时间
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.UserClaimDetail.PayAmount">
+            <summary>
+            理赔金额
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.UserClaimDetail.PayCompanyNo">
+            <summary>
+            理赔公司代码
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.UserClaimDetail.ClaimReason">
+            <summary>
+            理赔类型
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.UserClaimDetail.ClaimBizNo">
+            <summary>
+            理赔保单号
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.UserClaimDetail.PayType">
+            <summary>
+            出险类别，0=商业险，1=交强险
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.UserClaimDetail.PayCompanyName">
+            <summary>
+            理赔公司名称
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.UserInfoForDB.UserQuoteInfo">
+            <summary>
+            商业险、交强险、车船税报价结果
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.UserInfoForDB.NewUserInfo">
+            <summary>
+            用户信息（需要返回车主姓名、初登日期、vehicleId（仅限平安））
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.UserInfoForDB.LastYearInfo">
+            <summary>
+            上年理赔信息
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.UserInfoForDB.InsuranceTimeInfo">
+            <summary>
+            起保时间
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.UserInfoForDB.RelationPerson">
+            <summary>
+            关系人
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.UserInfoForDB.CarInfo">
+            <summary>
+            车辆信息
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.UserInfoForDB.RateFactor">
+            <summary>
+            费率系数
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.UserInfoForDB.SaveQuote">
+            <summary>
+            保额信息
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.UserInfoForDB.SubmitInfo">
+            <summary>
+            保单信息
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.UserInfoForDB.CiInsureDemandLoss">
+            <summary>
+            违章记录
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Model.UserInfoModel.IsCloseSms">
+            <summary>
+            是否关闭短信，0=否，1=是
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.UserInfoModel.LastYearSource">
+            <summary>
+            0=平安，1=太平洋，2=人保,3=其他
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.UserInfoModel.LicenseOwner">
+            <summary>
+            车主姓名
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.UserInfoModel.ssBizTotal">
+            <summary>
+            试算报价
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.UserInfoModel.oBizTotal">
+            <summary>
+            订单报价
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.UserInfoModel.IsReView">
+            <summary>
+            0没有回访,1未接听,2考虑中,3完善信息4无意向,5忙碌中,6待出单,7待报价
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.UserInfoModel.OwnerIdCardType">
+            <summary>
+            车主证件类型
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.UserInfoModel.InsuredIdType">
+            <summary>
+            证件类型：1:身份证 2：户口薄 3：护照 4：军人证件5：驾驶执照 6：返乡证 7：港澳身份证 8：工号 :9：赴台通行证 10：港澳通行证 11：士兵证12：港澳居民来往内地通行证 13：台湾居民来往内地通行证 14：组织机构代码证 15：其他
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.UserInfoModel.AgentConfigs">
+            <summary>
+            经纪人的保险系统配置信息
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.UserInfoModel.IsSingleSubmit">
+            <summary>
+            是否单个保险公司核保，1=是，核保公司为source，0=否
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.UserInfoModel.InsuredCertiStartdate">
+            <summary>
+            被保险人身份证有效期起期
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.UserInfoModel.InsuredCertiEnddate">
+            <summary>
+            被保险人身份证有效期止期
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.UserInfoModel.InsuredEmail">
+            <summary>
+            被保险人电子保单邮箱
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.UserInfoModel.HolderIdCard">
+            <summary>
+            投保人身份证信息
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.UserInfoModel.HolderName">
+            <summary>
+            投保人姓名
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.UserInfoModel.HolderMobile">
+            <summary>
+            投保人手机号
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.UserInfoModel.HolderAddress">
+            <summary>
+            投保人地址
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.UserInfoModel.HolderIdType">
+            <summary>
+            投保人证件类型
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.UserInfoModel.HolderCertiStartdate">
+            <summary>
+            投保人身份证有效期起期
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.UserInfoModel.HolderCertiEnddate">
+            <summary>
+            投保人身份证有效期止期
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.UserInfoModel.HolderEmail">
+            <summary>
+            投保人电子保单邮箱
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.UserInfoModel.OwnerCertiStartdate">
+            <summary>
+            车主证件有效期起期
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.UserInfoModel.OwnerCertiEnddate">
+            <summary>
+            车主证件有效期止期
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.UserInfoModel.OwnerCertiAddress">
+            <summary>
+            车主地址
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Model.UserLastYearInfo.NonClaimDiscountRate">
+            <summary>
+            无赔款优惠系数
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Model.UserLastYearInfo.LastYearAccTimes">
+            <summary>
+            上年违章次数
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Model.UserLastYearInfo.LastYearInsureTimes">
+            <summary>
+            上年违章次数（废弃）
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.UserLastYearInfo.LastYears">
+            <summary>
+            废弃
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.UserLastYearInfo.LastYearClaimAmount">
+            <summary>
+            上年理赔金额
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.UserLastYearInfo.LastYearClaimTimes">
+            <summary>
+            上年理赔次数
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.UserLastYearInfo.LastEndDate">
+            <summary>
+            上年交强险到期时间
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.UserLastYearInfo.VehicleId">
+            <summary>
+            平安返回车辆id
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.UserLastYearInfo.StandardName">
+            <summary>
+            平安使用完整moldname
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.UserLastYearInfo.ClaimDetail">
+            <summary>
+            理赔明细
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.UserLastYearInfo.LastBusinessEndDate">
+            <summary>
+            上年商业险到期日期
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.UserLastYearInfo.NoDefendedYear">
+            <summary>
+            连续未出险年数
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.UserLastYearInfo.CurrentYearClaimTimes">
+            <summary>
+            本年理赔次数
+            </summary>
+        </member>
+        <member name="T:BaoXian.Model.Model.UserRenewalInfo">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.UserRenewalInfo.CheSun">
+            <summary>
+            车损
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.UserRenewalInfo.SanZhe">
+            <summary>
+            三者
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.UserRenewalInfo.DaoQiang">
+            <summary>
+            盗抢
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.UserRenewalInfo.SiJi">
+            <summary>
+            司机
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.UserRenewalInfo.ChengKe">
+            <summary>
+            乘客
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.UserRenewalInfo.BoLi">
+            <summary>
+            玻璃单独破碎险
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.UserRenewalInfo.HuaHen">
+            <summary>
+            划痕
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.UserRenewalInfo.BuJiMianCheSun">
+            <summary>
+            不计免赔车损
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.UserRenewalInfo.BuJiMianSanZhe">
+            <summary>
+            不计免赔三者
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.UserRenewalInfo.BuJiMianDaoQiang">
+            <summary>
+            不计免赔盗抢
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.UserRenewalInfo.BuJiMianRenYuan">
+            <summary>
+            不计免赔人员
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.UserRenewalInfo.BuJiMianFuJian">
+            <summary>
+            不计免赔附加
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.UserRenewalInfo.TeYue">
+            <summary>
+            特约
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.UserRenewalInfo.SheShui">
+            <summary>
+            涉水
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.UserRenewalInfo.CheDeng">
+            <summary>
+            车灯
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.UserRenewalInfo.ZiRan">
+            <summary>
+            自然
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.UserRenewalInfo.SanFangTeYue">
+            <summary>
+            机动车损失保险无法找到第三方特约险
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.UserRenewalInfo.JingShenSunShi">
+            <summary>
+            三者附加险-精神损害抚慰金责任险
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.UserRenewalInfo.BuJiMianJingShenSunShi">
+            <summary>
+            不计免赔三者附加险-精神损害抚慰金责任险
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.UserRenewalInfo.BuJiMianSiji">
+            <summary>
+            不计免司机
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.UserRenewalInfo.BuJiMianChengKe">
+            <summary>
+            不计免乘客 
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.UserRenewalInfo.BuJiMianHuaHen">
+            <summary>
+            不计免赔划痕
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.UserRenewalInfo.BuJiMianZiRan">
+            <summary>
+            不计免赔自燃
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.UserRenewalInfo.BuJiMianSheShui">
+            <summary>
+            不计免涉水
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.UserRenewalInfo.XiuLiChang">
+            <summary>
+            指定修理厂
+            0无，1有
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.UserRenewalInfo.XiuLiChangType">
+            <summary>
+            指定修理厂类型
+            0国产，1进口
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.UserRenewalInfo.CoRealValue">
+            <summary>
+            协商实际价值
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.UserRenewalInfo.Source">
+            <summary>
+            0=平安，1=太平洋，2=人保
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.UserRenewalInfo.LastEndDate">
+            <summary>
+            商业险保单到期时间
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.UserRenewalInfo.LastForceEndTime">
+            <summary>
+            上年交强到期时间
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.UserRenewalInfo.NextBizStartTime">
+            <summary>
+            商业险下年起保时间
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.UserRenewalInfo.NextForceStartTime">
+            <summary>
+            交强险下年起保时间
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.UserRenewalInfo.SheBeiSunshi">
+            <summary>
+            新增加设备损失险
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.UserRenewalInfo.BuJiMianSheBeiSunshi">
+            <summary>
+            新增设备不计免
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.UserRenewalInfo.FeiYongBuChang">
+            <summary>
+                修理期间费用补偿险
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.UserRenewalInfo.FeiYongBuChangDays">
+            <summary>
+                修理期间费用补偿险天数
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.UserRenewalInfo.LicenseOwner">
+            <summary>
+            车主姓名
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.UserRenewalInfo.LicenseOwnerIdType">
+            <summary>
+            车主证件类型
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.UserRenewalInfo.LicenseOwnerIdCard">
+            <summary>
+            车主身份证号
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.UserRenewalInfo.InsuredName">
+            <summary>
+            被保险人姓名
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.UserRenewalInfo.InsuredIdCard">
+            <summary>
+            被保险人身份证
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.UserRenewalInfo.RegisterDate">
+            <summary>
+            初登日期
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.UserRenewalInfo.CarVin">
+            <summary>
+            车架号
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.UserRenewalInfo.EngineNo">
+            <summary>
+            发动机号
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.UserRenewalInfo.MoldName">
+            <summary>
+            品牌型号
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.UserRenewalInfo.AutoModelCode">
+            <summary>
+            厂牌车型编码
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.UserRenewalInfo.CarUsedType">
+            <summary>
+            使用性质
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.UserRenewalInfo.LicenseType">
+            <summary>
+            号牌种类,返回值为01、02、03等，01=大型汽车号牌，02=小型汽车号牌......
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.UserRenewalInfo.LicenseTypeValue">
+            <summary>
+            号牌种类,返回值为01、02、03等，01=大型汽车号牌，02=小型汽车号牌......Value
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.UserRenewalInfo.CarType">
+            <summary>
+            车辆种类，返回值为A01、B01、B02等，A01=客车，B01=货车......
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.UserRenewalInfo.CarTypeValue">
+            <summary>
+            车辆种类，返回值为客车、货车等，A01=客车，B01=货车......
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.UserRenewalInfo.SeatCount">
+            <summary>
+            座位数
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.UserRenewalInfo.ExhaustScale">
+            <summary>
+            排气量
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.UserRenewalInfo.CarLotEquQuality">
+            <summary>
+            整备质量
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.UserRenewalInfo.CarTonCount">
+            <summary>
+            核定载质量
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.UserRenewalInfo.PurchasePrice">
+            <summary>
+            新车购置价
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.UserRenewalInfo.analogyCarPrice">
+            <summary>
+            打折价
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.UserRenewalInfo.RelationPerson">
+            <summary>
+            关系人（！！将之前的车主、被保险人信息赋值到这个对象里！！）
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.UserRenewalInfo.CarInfo">
+            <summary>
+            车辆信息（！！将之前的字段都赋值到这个对象里！！）
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.UserRenewalInfo.RateFactor">
+            <summary>
+            费率系数
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.UserRenewalInfo.CompanyCode">
+            <summary>
+            保险公司代码
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.UserRenewalInfo.RenewalSource">
+            <summary>
+            续保来源
+            1太平洋平台续保  2太平洋散单续保
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.UserRenewalInfo.BizPriceTotal">
+            <summary>
+            商业险价格
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.UserRenewalInfo.ForcePriceTotal">
+            <summary>
+            交强险价格
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.UserRenewalInfo.TaxPriceTotal">
+            <summary>
+            车船税价格
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.UserRenewalInfo.BizTotal">
+            <summary>
+            商业险合计
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.UserRenewalInfo.ForceTotal">
+            <summary>
+            交强险总额
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.UserRenewalInfo.TaxTotal">
+            <summary>
+            车船税
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.dimensioncountInfo.city_id">
+            <summary>
+            城市名称
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.dimensioncountInfo.city_name">
+            <summary>
+            城市名称
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.dimensioncountInfo.agetid">
+            <summary>
+            报价经纪人名称
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.dimensioncountInfo.agentname">
+            <summary>
+            报价经纪人名称
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.dimensioncountInfo.renewalcount">
+            <summary>
+            总量(非批续+批续)
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.dimensioncountInfo.Nobulkrenewa">
+            <summary>
+            非批量续保
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.dimensioncountInfo.bulkrenewa">
+            <summary>
+            批量续保
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.dimensioncountInfo.NobulkNorenewa">
+            <summary>
+            非批量未执行
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.dimensioncountInfo.bulkNorenewa">
+            <summary>
+            批量未执行
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.dimensioncountInfo.yeaQuote">
+            <summary>
+            已报价
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.dimensioncountInfo.onlyrenewa">
+            <summary>
+            只续保
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.dimensioncountInfo.quotescale">
+            <summary>
+            报价成功比
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.dimensioncountInfo.Travelscale">
+            <summary>
+            拿到行驶证量成功比
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Model.dimensioncountInfo.renewascale">
+            <summary>
+            续保成功比
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.PrudentialGross.CityCode">
+            <summary>
+            城市id
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.PrudentialGross.source">
+            <summary>
+            保险公司
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.PrudentialGross.QuoteFailure">
+            <summary>
+            失败量
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.PrudentialGross.Quotesucceed">
+            <summary>
+            成功量
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.PrudentialGross.QuoteAmounts">
+            <summary>
+            报价总量
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.RenewalCity.cityid">
+            <summary>
+            续保城市id
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.RenewalCity.soures">
+            <summary>
+            续保公司
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.RenewalCity.doc_countSou">
+            <summary>
+            续保公司成功量
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.RenewalCity.doc_count">
+            <summary>
+            续保总量-按照城市来划分
+            </summary>
+        </member>
+        <member name="T:BaoXian.Model.Common.SocketModel.ConfigInfo">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:BaoXian.Model.Common.WebApIRequest.WaBaseRequest">
+            <summary>
+            web api 请求基类
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.WebApIRequest.WaBaseRequest.OutTime">
+            <summary>
+            超时时间
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.SocketModel.ConfigInfo.UserCode">
+            <summary>
+            员工工号-登录账号
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.SocketModel.ConfigInfo.BranchCode">
+            <summary>
+            公司代码
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.SocketModel.ConfigInfo.OldPassWord">
+            <summary>
+            旧密码（加密后的）
+            </summary>
+        </member>
+        <!-- 对于成员“P:BaoXian.Model.Common.SocketModel.ConfigInfo.NewPassWord”忽略有格式错误的 XML 注释 -->
+        <member name="P:BaoXian.Model.Common.SocketModel.ConfigInfo.ReqSource">
+            <summary>
+            数据来源默认1，走全部校验。2不做校验
+            </summary>
+        </member>
+        <member name="T:BaoXian.Model.Common.SocketModel.SubmitModel">
+            <summary>
+            核保 撤销核保
+            </summary>
+        </member>
+        <member name="T:BaoXian.Model.Common.SocketModel.BaseModel">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.SocketModel.BaseModel.OutTime">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.SocketModel.BaseModel.RequestKey">
+            <summary>
+            唯一标识
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.SocketModel.SubmitModel.ApplicationNo">
+            <summary>
+            保单号
+            </summary>
+        </member>
+        <member name="T:BaoXian.Model.Response.BaseResponse">
+            <summary>
+            请求返回基类
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Response.BaseResponse.Content">
+            <summary>
+            response原始信息
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Response.BaseResponse.ResultCode">
+            <summary>
+            返回值状态码
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Response.BaseResponse.ResultMessage">
+            <summary>
+            返回值信息
+            </summary>
+        </member>
+        <member name="T:BaoXian.Model.Response.PingAnBizQuoteResponse">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Response.PingAnBizQuoteResponse.BizPremium">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Response.PingAnBizQuoteResponse.circResult">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:BaoXian.Model.Response.PingAnBizPremium">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Response.PingAnBizPremium.Amounts">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Response.PingAnBizPremium.Premiums">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:BaoXian.Model.Response.PingAnPremiumAmounts">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Response.PingAnPremiumAmounts.Amount01">
+            <summary>
+            机动车损失保险
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Response.PingAnPremiumAmounts.Amount02">
+            <summary>
+            第三者责任保险
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Response.PingAnPremiumAmounts.Amount03">
+            <summary>
+            全车盗抢保险
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Response.PingAnPremiumAmounts.Amount04">
+            <summary>
+            车上人员责任险(司机) 
+            {"text": "不投保", "value": "0"},{"text": "20万", "value": "200000"},{"text": "10万", "value": "100000"},{"text": "5万", "value": "50000"},{"text": "4万", "value": "40000"},{"text": "3万", "value": "30000"},{"text": "2万", "value": "20000"},{"text": "1万", "value": "10000"}
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Response.PingAnPremiumAmounts.Amount05">
+            <summary>
+            车上人员责任险(乘客)
+            {"text": "不投保", "value": "0"},{"text": "20万", "value": "200000"},{"text": "10万", "value": "100000"},{"text": "5万", "value": "50000"},{"text": "4万", "value": "40000"},{"text": "3万", "value": "30000"},{"text": "2万", "value": "20000"},{"text": "1万", "value": "10000"}
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Response.PingAnPremiumAmounts.Amount08">
+            <summary>
+             玻璃单独破碎险
+             {"text": "不投保 ", "value": "0"},{"text": "国产玻璃", "value": "1"},{"text": "进口玻璃", "value": "2"}
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Response.PingAnPremiumAmounts.Amount17">
+            <summary>
+            车身划痕损失险
+            {"text": "不投保", "value": "0"},{"text": "2万", "value": "20000"},{"text": "1万", "value": "10000"},{"text": "5000", "value": "5000"},{"text": "2000", "value": "2000"}
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Response.PingAnPremiumAmounts.Amount18">
+            <summary>
+             自燃损失险
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Response.PingAnPremiumAmounts.Amount27">
+            <summary>
+            不计免赔险(车损)
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Response.PingAnPremiumAmounts.Amount28">
+            <summary>
+            不计免赔险(三者)
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Response.PingAnPremiumAmounts.Amount48">
+            <summary>
+             不计免赔险(盗抢)
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Response.PingAnPremiumAmounts.Amount49">
+            <summary>
+            不计免赔险(车上人员)
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Response.PingAnPremiumAmounts.Amount50">
+            <summary>
+             不计免赔险(附加险)
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Response.PingAnPremiumAmounts.Amount57">
+            <summary>
+             指定专修厂特约险
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Response.PingAnPremiumAmounts.Amount41">
+            <summary>
+             涉水行驶损失险
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Response.PingAnPremiumAmounts.Amount59">
+            <summary>
+             倒车镜、车灯单独损坏险
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Response.PingAnPremiumAmounts.Amount01Min">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Response.PingAnPremiumAmounts.Amount01Max">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Response.PingAnPremiumAmounts.InputAmount">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:BaoXian.Model.Response.PingAnPremiums">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Response.PingAnPremiums.Premium01">
+            <summary>
+            机动车损失保险
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Response.PingAnPremiums.Premium02">
+            <summary>
+            第三者责任保险
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Response.PingAnPremiums.Premium03">
+            <summary>
+            全车盗抢保险
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Response.PingAnPremiums.Premium04">
+            <summary>
+            车上人员责任险(司机) 
+            {"text": "不投保", "value": "0"},{"text": "20万", "value": "200000"},{"text": "10万", "value": "100000"},{"text": "5万", "value": "50000"},{"text": "4万", "value": "40000"},{"text": "3万", "value": "30000"},{"text": "2万", "value": "20000"},{"text": "1万", "value": "10000"}
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Response.PingAnPremiums.Premium05">
+            <summary>
+            车上人员责任险(乘客)
+            {"text": "不投保", "value": "0"},{"text": "20万", "value": "200000"},{"text": "10万", "value": "100000"},{"text": "5万", "value": "50000"},{"text": "4万", "value": "40000"},{"text": "3万", "value": "30000"},{"text": "2万", "value": "20000"},{"text": "1万", "value": "10000"}
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Response.PingAnPremiums.Premium08">
+            <summary>
+             玻璃单独破碎险
+             {"text": "不投保 ", "value": "0"},{"text": "国产玻璃", "value": "1"},{"text": "进口玻璃", "value": "2"}
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Response.PingAnPremiums.Premium17">
+            <summary>
+            车身划痕损失险
+            {"text": "不投保", "value": "0"},{"text": "2万", "value": "20000"},{"text": "1万", "value": "10000"},{"text": "5000", "value": "5000"},{"text": "2000", "value": "2000"}
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Response.PingAnPremiums.Premium18">
+            <summary>
+             自燃损失险
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Response.PingAnPremiums.Premium27">
+            <summary>
+            不计免赔险(车损)
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Response.PingAnPremiums.Premium28">
+            <summary>
+            不计免赔险(三者)
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Response.PingAnPremiums.Premium48">
+            <summary>
+             不计免赔险(盗抢)
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Response.PingAnPremiums.Premium49">
+            <summary>
+            不计免赔险(车上人员)
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Response.PingAnPremiums.Premium50">
+            <summary>
+             不计免赔险(附加险)
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Response.PingAnPremiums.Premium57">
+            <summary>
+             指定专修厂特约险
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Response.PingAnPremiums.Premium41">
+            <summary>
+             涉水行驶损失险
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Response.PingAnPremiums.Premium59">
+            <summary>
+             倒车镜、车灯单独损坏险
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Response.PingAnPremiums.TotalPremium">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Response.PingAnPremiums.OriginalPremium">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Response.PingAnPremiums.SavedPremium">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:BaoXian.Model.Response.PingAnForceQuoteResponse">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Response.PingAnForceQuoteResponse.forcePremium">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:BaoXian.Model.Response.PingAnForcePremium">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Response.PingAnForcePremium.BeginDate">
+            <summary>
+            交强险到期时间
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Response.PingAnForcePremium.ResultCode">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Response.PingAnForcePremium.Message">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Response.PingAnForcePremium.IsApplyForce">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Response.PingAnForcePremium.ForcePremium">
+            <summary>
+            交强险
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Response.PingAnForcePremium.TaxPremium">
+            <summary>
+            车船税
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Response.PingAnForcePremium.TotalPremium">
+            <summary>
+            交强险总计
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Response.PingAnForcePremium.IsRepForce">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Response.PingAnForcePremium.LastBeginDate">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Response.PingAnForcePremium.LastEndDate">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Response.PingAnForcePremium.curYearTax">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Response.PingAnForcePremium.lastYearPay">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Response.PingAnForcePremium.delayPayMoney">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Response.PingAnForcePremium.promptText">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Response.PingAnForcePremium.promptRemark">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:BaoXian.Model.Response.PingAnSaveQuoteInfoResponse">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Response.PingAnSaveQuoteInfoResponse.FlowId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Response.PingAnSaveQuoteInfoResponse.ForceConfig">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Response.PingAnSaveQuoteInfoResponse.BizConfig">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Response.PingAnSaveQuoteInfoResponse.vehicle">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Response.PingAnSaveQuoteInfoResponse.circResult">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:BaoXian.Model.Response.PingAnCircResult">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Response.PingAnCircResult.circResult">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:BaoXian.Model.Response.PingAnCircResultDesc">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Response.PingAnCircResultDesc.claimListSize">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:BaoXian.Model.Response.PingAnQuoteModel">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Response.PingAnQuoteModel.Name">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Response.PingAnQuoteModel.Value">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Response.PingAnQuoteModel.Text">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Response.PingAnQuoteModel.option">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:BaoXian.Model.Response.TaiPyBizQuoteResponse">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Response.TaiPyBizQuoteResponse.Discount">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Response.TaiPyBizQuoteResponse.DamageLossCoverage">
+            <summary>
+            车辆损失险
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Response.TaiPyBizQuoteResponse.ThirdPartyLiabilityCoverage">
+            <summary>
+             第三者责任险
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Response.TaiPyBizQuoteResponse.TheftCoverage">
+            <summary>
+            全车盗抢损失险
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Response.TaiPyBizQuoteResponse.InCarDriverLiabilityCoverage">
+            <summary>
+            车上司机责任险
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Response.TaiPyBizQuoteResponse.InCarPassengerLiabilityCoverage">
+            <summary>
+             车上乘客责任险
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Response.TaiPyBizQuoteResponse.GlassBrokenCoverage">
+            <summary>
+             玻璃破碎险
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Response.TaiPyBizQuoteResponse.CarBodyPaintCoverage">
+            <summary>
+             车身油漆单独损伤险
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Response.TaiPyBizQuoteResponse.SelfIgniteCoverage">
+            <summary>
+            自然损失险
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Response.TaiPyBizQuoteResponse.DamageLossExemptDeductibleSpecialClause">
+            <summary>
+             车损险不计免赔
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Response.TaiPyBizQuoteResponse.ThirdPartyLiabilityExemptDeductibleSpecialClause">
+            <summary>
+            三责险不计免赔
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Response.TaiPyBizQuoteResponse.TheftCoverageExemptDeductibleSpecialClause">
+            <summary>
+             全车盗抢险不计免赔
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Response.TaiPyBizQuoteResponse.InCarPersonLiabilityExemptDeductibleSpecialClause">
+            <summary>
+             车上人员责任险不计免赔
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Response.TaiPyBizQuoteResponse.RiderExemptDeductibleSpecialClause">
+            <summary>
+            附加险不计免赔
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Response.TaiPyBizQuoteResponse.PaddleDamageCoverage">
+            <summary>
+             涉水损失险
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Response.TaiPyBizQuoteResponse.Total">
+            <summary>
+            商业险总计
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Response.TaiPyBizQuoteResponse.AppointedRepairFactorySpecialClause">
+            <summary>
+            指定专修厂
+            </summary>
+        </member>
+        <member name="T:BaoXian.Model.Common.SocketModel.RenewalRequestModel">
+            <summary>
+            续保 车辆查询请求对象
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.SocketModel.RenewalRequestModel.LicenseNo">
+            <summary>
+            车牌号
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.SocketModel.RenewalRequestModel.CarVin">
+            <summary>
+            车架号
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.SocketModel.RenewalRequestModel.EngineNo">
+            <summary>
+            发动机号
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.SocketModel.RenewalRequestModel.Order">
+            <summary>
+            保单号续保，大地
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.SocketModel.RenewalRequestModel.VehicleName">
+            <summary>
+            品牌型号
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.SocketModel.RenewalRequestModel.CarType">
+            <summary>
+            车辆类型
+            车辆类型:0小车，1大车，默认0
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.SocketModel.RenewalRequestModel.RenewalType">
+            <summary>
+            续保类型
+            1车牌号，2车架号，0车牌号
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.SocketModel.RenewalRequestModel.VehicleNo">
+            <summary>
+            精友车型代码
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.SocketModel.RenewalRequestModel.RegisterDate">
+            <summary>
+            初登日期
+            </summary>
+        </member>
+        <member name="T:BaoXian.Model.Common.SocketModel.HistoryPolicyRequestModel">
+            <summary>
+            历史保单请求参数
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.SocketModel.HistoryPolicyRequestModel.LicenseNo">
+            <summary>
+            车牌号
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.SocketModel.HistoryPolicyRequestModel.CarVin">
+            <summary>
+            车架号
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.SocketModel.HistoryPolicyRequestModel.EngineNo">
+            <summary>
+            发动机号
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.SocketModel.HistoryPolicyRequestModel.CarType">
+            <summary>
+            车辆类型，1小车，2大车
+            </summary>
+        </member>
+        <member name="T:BaoXian.Model.Common.SocketModel.PolicyInfoRequestModel">
+            <summary>
+            查询保单信息参数
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.SocketModel.PolicyInfoRequestModel.PolicyNo">
+            <summary>
+            保单号
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.SocketModel.PolicyInfoRequestModel.IsCommerce">
+            <summary>
+            是否商业,1商业，0交强
+            </summary>
+        </member>
+        <member name="T:BaoXian.Model.Common.WebApIRequest.QuotedRequestModel">
+            <summary>
+            报价请求参数
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.WebApIRequest.QuotedRequestModel.businessestno">
+            <summary>
+            保险公司单号
+            </summary>
+        </member>
+        <member name="T:BaoXian.Model.Common.WebApIRequest.WaHistoryPolicyRequest">
+            <summary>
+            历史保单请求参数
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.WebApIRequest.WaHistoryPolicyRequest.LicenseNo">
+            <summary>
+            车牌号
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.WebApIRequest.WaHistoryPolicyRequest.CarVin">
+            <summary>
+            车架号
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.WebApIRequest.WaHistoryPolicyRequest.EngineNo">
+            <summary>
+            发动机号
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.WebApIRequest.WaHistoryPolicyRequest.CarType">
+            <summary>
+            车辆类型，1小车，2大车
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.WebApIRequest.WaPAunderwritingRequest.documentGroupId">
+            <summary>
+            平安核保失败，报价上传图片id
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.WebApIRequest.WaPAunderwritingRequest.picsInfo">
+            <summary>
+            上传图片信息
+            </summary>
+        </member>
+        <member name="T:BaoXian.Model.Common.WebApIRequest.WaPolicyInfoRequest">
+            <summary>
+            查询保单信息参数
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.WebApIRequest.WaPolicyInfoRequest.PolicyNo">
+            <summary>
+            保单号
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.WebApIRequest.WaPolicyInfoRequest.IsCommerce">
+            <summary>
+            是否商业,1商业，0交强
+            </summary>
+        </member>
+        <member name="T:BaoXian.Model.WebApIRequest.WaQuoteRequest">
+            <summary>
+                报价请求参数
+            </summary>
+        </member>
+        <member name="M:BaoXian.Model.WebApIRequest.WaQuoteRequest.Clone">
+            <summary>
+                此处的复制为深拷贝，采用序列化和反序列化。
+            </summary>
+            <returns>深拷贝对象</returns>
+        </member>
+        <member name="P:BaoXian.Model.WebApIRequest.WaQuoteRequest.Xrc">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.WebApIRequest.WaQuoteRequest.FlowId">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.WebApIRequest.WaQuoteRequest.PlateNo">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.WebApIRequest.WaQuoteRequest.Random">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.WebApIRequest.WaQuoteRequest.OrderNo">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.WebApIRequest.WaQuoteRequest.SessionId">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.WebApIRequest.WaQuoteRequest.RedisKey">
+            <summary>
+                缓存key值
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.WebApIRequest.WaQuoteRequest.IsOnlyBiz">
+            <summary>
+                单商业标识
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.WebApIRequest.WaQuoteRequest.IsOnlyForce">
+            <summary>
+                单交强标识
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.WebApIRequest.WaQuoteRequest.IsPublic">
+            <summary>
+                是否是公车 0 ：非 1 是
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.WebApIRequest.WaQuoteRequest.LastYearSource">
+            <summary>
+                0=平安，1=太平洋，2=人保
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.WebApIRequest.WaQuoteRequest.ClauseType">
+            <summary>
+                条款类型
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.WebApIRequest.WaQuoteRequest.ClauseTypeValue">
+            <summary>
+                条款类型 Value
+            </summary>
+        </member>
+        <!-- 对于成员“P:BaoXian.Model.WebApIRequest.WaQuoteRequest.FuelType”忽略有格式错误的 XML 注释 -->
+        <member name="P:BaoXian.Model.WebApIRequest.WaQuoteRequest.ProofType">
+            <summary>
+                车辆来历凭证种类
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.WebApIRequest.WaQuoteRequest.ProofTypeValue">
+            <summary>
+                车辆来历凭证种类 Value
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.WebApIRequest.WaQuoteRequest.LicenseColorValue">
+            <summary>
+                号牌底色
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.WebApIRequest.WaQuoteRequest.RunRegion">
+            <summary>
+                行驶区域
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.WebApIRequest.WaQuoteRequest.RunMiles">
+            <summary>
+                年平均行驶里程
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.WebApIRequest.WaQuoteRequest.SpecialRate">
+            <summary>
+                特殊风险系数
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.WebApIRequest.WaQuoteRequest.TransferDate">
+            <summary>
+                过户日期
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.WebApIRequest.WaQuoteRequest.RequestKey">
+            <summary>
+                唯一标识
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.WebApIRequest.WaQuoteRequest.Email">
+            <summary>
+                电子保单邮箱
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.WebApIRequest.WaQuoteRequest.PaRemark">
+            <summary>
+                平安备注
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.WebApIRequest.WaQuoteRequest.IsNewCar">
+            <summary>
+                是否新车 0不是 1新车
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.WebApIRequest.WaQuoteRequest.IsTruck">
+            <summary>
+            是否货车 0 不是 1 是
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.WebApIRequest.WaQuoteRequest.DriveLicenseCarTypeValue">
+            <summary>
+            行驶证车辆类型
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.WebApIRequest.WaQuoteRequest.DriveLicenseCarTypeName">
+            <summary>
+            行驶证车辆类型
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.WebApIRequest.WaQuoteRequest.IsShortQuote">
+            <summary>
+                是否短期起保 0不是 1是
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.WebApIRequest.WaQuoteRequest.seatflag">
+            <summary>
+                报价座位数标识
+                0 表示续保出来的座位数可能与实际座位数不符，需要保险小组酌情处理
+                1 表示用户手动录入，可作为最终报价请求参数.
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.WebApIRequest.WaQuoteRequest.CarVin">
+            <summary>
+                车架号
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.WebApIRequest.WaQuoteRequest.EngineNo">
+            <summary>
+                发动机号
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.WebApIRequest.WaQuoteRequest.MoldName">
+            <summary>
+                品牌型号
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.WebApIRequest.WaQuoteRequest.autoModelCode">
+            <summary>
+                厂牌车型编码
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.WebApIRequest.WaQuoteRequest.autoModelCodeSource">
+            <summary>
+                车型编码来源
+                -1无， 0保险接口续保，1用户选择续保，2用户选择自定义，3用户选择最低
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.WebApIRequest.WaQuoteRequest.VehicleAlias">
+            <summary>
+                车型别名
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.WebApIRequest.WaQuoteRequest.PriceT">
+            <summary>
+                新车购置价
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.WebApIRequest.WaQuoteRequest.VehicleYear">
+            <summary>
+                上市年份
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.WebApIRequest.WaQuoteRequest.CoRealValue">
+            <summary>
+                协商实际价值
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.WebApIRequest.WaQuoteRequest.RegisterDate">
+            <summary>
+                登记日期
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.WebApIRequest.WaQuoteRequest.LicenseOwner">
+            <summary>
+                车主名
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.WebApIRequest.WaQuoteRequest.LicenseOwnerIdNo">
+            <summary>
+                车主身份证号
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.WebApIRequest.WaQuoteRequest.LicenseOwnerIdType">
+            <summary>
+                车主证件类型
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.WebApIRequest.WaQuoteRequest.LicenseOwnerIdTypeValue">
+            <summary>
+                车主证件类型Value
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.WebApIRequest.WaQuoteRequest.OwnerCertiStartdate">
+            <summary>
+                车主证件有效期起期
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.WebApIRequest.WaQuoteRequest.OwnerCertiEnddate">
+            <summary>
+                车主证件有效期止期
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.WebApIRequest.WaQuoteRequest.OwnerCertiAddress">
+            <summary>
+                车主地址
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.WebApIRequest.WaQuoteRequest.InsuredIdNo">
+            <summary>
+                被保险人身份证信息
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.WebApIRequest.WaQuoteRequest.InsuredCertiStartdate">
+            <summary>
+                被保险人身份证有效期起期
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.WebApIRequest.WaQuoteRequest.InsuredCertiEnddate">
+            <summary>
+                被保险人身份证有效期止期
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.WebApIRequest.WaQuoteRequest.InsuredEmail">
+            <summary>
+                被保险人电子保单邮箱
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.WebApIRequest.WaQuoteRequest.HolderIdNo">
+            <summary>
+                投保人身份证信息
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.WebApIRequest.WaQuoteRequest.HolderCertiStartdate">
+            <summary>
+                投保人身份证有效期起期
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.WebApIRequest.WaQuoteRequest.HolderCertiEnddate">
+            <summary>
+                投保人身份证有效期止期
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.WebApIRequest.WaQuoteRequest.HolderEmail">
+            <summary>
+                投保人电子保单邮箱
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.WebApIRequest.WaQuoteRequest.LicenseType">
+            <summary>
+                号牌种类,返回值为01、02、03等，01=大型汽车号牌，02=小型汽车号牌......
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.WebApIRequest.WaQuoteRequest.LicenseTypeValue">
+            <summary>
+                号牌种类,返回值为01、02、03等，01=大型汽车号牌，02=小型汽车号牌......Value
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.WebApIRequest.WaQuoteRequest.CarUsedType">
+            <summary>
+                使用性质
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.WebApIRequest.WaQuoteRequest.CarUsedTypeValue">
+            <summary>
+                使用性质Value
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.WebApIRequest.WaQuoteRequest.CarType">
+            <summary>
+                车辆种类，返回值为A01、B01、B02等，A01=客车，B01=货车......
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.WebApIRequest.WaQuoteRequest.SeatCount">
+            <summary>
+                座位数
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.WebApIRequest.WaQuoteRequest.ExhaustScale">
+            <summary>
+                排气量
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.WebApIRequest.WaQuoteRequest.CarLotEquQuality">
+            <summary>
+                整备质量
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.WebApIRequest.WaQuoteRequest.CarTonCount">
+            <summary>
+                核定载质量
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.WebApIRequest.WaQuoteRequest.BizStartDate">
+            <summary>
+                商业险起保时间
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.WebApIRequest.WaQuoteRequest.BizEndDate">
+            <summary>
+                商业险终保事件
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.WebApIRequest.WaQuoteRequest.ForceStartDate">
+            <summary>
+                交强险起保时间
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.WebApIRequest.WaQuoteRequest.ForceEndDate">
+            <summary>
+                交强险终保时间
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.WebApIRequest.WaQuoteRequest.PurchasePrice">
+            <summary>
+                新车购置价
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.WebApIRequest.WaQuoteRequest.analogyCarPrice">
+            <summary>
+                打折价
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.WebApIRequest.WaQuoteRequest.Amount01">
+            <summary>
+                机动车损失保险
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.WebApIRequest.WaQuoteRequest.Amount02">
+            <summary>
+                第三者责任保险
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.WebApIRequest.WaQuoteRequest.Amount03">
+            <summary>
+                全车盗抢保险
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.WebApIRequest.WaQuoteRequest.Amount04">
+            <summary>
+                车上人员责任险(司机)
+                {"text": "不投保", "value": "0"},{"text": "20万", "value": "200000"},{"text": "10万", "value": "100000"},{"text": "5万",
+                "value": "50000"},{"text": "4万", "value": "40000"},{"text": "3万", "value": "30000"},{"text": "2万", "value":
+                "20000"},{"text": "1万", "value": "10000"}
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.WebApIRequest.WaQuoteRequest.Amount05">
+            <summary>
+                车上人员责任险(乘客)
+                {"text": "不投保", "value": "0"},{"text": "20万", "value": "200000"},{"text": "10万", "value": "100000"},{"text": "5万",
+                "value": "50000"},{"text": "4万", "value": "40000"},{"text": "3万", "value": "30000"},{"text": "2万", "value":
+                "20000"},{"text": "1万", "value": "10000"}
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.WebApIRequest.WaQuoteRequest.Amount08">
+            <summary>
+                玻璃单独破碎险
+                {"text": "不投保 ", "value": "0"},{"text": "国产玻璃", "value": "1"},{"text": "进口玻璃", "value": "2"}
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.WebApIRequest.WaQuoteRequest.Amount17">
+            <summary>
+                车身划痕损失险
+                {"text": "不投保", "value": "0"},{"text": "2万", "value": "20000"},{"text": "1万", "value": "10000"},{"text": "5000",
+                "value": "5000"},{"text": "2000", "value": "2000"}
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.WebApIRequest.WaQuoteRequest.Amount18">
+            <summary>
+                自燃损失险
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.WebApIRequest.WaQuoteRequest.Amount27">
+            <summary>
+                不计免赔险(车损)
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.WebApIRequest.WaQuoteRequest.Amount28">
+            <summary>
+                不计免赔险(三者)
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.WebApIRequest.WaQuoteRequest.Amount48">
+            <summary>
+                不计免赔险(盗抢)
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.WebApIRequest.WaQuoteRequest.Amount49">
+            <summary>
+                不计免赔险(车上人员)
+                <remarks>费改城市为不计免司机</remarks>
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.WebApIRequest.WaQuoteRequest.Amount50">
+            <summary>
+                不计免赔险(附加险)
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.WebApIRequest.WaQuoteRequest.Amount57">
+            <summary>
+                指定专修厂特约险
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.WebApIRequest.WaQuoteRequest.Amount41">
+            <summary>
+                涉水行驶损失险
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.WebApIRequest.WaQuoteRequest.Amount59">
+            <summary>
+                倒车镜、车灯单独损坏险
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.WebApIRequest.WaQuoteRequest.Amount60">
+            <summary>
+                机动车损失保险无法找到第三方特约险
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.WebApIRequest.WaQuoteRequest.Amount61">
+            <summary>
+                三者附加险-精神损害抚慰金责任险
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.WebApIRequest.WaQuoteRequest.Amount80">
+            <summary>
+                不计免赔乘客
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.WebApIRequest.WaQuoteRequest.Amount75">
+            <summary>
+                不计免赔划痕
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.WebApIRequest.WaQuoteRequest.Amount77">
+            <summary>
+                不计免赔自燃
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.WebApIRequest.WaQuoteRequest.Amount79">
+            <summary>
+                不计免赔发动机涉水
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.WebApIRequest.WaQuoteRequest.Amount81">
+            <summary>
+                不计免赔精神损害抚慰金责任险
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.WebApIRequest.WaQuoteRequest.HcSheBeiSunshi">
+            <summary>
+                新增设备损失险
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.WebApIRequest.WaQuoteRequest.BuJiMianHcSheBeiSunshi">
+            <summary>
+            新增设备不计免
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.WebApIRequest.WaQuoteRequest.HcHuoWuZeRen">
+            <summary>
+                车上货物责任险
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.WebApIRequest.WaQuoteRequest.HcFeiYongBuChang">
+            <summary>
+                修理期间费用补偿险
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.WebApIRequest.WaQuoteRequest.HcFeiYongBuChangDays">
+            <summary>
+                修理期间费用补偿险天数
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.WebApIRequest.WaQuoteRequest.HcJingShenSunShi">
+            <summary>
+                精神损失抚慰金责任险
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.WebApIRequest.WaQuoteRequest.HcSanFangTeYue">
+            <summary>
+                机动车损失保险无法找到第三方特约险
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.WebApIRequest.WaQuoteRequest.HcXiuLiChang">
+            <summary>
+                指定修理厂险
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.WebApIRequest.WaQuoteRequest.HcXiuLiChangType">
+            <summary>
+                指定专修厂类型
+                国产0 进口1
+            </summary>
+        </member>
+        <member name="T:BaoXian.Model.Common.WebApIRequest.WaReconciliationRequest">
+            <summary>
+            对账请求参数
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.WebApIRequest.WaReconciliationRequest.Licenseno">
+            <summary>
+            车牌号
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.WebApIRequest.WaReconciliationRequest.Policy">
+            <summary>
+            保单号
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.WebApIRequest.WaReconciliationRequest.CarVin">
+            <summary>
+            车架号
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.WebApIRequest.WaReconciliationRequest.IssueDate">
+            <summary>
+            出单时间
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.WebApIRequest.WaReconciliationRequest.InsuredName">
+            <summary>
+            被保人名称
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Request.WaSubmitRequest.Mobile">
+            <summary>
+            手机号，获取userId
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Request.WaSubmitRequest.PlateNo">
+            <summary>
+            车牌号
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Request.WaSubmitRequest.City">
+            <summary>
+            城市
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Request.WaSubmitRequest.RenewalIdNo">
+            <summary>
+            身份证后6位
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Request.WaSubmitRequest.EngineNo">
+            <summary>
+            *发动机号*必填
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Request.WaSubmitRequest.CarVin">
+            <summary>
+            *车架号*必填
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Request.WaSubmitRequest.MoldName">
+            <summary>
+            车型代码
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Request.WaSubmitRequest.RegisterDate">
+            <summary>
+            登记日期
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Request.WaSubmitRequest.LicenseOwner">
+            <summary>
+            车主名
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Request.WaSubmitRequest.VehicleId">
+            <summary>
+            车辆id
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Request.WaSubmitRequest.OutTime">
+            <summary>
+            耗时设置
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Request.WaSubmitRequest.CarType">
+            <summary>
+            车辆类型
+            车辆类型:0小车，1大车，默认0
+            </summary>
+        </member>
+        <member name="T:BaoXian.Model.Common.WebApiResponse.QuotedResponse">
+            <summary>
+            保单请求回传模型
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.WebApiResponse.WaBaseResponse.ErrCode">
+            <summary>
+            错误码
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.WebApiResponse.WaBaseResponse.ErrMsg">
+            <summary>
+            错误描述
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.WebApiResponse.WaBaseResponse.Version">
+            <summary>
+            机器人接口版本号 
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.WebApiResponse.WaBaseResponse.VersionType">
+            <summary>
+            版本类型
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.WebApiResponse.QuotedResponse._BxCarInfo">
+            <summary>
+            车辆信息
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.WebApiResponse.QuotedResponse._RelationPersonInfo">
+            <summary>
+            关系人
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.WebApiResponse.QuotedResponse._SaveQuoteBE">
+            <summary>
+            保额
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.WebApiResponse.QuotedResponse._SaveQuoteBF">
+            <summary>
+            保费
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.WebApiResponse.QuotedResponse._BxRateFactorInfo">
+            <summary>
+            费率系数
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.WebApiResponse.TaiPyForceQuoteResponse.ComplusoryPreimum">
+            <summary>
+            交强险
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.WebApiResponse.TaiPyForceQuoteResponse.StartDate">
+            <summary>
+            交强险到期时间
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.WebApiResponse.TaiPyForceQuoteResponse.VehicleTaxAmount">
+            <summary>
+            车船税
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.WebApiResponse.WaBxSysDocGroupIdResponse.documentGroupId">
+            <summary>
+            平安返回，核保失败需要上传图片，返回的id
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.WebApiResponse.WaPingAnPicsInfoResponse.credentialsType">
+            <summary>
+            证件类型
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.WebApiResponse.WaPingAnPicsInfoResponse.base64Str">
+            <summary>
+            图片的base64
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.WebApiResponse.WaPingAnPicsInfoResponse.pictureName">
+            <summary>
+            图片名称
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.WebApiResponse.WaPwsResponse.Message">
+            <summary>
+            返回消息体
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.WebApiResponse.WaBxSysSubmitResponse.AccidentRecords">
+            <summary>
+            上年理赔信息
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.WebApiResponse.WaBxSysSubmitResponse.SubmitId">
+            <summary>
+            submitInfo.id
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.WebApiResponse.WaBxSysSubmitResponse.BizpNo">
+            <summary>
+            商业险保单号
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.WebApiResponse.WaBxSysSubmitResponse.BiztNo">
+            <summary>
+            商业险投保单号
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.WebApiResponse.WaBxSysSubmitResponse.BizStartTime">
+            <summary>
+            商业险起保时间
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.WebApiResponse.WaBxSysSubmitResponse.BizEndTime">
+            <summary>
+            商业险截止时间
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.WebApiResponse.WaBxSysSubmitResponse.ForcetNo">
+            <summary>
+            交强险投保单号
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.WebApiResponse.WaBxSysSubmitResponse.ForcepNo">
+            <summary>
+            交强险保单号
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.WebApiResponse.WaBxSysSubmitResponse.ForceStartTime">
+            <summary>
+            交强险起保时间
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.WebApiResponse.WaBxSysSubmitResponse.ForceEndTime">
+            <summary>
+            交强险截止时间
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.WebApiResponse.WaBxSysSubmitResponse.SubmitStatus">
+            <summary>
+            核保状态，1=成功，0=失败
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.WebApiResponse.WaBxSysSubmitResponse.SubmitResult">
+            <summary>
+            核保说明
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.WebApiResponse.WaBxSysSubmitResponse.BizDiscountRate">
+            <summary>
+            商业险费率
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.WebApiResponse.WaBxSysSubmitResponse.ForceDiscountRate">
+            <summary>
+            交强险费率
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.WebApiResponse.WaBxSysSubmitResponse.company_id">
+            <summary>
+            承保公司0平安，1太平洋，2人保
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.WebApiResponse.WaBxSysSubmitResponse.bizinsurance_price">
+            <summary>
+            商业险保费金额
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.WebApiResponse.WaBxSysSubmitResponse.tax_price">
+            <summary>
+            车船税
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.WebApiResponse.WaBxSysSubmitResponse.licenseNo">
+            <summary>
+            车牌
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.WebApiResponse.WaBxSysSubmitResponse.ForceTotal">
+            <summary>
+            交强险保费金额
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.WebApiResponse.WaBxSysSubmitResponse.user_name">
+            <summary>
+            被保险人姓名
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.WebApiResponse.WaBxSysSubmitResponse.InsureStatus">
+            <summary>
+            投保状态
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.WebApiResponse.WaBxSysSubmitResponse.ChargesDate">
+            <summary>
+            商业险保险系统确认时间
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.WebApiResponse.WaBxSysSubmitResponse.ForceChargesDate">
+            <summary>
+            交强险保险系统确认时间
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.WebApiResponse.WaBxSysSubmitResponse.PrintDate">
+            <summary>
+            商业险的打印时间
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.WebApiResponse.WaBxSysSubmitResponse.ForcPrintDate">
+            <summary>
+            交强险打印时间
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.WebApiResponse.WaBxSysSubmitResponse.InputDate">
+            <summary>
+            保单录入日期
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.WebApiResponse.WaBxSysSubmitResponse.ArrivalDate">
+            <summary>
+            费用到账时间
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.WebApiResponse.WaBxSysSubmitResponse.ForceInputDate">
+            <summary>
+            交强险保单录入日期
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.WebApiResponse.WaBxSysSubmitResponse.ForceArrivalDate">
+            <summary>
+            交强险费用到账时间
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.WebApiResponse.WaBxSysSubmitResponse.BaoDanType">
+            <summary>
+            保单类型 0双险  1 单商业 2 单交强
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.WebApiResponse.WaBxSysSubmitResponse.RedisKey">
+            <summary>
+            缓存key
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.WebApiResponse.WaBxSysSubmitResponse.RelationPerson">
+            <summary>
+            关系人（！！将之前的车主、被保险人信息赋值到这个对象里！！）
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.WebApiResponse.WaBxSysSubmitResponse.RateFactor">
+            <summary>
+            费率系数
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.WebApiResponse.WaBxSysSubmitResponse.HistoryId">
+            <summary>
+            历史记录id
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.WebApiResponse.WaBxSysSubmitResponse.documentGroupId">
+            <summary>
+            平安核保专用
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.WebApiResponse.WaBxSysSubmitResponseList.BizpNo">
+            <summary>
+            商业险保单号
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.WebApiResponse.WaBxSysSubmitResponseList.ForcepNo">
+            <summary>
+            交强险保单号
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.WebApiResponse.WaBxSysSubmitResponseList.licenseNo">
+            <summary>
+            车牌
+            </summary>
+        </member>
+        <member name="T:BaoXian.Model.Common.WebApiResponse.WaCarVehiclesResponse">
+            <summary>
+            车型列表
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.WebApiResponse.RBSysClaimInfo.PolicyNo">
+            <summary>
+            保单号
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.WebApiResponse.RBSysClaimInfo.EndDate">
+            <summary>
+            保单结束时间
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.WebApiResponse.RBSysClaimInfo.LastDamagedBI">
+            <summary>
+            上年商业险出险次数
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.WebApiResponse.RBSysClaimInfo.LastDamagedCI">
+            <summary>
+            上年交强险出险次数
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.WebApiResponse.RBSysClaimInfo.NoDamYearsBI">
+            <summary>
+            商业险连续未出险年数
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.WebApiResponse.RBSysClaimInfo.NoDamYearsCI">
+            <summary>
+            交强险连续未出险年数
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.WebApiResponse.WaGSCInfoResponse.GSC_UserCode">
+            <summary>
+            国寿财用户名
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.WebApiResponse.WaGSCInfoResponse.GSC_Pwd">
+            <summary>
+            国寿财密码
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.WebApiResponse.WaGSCInfoResponse.UserCode">
+            <summary>
+            用户名
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.WebApiResponse.WaGSCInfoResponse.Pwd">
+            <summary>
+            密码
+            </summary>
+        </member>
+        <member name="T:BaoXian.Model.Common.WebApiResponse.WaHistoryPolicysResponse">
+            <summary>
+            历史保单列表
+            </summary>
+        </member>
+        <member name="T:BaoXian.Model.WebApiResponse.WaPingAnBizForceResponse">
+            <summary>
+            平安报价返回对象
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.WebApiResponse.WaRBSysConfirmJFResponse.FormalSYOrderNo">
+            <summary>
+            正式商业险保单号
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.WebApiResponse.WaRBSysConfirmJFResponse.FormalJQOrderNo">
+            <summary>
+            正式交强险保单号
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.WebApiResponse.WaRBSysSaveJFResponse.JFNo">
+            <summary>
+            交费单号
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.WebApiResponse.WaRBSysSaveJFResponse.OrderCount">
+            <summary>
+            关联批单数量
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.WebApiResponse.WaRBSysSaveJFResponse.Amount">
+            <summary>
+            交费金额
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.WebApiResponse.WaRBSysSaveJFResponse.PosLastDate">
+            <summary>
+            刷卡最迟交费日期
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.WebApiResponse.WaRBSysSaveJFResponse.ChequeLastDate">
+            <summary>
+            支票最迟交费日期
+            </summary>
+        </member>
+        <member name="T:BaoXian.Model.Common.WebApiResponse.WaReconciliationResponse">
+            <summary>
+            对账返回结果对象
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.Common.WebApiResponse.WaReconciliationResponse.reconciliation">
+            <summary>
+            对账信息，交强商业分开
+            </summary>
+        </member>
+        <member name="T:BaoXian.Model.WebApiResponse.WaRenewalInfoResponse">
+            <summary>
+            续保返回信息
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.WebApiResponse.WaRenewalInfoResponse.RenewalItemInfo">
+            <summary>
+            续保的险种信息
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.WebApiResponse.WaRenewalInfoResponse.RenewalItemQuote">
+            <summary>
+            续保各险种报价
+            </summary>
+        </member>
+        <member name="P:BaoXian.Model.WebApiResponse.WaRenewalInfoResponse.LastYearInfo">
+            <summary>
+            上年理赔信息
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.WebApiResponse.WaTaiPyBizForceQuoteResponseInfo.ForceQuote">
+            <summary>
+            交强险车船税报价结果(仅限官网报价使用）
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.WebApiResponse.WaTaiPyBizForceQuoteResponseInfo.BizQuote">
+            <summary>
+            商业险报价结果（仅限官网报价使用）
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.WebApiResponse.WaTaiPyBizForceQuoteResponseInfo.UserDBInfo">
+            <summary>
+            用户信息，包括报价信息、理赔信息等
+            </summary>
+        </member>
+        <member name="F:BaoXian.Model.Response.WaTaiPySubmitResponseInfo.InsuredIdentifyNo">
+            <summary>
+            身份证号，只有太平洋老用户能取到
+            </summary>
+        </member>
+    </members>
+</doc>

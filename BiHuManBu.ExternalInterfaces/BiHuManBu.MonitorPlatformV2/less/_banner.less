@@ -1,0 +1,38 @@
+﻿header[role="banner"]{
+    .banner-brand{
+        padding-top:40px;
+    }
+    > .container{
+        position:relative;
+    }
+    .utility-nav{
+        z-index:1999;
+        position:absolute;
+        top:0;
+        right:0;
+        > ul{
+            list-style:none;
+            >li{
+                float:left;
+                >a{
+                    display:inline-block;
+                    padding:8px 12px;
+                    &:hover{
+                        text-decoration:none;
+                    }
+
+                    @media (max-width: (@grid-float-breakpoint - 1)){
+                        span{
+                            .sr-only();
+                        }
+                        .icon{
+                            margin-top:10px;
+                            font-size:2em;
+                            line-height:1.2;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

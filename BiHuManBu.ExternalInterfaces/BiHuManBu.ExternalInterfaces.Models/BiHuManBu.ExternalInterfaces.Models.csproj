@@ -1,0 +1,475 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3814E7E1-9CAE-4E12-BB7A-BECDA662C19A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BiHuManBu.ExternalInterfaces.Models</RootNamespace>
+    <AssemblyName>BiHuManBu.ExternalInterfaces.Models</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'QA_Normal_Release|AnyCPU'">
+    <OutputPath>bin\QA_Normal_Release\</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Lib\mysql6\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.8.3.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Lib\mysql6\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data.Entity.EF6, Version=6.8.3.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Lib\mysql6\MySql.Data.Entity.EF6.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Account.cs" />
+    <Compile Include="BiHuManBu.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BiHuManBu.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BiHuManBu.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BiHuManBu.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BiHuManBu.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BiHuManBu.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="bj_baodanxianzhong.cs">
+      <DependentUpon>BiHuManBu.tt</DependentUpon>
+    </Compile>
+    <Compile Include="bj_baodanxinxi.cs">
+      <DependentUpon>BiHuManBu.tt</DependentUpon>
+    </Compile>
+    <Compile Include="bx_address.cs">
+      <DependentUpon>BiHuManBu.tt</DependentUpon>
+    </Compile>
+    <Compile Include="bx_agent.cs">
+      <DependentUpon>BiHuManBu.tt</DependentUpon>
+    </Compile>
+    <Compile Include="bx_agentpoint.cs">
+      <DependentUpon>BiHuManBu.tt</DependentUpon>
+    </Compile>
+    <Compile Include="bx_agent_config.cs">
+      <DependentUpon>BiHuManBu.tt</DependentUpon>
+    </Compile>
+    <Compile Include="bx_agent_distributed.cs">
+      <DependentUpon>BiHuManBu.tt</DependentUpon>
+    </Compile>
+    <Compile Include="bx_agent_rate.cs">
+      <DependentUpon>BiHuManBu.tt</DependentUpon>
+    </Compile>
+    <Compile Include="bx_agent_select.cs">
+      <DependentUpon>BiHuManBu.tt</DependentUpon>
+    </Compile>
+    <Compile Include="bx_agent_special_rate.cs">
+      <DependentUpon>BiHuManBu.tt</DependentUpon>
+    </Compile>
+    <Compile Include="bx_agent_ukey.cs">
+      <DependentUpon>BiHuManBu.tt</DependentUpon>
+    </Compile>
+    <Compile Include="bx_agent_xgaccount_relationship.cs">
+      <DependentUpon>BiHuManBu.tt</DependentUpon>
+    </Compile>
+    <Compile Include="bx_anxin_delivery.cs">
+      <DependentUpon>BiHuManBu.tt</DependentUpon>
+    </Compile>
+    <Compile Include="bx_appsetting.cs">
+      <DependentUpon>BiHuManBu.tt</DependentUpon>
+    </Compile>
+    <Compile Include="bx_area.cs">
+      <DependentUpon>BiHuManBu.tt</DependentUpon>
+    </Compile>
+    <Compile Include="bx_batchrenewal_item.cs">
+      <DependentUpon>BiHuManBu.tt</DependentUpon>
+    </Compile>
+    <Compile Include="bx_bj_union.cs">
+      <DependentUpon>BiHuManBu.tt</DependentUpon>
+    </Compile>
+    <Compile Include="bx_buid_activity.cs">
+      <DependentUpon>BiHuManBu.tt</DependentUpon>
+    </Compile>
+    <Compile Include="bx_camera_blacklist.cs">
+      <DependentUpon>BiHuManBu.tt</DependentUpon>
+    </Compile>
+    <Compile Include="bx_camera_config.cs">
+      <DependentUpon>BiHuManBu.tt</DependentUpon>
+    </Compile>
+    <Compile Include="bx_carinfo.cs">
+      <DependentUpon>BiHuManBu.tt</DependentUpon>
+    </Compile>
+    <Compile Include="bx_carmodel.cs">
+      <DependentUpon>BiHuManBu.tt</DependentUpon>
+    </Compile>
+    <Compile Include="bx_car_claims.cs">
+      <DependentUpon>BiHuManBu.tt</DependentUpon>
+    </Compile>
+    <Compile Include="bx_car_order.cs">
+      <DependentUpon>BiHuManBu.tt</DependentUpon>
+    </Compile>
+    <Compile Include="bx_car_record.cs">
+      <DependentUpon>BiHuManBu.tt</DependentUpon>
+    </Compile>
+    <Compile Include="bx_car_renewal.cs">
+      <DependentUpon>BiHuManBu.tt</DependentUpon>
+    </Compile>
+    <Compile Include="bx_car_renewal_premium.cs">
+      <DependentUpon>BiHuManBu.tt</DependentUpon>
+    </Compile>
+    <Compile Include="bx_charge.cs">
+      <DependentUpon>BiHuManBu.tt</DependentUpon>
+    </Compile>
+    <Compile Include="bx_charge_history.cs">
+      <DependentUpon>BiHuManBu.tt</DependentUpon>
+    </Compile>
+    <Compile Include="bx_city.cs">
+      <DependentUpon>BiHuManBu.tt</DependentUpon>
+    </Compile>
+    <Compile Include="bx_cityquoteday.cs">
+      <DependentUpon>BiHuManBu.tt</DependentUpon>
+    </Compile>
+    <Compile Include="bx_claim_detail.cs">
+      <DependentUpon>BiHuManBu.tt</DependentUpon>
+    </Compile>
+    <Compile Include="bx_config.cs">
+      <DependentUpon>BiHuManBu.tt</DependentUpon>
+    </Compile>
+    <Compile Include="bx_consumer_review.cs">
+      <DependentUpon>BiHuManBu.tt</DependentUpon>
+    </Compile>
+    <Compile Include="bx_crm_steps.cs">
+      <DependentUpon>BiHuManBu.tt</DependentUpon>
+    </Compile>
+    <Compile Include="bx_customercategories.cs">
+      <DependentUpon>BiHuManBu.tt</DependentUpon>
+    </Compile>
+    <Compile Include="bx_devicedetail.cs">
+      <DependentUpon>BiHuManBu.tt</DependentUpon>
+    </Compile>
+    <Compile Include="bx_distributed_history.cs">
+      <DependentUpon>BiHuManBu.tt</DependentUpon>
+    </Compile>
+    <Compile Include="bx_drivelicense_cartype.cs">
+      <DependentUpon>BiHuManBu.tt</DependentUpon>
+    </Compile>
+    <Compile Include="bx_gsc_renewal.cs">
+      <DependentUpon>BiHuManBu.tt</DependentUpon>
+    </Compile>
+    <Compile Include="bx_gsc_userinfo.cs">
+      <DependentUpon>BiHuManBu.tt</DependentUpon>
+    </Compile>
+    <Compile Include="bx_hebaodianwei.cs">
+      <DependentUpon>BiHuManBu.tt</DependentUpon>
+    </Compile>
+    <Compile Include="bx_history_contract.cs">
+      <DependentUpon>BiHuManBu.tt</DependentUpon>
+    </Compile>
+    <Compile Include="bx_images.cs">
+      <DependentUpon>BiHuManBu.tt</DependentUpon>
+    </Compile>
+    <Compile Include="bx_lastinfo.cs">
+      <DependentUpon>BiHuManBu.tt</DependentUpon>
+    </Compile>
+    <Compile Include="bx_lastinfo_userinput.cs">
+      <DependentUpon>BiHuManBu.tt</DependentUpon>
+    </Compile>
+    <Compile Include="bx_message.cs">
+      <DependentUpon>BiHuManBu.tt</DependentUpon>
+    </Compile>
+    <Compile Include="bx_msgindex.cs">
+      <DependentUpon>BiHuManBu.tt</DependentUpon>
+    </Compile>
+    <Compile Include="bx_notice_xb.cs">
+      <DependentUpon>BiHuManBu.tt</DependentUpon>
+    </Compile>
+    <Compile Include="bx_order.cs">
+      <DependentUpon>BiHuManBu.tt</DependentUpon>
+    </Compile>
+    <Compile Include="bx_order_claimdetail.cs">
+      <DependentUpon>BiHuManBu.tt</DependentUpon>
+    </Compile>
+    <Compile Include="bx_order_quoteresult.cs">
+      <DependentUpon>BiHuManBu.tt</DependentUpon>
+    </Compile>
+    <Compile Include="bx_order_savequote.cs">
+      <DependentUpon>BiHuManBu.tt</DependentUpon>
+    </Compile>
+    <Compile Include="bx_order_submit_info.cs">
+      <DependentUpon>BiHuManBu.tt</DependentUpon>
+    </Compile>
+    <Compile Include="bx_order_userinfo.cs">
+      <DependentUpon>BiHuManBu.tt</DependentUpon>
+    </Compile>
+    <Compile Include="bx_para_bhtype.cs">
+      <DependentUpon>BiHuManBu.tt</DependentUpon>
+    </Compile>
+    <Compile Include="bx_picture.cs">
+      <DependentUpon>BiHuManBu.tt</DependentUpon>
+    </Compile>
+    <Compile Include="bx_preferential_activity.cs">
+      <DependentUpon>BiHuManBu.tt</DependentUpon>
+    </Compile>
+    <Compile Include="bx_quotehistory_related.cs">
+      <DependentUpon>BiHuManBu.tt</DependentUpon>
+    </Compile>
+    <Compile Include="bx_quotereq_carinfo.cs">
+      <DependentUpon>BiHuManBu.tt</DependentUpon>
+    </Compile>
+    <Compile Include="bx_quoteresult.cs">
+      <DependentUpon>BiHuManBu.tt</DependentUpon>
+    </Compile>
+    <Compile Include="bx_quoteresult_carinfo.cs">
+      <DependentUpon>BiHuManBu.tt</DependentUpon>
+    </Compile>
+    <Compile Include="bx_quote_many_source.cs">
+      <DependentUpon>BiHuManBu.tt</DependentUpon>
+    </Compile>
+    <Compile Include="bx_renewalquote.cs">
+      <DependentUpon>BiHuManBu.tt</DependentUpon>
+    </Compile>
+    <Compile Include="bx_renewalstatus.cs">
+      <DependentUpon>BiHuManBu.tt</DependentUpon>
+    </Compile>
+    <Compile Include="bx_report_claim.cs">
+      <DependentUpon>BiHuManBu.tt</DependentUpon>
+    </Compile>
+    <Compile Include="bx_savequote.cs">
+      <DependentUpon>BiHuManBu.tt</DependentUpon>
+    </Compile>
+    <Compile Include="bx_sms_account.cs">
+      <DependentUpon>BiHuManBu.tt</DependentUpon>
+    </Compile>
+    <Compile Include="bx_sms_account_content.cs">
+      <DependentUpon>BiHuManBu.tt</DependentUpon>
+    </Compile>
+    <Compile Include="bx_sms_order.cs">
+      <DependentUpon>BiHuManBu.tt</DependentUpon>
+    </Compile>
+    <Compile Include="bx_specialoption.cs">
+      <DependentUpon>BiHuManBu.tt</DependentUpon>
+    </Compile>
+    <Compile Include="bx_submit_info.cs">
+      <DependentUpon>BiHuManBu.tt</DependentUpon>
+    </Compile>
+    <Compile Include="bx_system_message.cs">
+      <DependentUpon>BiHuManBu.tt</DependentUpon>
+    </Compile>
+    <Compile Include="bx_transferrecord.cs">
+      <DependentUpon>BiHuManBu.tt</DependentUpon>
+    </Compile>
+    <Compile Include="bx_userinfo.cs">
+      <DependentUpon>BiHuManBu.tt</DependentUpon>
+    </Compile>
+    <Compile Include="bx_userinfo_expand.cs">
+      <DependentUpon>BiHuManBu.tt</DependentUpon>
+    </Compile>
+    <Compile Include="bx_userinfo_renewal_index.cs">
+      <DependentUpon>BiHuManBu.tt</DependentUpon>
+    </Compile>
+    <Compile Include="bx_userinfo_renewal_info.cs">
+      <DependentUpon>BiHuManBu.tt</DependentUpon>
+    </Compile>
+    <Compile Include="bx_vehicleinfo.cs">
+      <DependentUpon>BiHuManBu.tt</DependentUpon>
+    </Compile>
+    <Compile Include="bx_violationlog.cs">
+      <DependentUpon>BiHuManBu.tt</DependentUpon>
+    </Compile>
+    <Compile Include="bx_ywxdetail.cs">
+      <DependentUpon>BiHuManBu.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CarOrderModel.cs" />
+    <Compile Include="DistributeModels\DistributeModels.cs" />
+    <Compile Include="IRepository\IAddressRepository.cs" />
+    <Compile Include="IRepository\IAgentConfigRepository.cs" />
+    <Compile Include="IRepository\IAgentDistributedRepository.cs" />
+    <Compile Include="IRepository\IAgentPointRepository.cs" />
+    <Compile Include="IRepository\IAgentRateRepository.cs" />
+    <Compile Include="IRepository\IAgentRepository.cs" />
+    <Compile Include="IRepository\IAgentSelectRepository.cs" />
+    <Compile Include="IRepository\IAgentSpecialRateRepository.cs" />
+    <Compile Include="IRepository\IAgentUKeyRepository.cs" />
+    <Compile Include="IRepository\ICustomerCategoriesRepository.cs" />
+    <Compile Include="IRepository\IQuotehistoryRelatedRepository.cs" />
+    <Compile Include="IRepository\IReviewDetailRecordReponsitory.cs" />
+    <Compile Include="IRepository\IAppSettingRepository.cs" />
+    <Compile Include="IRepository\IAreaRepository.cs" />
+    <Compile Include="IRepository\IBaodanXianZhongRepository.cs" />
+    <Compile Include="IRepository\IBaodanxinxiRepository.cs" />
+    <Compile Include="IRepository\IBatchRenewalRepository.cs" />
+    <Compile Include="IRepository\IBxBjUnionRepository.cs" />
+    <Compile Include="IRepository\ICameraConfigRepository.cs" />
+    <Compile Include="IRepository\ICameraDistributeRepository.cs" />
+    <Compile Include="IRepository\ICarInfoRepository.cs" />
+    <Compile Include="IRepository\ICarModelRepository.cs" />
+    <Compile Include="IRepository\ICarRecordRepository.cs" />
+    <Compile Include="IRepository\ICarRenewalRepository.cs" />
+    <Compile Include="IRepository\IChargeHistoryRepository.cs" />
+    <Compile Include="IRepository\IChargeRepository.cs" />
+    <Compile Include="IRepository\ICityQuoteDayRepository.cs" />
+    <Compile Include="IRepository\ICityRepository.cs" />
+    <Compile Include="IRepository\IConfigRepository.cs" />
+    <Compile Include="IRepository\IConsumerReviewRepository.cs" />
+    <Compile Include="IRepository\IDeviceDetailRepository.cs" />
+    <Compile Include="IRepository\IDriverLicenseTypeRepository.cs" />
+    <Compile Include="IRepository\IGscRenewalRepository.cs" />
+    <Compile Include="IRepository\IGscRepository.cs" />
+    <Compile Include="IRepository\IHebaoDianweiRepository.cs" />
+    <Compile Include="IRepository\IHistoryClaimRepository.cs" />
+    <Compile Include="IRepository\IImagesRepository.cs" />
+    <Compile Include="IRepository\ILastInfoRepository.cs" />
+    <Compile Include="IRepository\IManagerRoleRepository.cs" />
+    <Compile Include="IRepository\IMessageRepository.cs" />
+    <Compile Include="IRepository\INoticexbRepository.cs" />
+    <Compile Include="IRepository\IOrderRepository.cs" />
+    <Compile Include="IRepository\ICarOrderQuoteResultRepository.cs" />
+    <Compile Include="IRepository\IParaBhTypeRepository.cs" />
+    <Compile Include="IRepository\IPictureRepository.cs" />
+    <Compile Include="IRepository\IPreferentialActivityRepository.cs" />
+    <Compile Include="IRepository\IQuoteHistoryRepository.cs" />
+    <Compile Include="IRepository\IQuoteManySourceRepository.cs" />
+    <Compile Include="IRepository\IQuoteReqCarinfoRepository.cs" />
+    <Compile Include="IRepository\IQuoteResultCarinfoRepository.cs" />
+    <Compile Include="IRepository\IQuoteResultRepository.cs" />
+    <Compile Include="IRepository\IRenewalQuoteRepository.cs" />
+    <Compile Include="IRepository\ICarOrderSaveQuoteRepository.cs" />
+    <Compile Include="IRepository\IRenewalStatusRepository.cs" />
+    <Compile Include="IRepository\IReportClaimRepository.cs" />
+    <Compile Include="IRepository\IRepositoryBase.cs" />
+    <Compile Include="IRepository\ISaveQuoteRepository.cs" />
+    <Compile Include="IRepository\ICarOrderSubmitInfoRepository.cs" />
+    <Compile Include="IRepository\ISmsContentRepository.cs" />
+    <Compile Include="IRepository\ISmsOrderRepository.cs" />
+    <Compile Include="IRepository\ISpecialOptionRepository.cs" />
+    <Compile Include="IRepository\ISubmitInfoRepository.cs" />
+    <Compile Include="IRepository\ITransferRecordRepository.cs" />
+    <Compile Include="IRepository\IUserClaimRepository.cs" />
+    <Compile Include="IRepository\ICarOrderUserInfoRepository.cs" />
+    <Compile Include="IRepository\IUserinfoExpandRepository.cs" />
+    <Compile Include="IRepository\IUserinfoRenewalInfoRepository.cs" />
+    <Compile Include="IRepository\IUserInfoRepository.cs" />
+    <Compile Include="IRepository\IUserRepository.cs" />
+    <Compile Include="IRepository\IYwxdetailRepository.cs" />
+    <Compile Include="manager_role_db.cs">
+      <DependentUpon>BiHuManBu.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MessageResult.cs" />
+    <Compile Include="PartialModels\bx_agent\bx_agent.cs" />
+    <Compile Include="PartialModels\bx_agent\IBxAgent.cs" />
+    <Compile Include="PartialModels\bx_agent\NullBxAgent.cs" />
+    <Compile Include="PartialModels\bx_agent\Specification\AgentHasQuoteGrantSpecification.cs" />
+    <Compile Include="PartialModels\bx_agent\Specification\AgentHasSubmitGrantSpecification.cs" />
+    <Compile Include="PartialModels\bx_agent\Specification\AgentIsActiveSpecification.cs" />
+    <Compile Include="PartialModels\bx_quote_history.cs" />
+    <Compile Include="PartialModels\bx_userinfo\bx_userinfo.cs" />
+    <Compile Include="PartialModels\bx_userinfo\IBxUserInfo.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReportModel\AgentConfigNameModel.cs" />
+    <Compile Include="ReportModel\AgentModel.cs" />
+    <Compile Include="ReportModel\BaojiaMyListModel.cs" />
+    <Compile Include="ReportModel\BjdCorrelateViewModel.cs" />
+    <Compile Include="ReportModel\CameraBackDataViewModel.cs" />
+    <Compile Include="ReportModel\CancelSubmitResult.cs" />
+    <Compile Include="ReportModel\CarOrderStatusModel.cs" />
+    <Compile Include="ReportModel\CityUKeyModel.cs" />
+    <Compile Include="ReportModel\GSCClaimsListInfo.cs" />
+    <Compile Include="ReportModel\GSCHistoryContractInfo.cs" />
+    <Compile Include="ReportModel\InsuranceEndDate.cs" />
+    <Compile Include="ReportModel\InsuranceEndDateAndClaim.cs" />
+    <Compile Include="ReportModel\InsuranceStartDate.cs" />
+    <Compile Include="ReportModel\MultiChannelsModel.cs" />
+    <Compile Include="ReportModel\RepeatUserInfoModel.cs" />
+    <Compile Include="ReportModel\TableMessage.cs" />
+    <Compile Include="ReportModel\TransferModel.cs" />
+    <Compile Include="ReportModel\UserInfoModel.cs" />
+    <Compile Include="ReportModel\WaBaseResponse.cs" />
+    <Compile Include="ReportModel\WaGuoShouCaiQuoteResponse.cs" />
+    <Compile Include="ReportModel\WaGuoShouCaiQuoteResult.cs" />
+    <Compile Include="Specification\AndSpecification.cs" />
+    <Compile Include="Specification\CompositeSpecification.cs" />
+    <Compile Include="Specification\ISpecification.cs" />
+    <Compile Include="Specification\NotSpecification.cs" />
+    <Compile Include="user.cs">
+      <DependentUpon>BiHuManBu.tt</DependentUpon>
+    </Compile>
+    <Compile Include="user_token.cs">
+      <DependentUpon>BiHuManBu.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config">
+      <SubType>Designer</SubType>
+    </None>
+    <EntityDeploy Include="BiHuManBu.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>BiHuManBu.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="BiHuManBu.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>BiHuManBu.edmx</DependentUpon>
+      <LastGenOutput>BiHuManBu.Context.cs</LastGenOutput>
+    </None>
+    <None Include="BiHuManBu.edmx.diagram">
+      <DependentUpon>BiHuManBu.edmx</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BiHuManBu.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>BiHuManBu.edmx</DependentUpon>
+      <LastGenOutput>BiHuManBu.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="PartialModels\bx_userinfo\Specification\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

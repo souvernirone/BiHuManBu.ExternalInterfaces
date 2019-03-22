@@ -1,0 +1,405 @@
+﻿@{
+    ViewBag.Title = "MySql监控";
+}
+<!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+<div id="main" style="height: 400px"></div>
+
+<div id="threadmain" style="height:400px"></div>
+<!-- ECharts单文件引入 -->
+@section scripts
+{
+    <script src="http://echarts.baidu.com/build/dist/echarts.js"></script>
+    <script type="text/javascript"> var timeTicket; </script>
+    <script type="text/javascript">
+        require.config({
+            paths: {
+                echarts: 'http://echarts.baidu.com/build/dist'
+            }
+        });
+        require(
+            [
+                'echarts',
+                'echarts/chart/line'
+            ], function(ec) {
+                // 基于准备好的dom，初始化echarts图表
+                var myChart = ec.init(document.getElementById('main'));
+                var threadChart = ec.init(document.getElementById("threadmain"));
+
+                option = {
+                    title: {
+                        text: 'QPS'
+                    },
+                    tooltip: {
+                        trigger: 'axis'
+                    },
+                    legend: {
+                        data: ['QPS', 'QTS','SELECT','UPDATE','INSERT']
+                    },
+                    toolbox: {
+                        show: true,
+                        feature: {
+                            mark: { show: true },
+                            dataView: { show: true, readOnly: false },
+                            magicType: { show: true, type: ['line', 'bar'] },
+                            restore: { show: true },
+                            saveAsImage: { show: true }
+                        }
+                    },
+                    dataZoom: {
+                        show: false,
+                        start: 0,
+                        end: 100
+                    },
+                    xAxis: [
+                        {
+                            type: 'category',
+                            boundaryGap: true,
+                            data: (function() {
+                                var now = new Date();
+                                var res = [];
+                                var len = 10;
+                                while (len--) {
+                                    res.unshift(now.toLocaleTimeString().replace(/(\d?\d:\d?\d):\d?\d/, '$1'));
+                                    now = new Date(now - 120000);
+                                }
+                                return res;
+                            })()
+                        },
+                        {
+                            type: 'category',
+                            boundaryGap: true,
+                            data: (function () {
+                                var now = new Date();
+                                var res = [];
+                                var len = 10;
+                                //while (len--) {
+                                //    res.push(len + 1);
+                                //}
+                                while (len--) {
+                                    res.unshift(now.toLocaleTimeString().replace(/(\d?\d:\d?\d):\d?\d/, '$1'));
+                                    now = new Date(now - 120000);
+                                }
+                                return res;
+                            })()
+                        }
+                    ],
+                    yAxis: [
+                        {
+                            type: 'value',
+                            scale: true,
+                            name: 'QPS',
+                            boundaryGap: [0.2, 0.2]
+                        },
+                        {
+                            type: 'value',
+                            scale: true,
+                            name: 'QTS',
+                            boundaryGap: [0.2, 0.2]
+                        }
+                    ],
+                    series: [
+                        {
+                            name: 'QTS',
+                            type: 'line',
+                            xAxisIndex: 1,
+                            yAxisIndex: 1,
+                            data: (function() {
+                                var res = [];
+                                var len = 10;
+                                while (len--) {
+                                    res.push(Math.round(Math.random() * 1000));
+                                }
+                                return res;
+                            })()
+                        },
+                        {
+                            name: 'QPS',
+                            type: 'line',
+                            data: (function() {
+                                var res = [];
+                                var len = 10;
+                                while (len--) {
+                                    res.push((Math.random() * 10 + 5).toFixed(1) - 0);
+                                }
+                                return res;
+                            })()
+                        },
+                        {
+                            name: 'SELECT',
+                            type: 'line',
+                            data: (function () {
+                                var res = [];
+                                var len = 10;
+                                while (len--) {
+                                    res.push((Math.random() * 10 + 5).toFixed(1) - 0);
+                                }
+                                return res;
+                            })()
+                        },
+                        {
+                            name: 'UPDATE',
+                            type: 'line',
+                            data: (function () {
+                                var res = [];
+                                var len = 10;
+                                while (len--) {
+                                    res.push((Math.random() * 10 + 5).toFixed(1) - 0);
+                                }
+                                return res;
+                            })()
+                        },
+                        {
+                            name: 'INSERT',
+                            type: 'line',
+                            data: (function () {
+                                var res = [];
+                                var len = 10;
+                                while (len--) {
+                                    res.push((Math.random() * 10 + 5).toFixed(1) - 0);
+                                }
+                                return res;
+                            })()
+                        }
+                    ]
+                };
+
+                threadoption = {
+                    title: {
+                        text: '线程池'
+                    },
+                    tooltip: {
+                        trigger: 'axis'
+                    },
+                    legend: {
+                        data: ['Cached','Connected','Running','Created']
+                    },
+                    toolbox: {
+                        show: true,
+                        feature: {
+                            mark: { show: true },
+                            dataView: { show: true, readOnly: false },
+                            magicType: { show: true, type: ['line', 'bar'] },
+                            restore: { show: true },
+                            saveAsImage: { show: true }
+                        }
+                    },
+                    dataZoom: {
+                        show: false,
+                        start: 0,
+                        end: 100
+                    },
+                    xAxis: [
+                        {
+                            type: 'category',
+                            boundaryGap: true,
+                            data: (function () {
+                                var now = new Date();
+                                var res = [];
+                                var len = 10;
+                                //while (len--) {
+                                //    res.push(len + 1);
+                                //}
+                                while (len--) {
+                                    res.unshift(now.toLocaleTimeString().replace(/(\d?\d:\d?\d):\d?\d/, '$1'));
+                                    now = new Date(now - 120000);
+                                }
+                                return res;
+                            })()
+                        },
+                        {
+                            type: 'category',
+                            boundaryGap: true,
+                            data: (function () {
+                                var now = new Date();
+                                var res = [];
+                                var len = 10;
+                                //while (len--) {
+                                //    res.push(len + 1);
+                                //}
+                                while (len--) {
+                                    res.unshift(now.toLocaleTimeString().replace(/(\d?\d:\d?\d):\d?\d/, '$1'));
+                                    now = new Date(now - 120000);
+                                }
+                                return res;
+                            })()
+                        }
+                    ],
+                    yAxis: [
+                        {
+                            type: 'value',
+                            scale: true,
+                            name: 'Cached',
+                            boundaryGap: [0.2, 0.2]
+                        },
+                         {
+                             type: 'value',
+                             scale: true,
+                             name: 'Created',
+                             boundaryGap: [0.2, 0.2]
+                         }
+                    ],
+                    series: [
+                        {
+                            name: 'Cached',
+                            type: 'line',
+                            data: (function () {
+                                var res = [];
+                                var len = 10;
+                                while (len--) {
+                                    res.push((Math.random() * 10 + 5).toFixed(1) - 0);
+                                }
+                                return res;
+                            })()
+                        },
+                        {
+                            name: 'Connected',
+                            type: 'line',
+                            data: (function () {
+                                var res = [];
+                                var len = 10;
+                                while (len--) {
+                                    res.push((Math.random() * 10 + 5).toFixed(1) - 0);
+                                }
+                                return res;
+                            })()
+                        },
+                        {
+                            name: 'Running',
+                            type: 'line',
+                            data: (function () {
+                                var res = [];
+                                var len = 10;
+                                while (len--) {
+                                    res.push((Math.random() * 10 + 5).toFixed(1) - 0);
+                                }
+                                return res;
+                            })()
+                        },
+                        {
+                            name: 'Created',
+                            type: 'line',
+                            xAxisIndex: 1,
+                            yAxisIndex: 1,
+                            data: (function () {
+                                var res = [];
+                                var len = 10;
+                                while (len--) {
+                                    res.push((Math.random() * 10 + 5).toFixed(1) - 0);
+                                }
+                                return res;
+                            })()
+                        }
+
+                    ]
+                };
+                var lastData = 11;
+                var qts = 0;
+                var select = 0;
+                var update = 0;
+                var insert = 0;
+                var cached = 0;
+                var connected = 0;
+                var running = 0;
+                var created = 0;
+                var axisData;
+                clearInterval(timeTicket);
+                timeTicket = setInterval(function() {
+                    $.ajax({
+                        url: '@Url.Action("GetMySqlMonitor")',
+                        type: "get",
+                        dataType: "json",
+                        success: function(data) {
+                            lastData = data.QPS.toFixed(2);
+                            qts = data.QTS.toFixed(2);
+                            select = data.Select.toFixed(2);
+                            update = data.Update.toFixed(2);
+                            insert = data.Insert.toFixed(2);
+                            cached = data.ThreadsCached;
+                            connected = data.ThreadsConnected;
+                            running = data.ThreadsRunning;
+                            created = data.ThreadsCreated;
+
+                        }
+                    });
+                    axisData = (new Date()).
+                        toLocaleTimeString().replace(/(\d?\d:\d?\d):\d?\d/, '$1');
+
+                    // 动态数据接口 addData
+                    myChart.addData([
+                        [
+                            0, // 系列索引
+                            qts, // 新增数据
+                            false, // 新增数据是否从队列头部插入
+                            false, // 是否增加队列长度，false则自定删除原有数据，队头插入删队尾，队尾插入删队头
+                            axisData // 坐标轴标签
+                        ],
+                        [
+                            1, // 系列索引
+                            lastData, // 新增数据
+                            false, // 新增数据是否从队列头部插入
+                            false, // 是否增加队列长度，false则自定删除原有数据，队头插入删队尾，队尾插入删队头
+                            axisData
+
+                        ],
+                        [
+                            2, // 系列索引
+                            select, // 新增数据
+                            false, // 新增数据是否从队列头部插入
+                            false, // 是否增加队列长度，false则自定删除原有数据，队头插入删队尾，队尾插入删队头
+                            //axisData // 坐标轴标签
+                        ],
+                        [
+                           3, // 系列索引
+                            update, // 新增数据
+                            false, // 新增数据是否从队列头部插入
+                            false, // 是否增加队列长度，false则自定删除原有数据，队头插入删队尾，队尾插入删队头
+                            //axisData // 坐标轴标签
+                        ],
+                        [
+                            4, // 系列索引
+                            insert, // 新增数据
+                            false, // 新增数据是否从队列头部插入
+                            false, // 是否增加队列长度，false则自定删除原有数据，队头插入删队尾，队尾插入删队头
+                            //axisData // 坐标轴标签
+                        ]
+                    ]);
+
+                    threadChart.addData([
+                        [
+                            0, // 系列索引
+                            cached, // 新增数据
+                            false, // 新增数据是否从队列头部插入
+                            false, // 是否增加队列长度，false则自定删除原有数据，队头插入删队尾，队尾插入删队头
+                            axisData
+                        ],
+                        [
+                            1, // 系列索引
+                            connected, // 新增数据
+                            false, // 新增数据是否从队列头部插入
+                            false // 是否增加队列长度，false则自定删除原有数据，队头插入删队尾，队尾插入删队头
+                        ],
+                        [
+                            2, // 系列索引
+                            running, // 新增数据
+                            false, // 新增数据是否从队列头部插入
+                            false // 是否增加队列长度，false则自定删除原有数据，队头插入删队尾，队尾插入删队头
+                        ],
+                        [
+                            3, // 系列索引
+                            created, // 新增数据
+                            false, // 新增数据是否从队列头部插入
+                            false, // 是否增加队列长度，false则自定删除原有数据，队头插入删队尾，队尾插入删队头,
+                            axisData
+                        ]
+                    ]);
+
+                }, 120000);
+
+
+                // 为echarts对象加载数据
+                myChart.setOption(option);
+                threadChart.setOption(threadoption);
+            }
+        );
+    </script>
+}

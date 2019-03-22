@@ -1,0 +1,85 @@
+﻿@{
+    ViewBag.Title = "分钟统计";
+}
+
+
+
+<div id="container" style="min-width:400px;height:400px"></div>
+
+@section scripts
+{
+    <script src="http://cdn.hcharts.cn/highcharts/highcharts.js"></script>
+    <script src="http://cdn.hcharts.cn/highcharts/modules/exporting.js"></script>
+    @*//<script src="http://cdn.hcharts.cn/highcharts/modules/data.js"></script>*@
+    <script type="text/javascript">
+        $(function() {
+            var QuestionsOptions = {
+                chart: {
+                    renderTo: 'mysql-questions-container',
+                    type: 'spline',
+                    events: {}
+                },
+                title: {
+                    text: '',
+                },
+                xAxis: {
+                    type: 'category',
+                },
+                yAxis: {
+            
+                },
+                series: [
+                    {
+                        name: 'Select'
+                    }
+                ]
+            };
+            @*setInterval(function() {
+            $.ajax({
+                url: '@Url.Action("GetMinList")',
+                success: function (data) {
+                    var items = data;
+                    QuestionsOptions.series[0].data = [];
+                    QuestionsOptions.xAxis.categories = [];
+                    $.each(items, function (index, va) {
+                        QuestionsOptions.series[0].data.push(va);
+                        QuestionsOptions.xAxis.categories.push(index);
+                    });
+                    $("#container").highcharts(QuestionsOptions);
+                }
+            });
+        },1000);*@
+            $.ajax({
+                url: '@Url.Action("GetMinList")',
+                success: function(data) {
+                    var items = data;
+                    QuestionsOptions.series[0].data = [];
+                    QuestionsOptions.xAxis.categories = [];
+                    $.each(items, function(index, va) {
+                        QuestionsOptions.series[0].data.push(va);
+                        QuestionsOptions.xAxis.categories.push(index);
+                    });
+                    $("#container").highcharts(QuestionsOptions);
+                }
+            });
+            setInterval(function() {
+                $.ajax({
+                    url: '@Url.Action("GetMinList")',
+                    success: function(data) {
+                        var items = data;
+                        QuestionsOptions.series[0].data = [];
+                        QuestionsOptions.xAxis.categories = [];
+                        $.each(items, function(index, va) {
+                            QuestionsOptions.series[0].data.push(va);
+                            QuestionsOptions.xAxis.categories.push(index);
+                        });
+                        $("#container").highcharts(QuestionsOptions);
+                    }
+                });
+            }, 60000);
+
+
+        });
+    </script>
+}
+

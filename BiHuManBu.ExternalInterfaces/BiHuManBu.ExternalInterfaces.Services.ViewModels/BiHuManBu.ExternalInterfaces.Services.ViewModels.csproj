@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0FE83B21-9E60-45DA-A600-C11B92C85B62}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BiHuManBu.ExternalInterfaces.Services.ViewModels</RootNamespace>
+    <AssemblyName>BiHuManBu.ExternalInterfaces.Services.ViewModels</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'QA_Normal_Release|AnyCPU'">
+    <OutputPath>bin\QA_Normal_Release\</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccidentViewModel\PingAnJyxInfoModel.cs" />
+    <Compile Include="AccidentViewModel\TpyYwxProductInfoModel.cs" />
+    <Compile Include="AdditionalReInfoViewModel.cs" />
+    <Compile Include="AddOrUpdateWorkOrderDetailViewModel.cs" />
+    <Compile Include="AddOrUpdateWorkOrderViewModel.cs" />
+    <Compile Include="AgentProtoViewModel.cs" />
+    <Compile Include="AgentViewModel.cs" />
+    <Compile Include="AddressViewModel.cs" />
+    <Compile Include="AgentIdentityAndRateViewModel.cs" />
+    <Compile Include="AgentPointViewModel.cs" />
+    <Compile Include="AgentRateViewModel.cs" />
+    <Compile Include="AppBaseViewModel.cs" />
+    <Compile Include="AreaViewModel.cs" />
+    <Compile Include="BaojiaInfoViewModel.cs" />
+    <Compile Include="BaojiaMyListViewModel.cs" />
+    <Compile Include="BaojiaItemViewModel.cs" />
+    <Compile Include="BaoxianXianZhongViewModel.cs" />
+    <Compile Include="BaseViewModel.cs" />
+    <Compile Include="BjdCountInfoViewModel.cs" />
+    <Compile Include="CancelSubmitViewModel.cs" />
+    <Compile Include="CarChargeViewModel.cs" />
+    <Compile Include="CarVehicleInfoViewModel.cs" />
+    <Compile Include="CarVehicle\CarVehicleDetail.cs" />
+    <Compile Include="CarVehicle\CarVehicleItem.cs" />
+    <Compile Include="CarVehicle\ICarVehicleInfoViewModel.cs" />
+    <Compile Include="CarVehicle\ICarVehicleItem.cs" />
+    <Compile Include="CheckCarVehicleInfoViewModel.cs" />
+    <Compile Include="CityChannelItem.cs" />
+    <Compile Include="CityChannelViewModel.cs" />
+    <Compile Include="CityViewModel.cs" />
+    <Compile Include="ContinuedPeriodViewModel.cs" />
+    <Compile Include="CreateAddressViewModel.cs" />
+    <Compile Include="CreateOrderViewMode.cs" />
+    <Compile Include="CreateOrderViewModel.cs" />
+    <Compile Include="AgentSourceViewModel.cs" />
+    <Compile Include="CrmTimeLineForSmsViewModel.cs" />
+    <Compile Include="DepreciationPriceViewModel.cs" />
+    <Compile Include="DriverLicenseTypeViewModel.cs" />
+    <Compile Include="DuoToNoticeViewModel.cs" />
+    <Compile Include="EnumChannelStatus.cs" />
+    <Compile Include="EnumOrderPlatform.cs" />
+    <Compile Include="EnumSmsBusinessType.cs" />
+    <Compile Include="EnumSource.cs" />
+    <Compile Include="ExpireAgentViewModel.cs" />
+    <Compile Include="GetAccidentListViewModel.cs" />
+    <Compile Include="GetAppVersionViewModel.cs" />
+    <Compile Include="GetChannelStatusViewModel.cs" />
+    <Compile Include="GetCreaditInfoViewModel.cs" />
+    <Compile Include="GetIntelligentReInfoViewModel.cs" />
+    <Compile Include="GetMoldNameViewModel.cs" />
+    <Compile Include="GetParaBhTypeViewModel.cs" />
+    <Compile Include="GetPicturesViewModel.cs" />
+    <Compile Include="GetPrecisePriceOfUserInfoViewModel.cs" />
+    <Compile Include="GetPrecisePriceViewModel.cs" />
+    <Compile Include="GetRecordNewCarViewModel.cs" />
+    <Compile Include="GetReInfoViewModel.cs" />
+    <Compile Include="GetRepeatSubmitViewModel.cs" />
+    <Compile Include="GetSpecialListViewModel.cs" />
+    <Compile Include="GetViolationInfoViewModel.cs" />
+    <Compile Include="ImagesViewModel.cs" />
+    <Compile Include="IndependentViewModel\FloatingInfoModel\BizBaseInfo.cs" />
+    <Compile Include="IndependentViewModel\FloatingInfoModel\BizFloatingInfo.cs" />
+    <Compile Include="IndependentViewModel\FloatingInfoModel\CarInfo.cs" />
+    <Compile Include="IndependentViewModel\FloatingInfoModel\ForceBaseInfo.cs" />
+    <Compile Include="IndependentViewModel\FloatingInfoModel\ForceFloatingInfo.cs" />
+    <Compile Include="IndependentViewModel\FloatingInfoModel\TaxInfo.cs" />
+    <Compile Include="IsUploadImgViewModel.cs" />
+    <Compile Include="IndependentViewModel\Assist\ClaimVo.cs" />
+    <Compile Include="IndependentViewModel\Assist\CvrgBaseVO.cs" />
+    <Compile Include="IndependentViewModel\Assist\CvrgVO.cs" />
+    <Compile Include="IndependentViewModel\Assist\JQFloatingNotificationList.cs" />
+    <Compile Include="IndependentViewModel\Assist\JSFloatingNotificationPrintListResponse.cs" />
+    <Compile Include="IndependentViewModel\Assist\JSFloatingNotificationPrintListResponseMain.cs" />
+    <Compile Include="IndependentViewModel\Assist\Msg.cs" />
+    <Compile Include="IndependentViewModel\Assist\prmCoefBase.cs" />
+    <Compile Include="IndependentViewModel\Assist\SYFloatingNotificationList.cs" />
+    <Compile Include="IndependentViewModel\Assist\VhlVOBase.cs" />
+    <Compile Include="IndependentViewModel\Assist\VsTax.cs" />
+    <Compile Include="IndependentViewModel\GetFloatingInfoViewModel.cs" />
+    <Compile Include="IndependentViewModel\GetSpecialAssumpsitViewModel.cs" />
+    <Compile Include="LastDayReInfoTotalViewModel.cs" />
+    <Compile Include="LicenseInfoViewModel.cs" />
+    <Compile Include="LicenseViewModel.cs" />
+    <Compile Include="MessageListViewModel.cs" />
+    <Compile Include="MsgClosedOrderViewModel.cs" />
+    <Compile Include="MultiQuotedChannelsViewModel.cs" />
+    <Compile Include="MyListViewModel.cs" />
+    <Compile Include="OrderDetailViewModel.cs" />
+    <Compile Include="OrderViewModel.cs" />
+    <Compile Include="PrecisePriceItemViewModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ProtoUserInfoViewModel.cs" />
+    <Compile Include="QuoteResultCarInfoViewModel.cs" />
+    <Compile Include="ReInfoListViewModel.cs" />
+    <Compile Include="ReportClaimHistoryViewModel.cs" />
+    <Compile Include="ReVisitedListViewModel.cs" />
+    <Compile Include="SaveQuoteViewModel.cs" />
+    <Compile Include="SmsAccountViewModel.cs" />
+    <Compile Include="SmsCreateOrderViewModel.cs" />
+    <Compile Include="SmsOrderViewModel.cs" />
+    <Compile Include="SmsResultViewModel.cs" />
+    <Compile Include="SpecialOptionViewModel.cs" />
+    <Compile Include="SubmitInfoViewModel.cs" />
+    <Compile Include="UKeyListViewModel.cs" />
+    <Compile Include="UploadMultipleViewModel.cs" />
+    <Compile Include="UserClaimViewModel.cs" />
+    <Compile Include="UserInfoViewModel.cs" />
+    <Compile Include="ViolationViewModel.cs" />
+    <Compile Include="WorkOrderDetailListViewModel.cs" />
+    <Compile Include="XianZhongUnit.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BiHuManBu.ExternalInterfaces.Models\BiHuManBu.ExternalInterfaces.Models.csproj">
+      <Project>{3814E7E1-9CAE-4E12-BB7A-BECDA662C19A}</Project>
+      <Name>BiHuManBu.ExternalInterfaces.Models</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

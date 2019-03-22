@@ -1,0 +1,91 @@
+﻿@{
+    ViewBag.Title = "续保统计";
+}
+<meta http-equiv="refresh" content="600">
+<!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+<div id="main" style="height: 400px"></div>
+
+<div id="threadmain" style="height:400px"></div>
+<!-- ECharts单文件引入 -->
+@section scripts
+{
+    <script src="http://echarts.baidu.com/build/dist/echarts.js"></script>
+    <script type="text/javascript"> var timeTicket; </script>
+    <script type="text/javascript">
+
+        require.config({
+            paths: {
+                echarts: 'http://echarts.baidu.com/build/dist'
+            }
+        });
+        require(
+            [
+                'echarts',
+                'echarts/chart/line'
+            ], function(ec) {
+                // 基于准备好的dom，初始化echarts图表
+                var myChart = ec.init(document.getElementById('main'));
+                var threadChart = ec.init(document.getElementById("threadmain"));
+                myChart.setOption({
+                    title: {
+                        text: '每个顶级下的续保调用量(5s刷新)'
+                    },
+                    tooltip: {
+                        trigger: 'axis'
+                    },
+                    legend: {
+                        data: ['顶级渠道下续保量（5s）']
+                    },
+                    xAxis: {
+                        data: []
+                    },
+                    yAxis: {
+                        type: 'value',
+                        scale: true,
+                        name: 'Created',
+                        boundaryGap: [0.2, 0.2]
+                    },
+                    series: []
+                });
+
+
+                setInterval(function() {
+                    $.ajax({
+                        url: "@Url.Action("GetRenewalStaData")",
+                        success: function (data) {
+                            myChart.setOption({
+                                xAxis: [
+                                    {
+                                        type: 'category',
+                                        data: (function () {
+                                            var names = [];
+                                            var len = data.length;
+                                            while (len--) {
+                                                names.push(data[len].Agent);
+                                            }
+                                            return names;
+                                        })()
+                                    }
+                                ],
+                                series: [{
+                                    name: '顶级渠道下续保量（5s）',
+                                    type: 'line',
+                                    data: (function () {
+                                        var res = [];
+                                        var len = data.length;
+                                        while (len--) {
+                                            res.push(data[len].Counts);
+                                        }
+                                        return res;
+                                    })()
+                                }]
+                            });
+                        }
+                    });
+                }, 5000);
+
+            }
+        );
+
+    </script>
+}
